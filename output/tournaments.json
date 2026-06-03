@@ -1,0 +1,196 @@
+{
+  "3005": {
+    "id": "3005",
+    "rounds": {
+      "1": {
+        "matches": [
+          {
+            "player1": "Mads thode schultz",
+            "player2": "Christoffer Nielsen",
+            "result": [
+              2,
+              0
+            ],
+            "has_bye": false
+          },
+          {
+            "player1": "Josef-Nam Nguyen",
+            "player2": "Erik Christensen",
+            "result": [
+              2,
+              0
+            ],
+            "has_bye": false
+          },
+          {
+            "player1": "Casper Albrektsen",
+            "player2": "Edoardo Cravero",
+            "result": [
+              2,
+              0
+            ],
+            "has_bye": false
+          },
+          {
+            "player1": "Gregoire  Sanguinetti",
+            "player2": "Eva \u00d8sterby",
+            "result": [
+              2,
+              1
+            ],
+            "has_bye": false
+          },
+          {
+            "player1": "Jonas Borgland",
+            "player2": null,
+            "result": null,
+            "has_bye": true
+          }
+        ],
+        "processed_at": "2026-06-03T09:32:28.843098"
+      },
+      "2": {
+        "matches": [
+          {
+            "player1": "Gregoire  Sanguinetti",
+            "player2": "Jonas Borgland",
+            "result": [
+              1,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "player1": "Josef-Nam Nguyen",
+            "player2": "Mads thode schultz",
+            "result": [
+              2,
+              1
+            ],
+            "has_bye": false
+          },
+          {
+            "player1": "Casper Albrektsen",
+            "player2": "Eva \u00d8sterby",
+            "result": [
+              2,
+              0
+            ],
+            "has_bye": false
+          },
+          {
+            "player1": "Edoardo Cravero",
+            "player2": "Christoffer Nielsen",
+            "result": [
+              2,
+              1
+            ],
+            "has_bye": false
+          },
+          {
+            "player1": "Erik Christensen",
+            "player2": null,
+            "result": null,
+            "has_bye": true
+          }
+        ],
+        "processed_at": "2026-06-03T09:32:28.852281"
+      },
+      "3": {
+        "matches": [
+          {
+            "player1": "Josef-Nam Nguyen",
+            "player2": "Jonas Borgland",
+            "result": [
+              1,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "player1": "Casper Albrektsen",
+            "player2": "Erik Christensen",
+            "result": [
+              0,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "player1": "Gregoire  Sanguinetti",
+            "player2": "Mads thode schultz",
+            "result": [
+              1,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "player1": "Edoardo Cravero",
+            "player2": "Eva \u00d8sterby",
+            "result": [
+              1,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "player1": "Christoffer Nielsen",
+            "player2": null,
+            "result": null,
+            "has_bye": true
+          }
+        ],
+        "processed_at": "2026-06-03T09:32:28.859764"
+      },
+      "4": {
+        "matches": [
+          {
+            "player1": "Jonas Borgland",
+            "player2": "Erik Christensen",
+            "result": [
+              1,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "player1": "Josef-Nam Nguyen",
+            "player2": "Casper Albrektsen",
+            "result": [
+              1,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "player1": "Mads thode schultz",
+            "player2": "Eva \u00d8sterby",
+            "result": [
+              0,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "player1": "Gregoire  Sanguinetti",
+            "player2": "Christoffer Nielsen",
+            "result": [
+              2,
+              0
+            ],
+            "has_bye": false
+          },
+          {
+            "player1": "Edoardo Cravero",
+            "player2": null,
+            "result": null,
+            "has_bye": true
+          }
+        ],
+        "processed_at": "2026-06-03T09:32:28.866695"
+      }
+    },
+    "created_at": "2026-06-03T09:32:28.843085"
+  }
+}

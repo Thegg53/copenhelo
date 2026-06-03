@@ -1,0 +1,73 @@
+name: Update ELO Ratings
+
+on:
+  schedule:
+    # Run daily at 00:00 UTC
+    - cron: '0 0 * * *'
+  # Also allow manual trigger
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-ratings:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install beautifulsoup4 lxml
+      
+      - name: Check for changes in input
+        id: check-changes
+        run: |
+          # Get list of input files
+          INPUT_FILES=$(find input -name '*.htm' | sort)
+          INPUT_HASH=$(echo "$INPUT_FILES" | xargs -I {} md5sum {} | md5sum | awk '{print $1}')
+          
+          # Check if output exists
+          if [ -f output/.input-hash ]; then
+            PREVIOUS_HASH=$(cat output/.input-hash)
+            if [ "$INPUT_HASH" = "$PREVIOUS_HASH" ]; then
+              echo "has-changes=false" >> $GITHUB_OUTPUT
+            else
+              echo "has-changes=true" >> $GITHUB_OUTPUT
+            fi
+          else
+            echo "has-changes=true" >> $GITHUB_OUTPUT
+          fi
+          
+          echo "$INPUT_HASH" > output/.input-hash
+      
+      - name: Run ELO calculator
+        if: steps.check-changes.outputs.has-changes == 'true'
+        run: |
+          python scripts/elo_calculator.py
+      
+      - name: Generate leaderboard
+        if: steps.check-changes.outputs.has-changes == 'true'
+        run: |
+          python scripts/leaderboard_generator.py
+      
+      - name: Commit and push changes
+        if: steps.check-changes.outputs.has-changes == 'true'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          
+          git add output/
+          
+          if ! git diff --cached --quiet; then
+            git commit -m "Update ELO ratings [automated]"
+            git push
+          fi
