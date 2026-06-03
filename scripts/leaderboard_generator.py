@@ -61,7 +61,7 @@ class LeaderboardGenerator:
         
         html = self._generate_html(sorted_players)
         
-        output_file = self.output_dir / 'index.html'
+        output_file = self.output_dir.parent / 'leaderboard.html'
         with open(output_file, 'w') as f:
             f.write(html)
         

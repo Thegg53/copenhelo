@@ -1,3 +1,6 @@
+[2026-06-03T13:05:06.392141] Starting leaderboard generation
+[2026-06-03T13:05:06.392772] Generated leaderboard: /Users/g.morgado/repos/copenhelo/leaderboard.html (9 players)
+[2026-06-03T13:05:06.392787] Leaderboard generation complete
 [2026-06-03T13:02:40.791497] Starting leaderboard generation
 [2026-06-03T13:02:40.792025] Generated leaderboard: /Users/g.morgado/repos/copenhelo/output/index.html (9 players)
 [2026-06-03T13:02:40.792035] Leaderboard generation complete
