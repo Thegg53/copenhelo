@@ -1,0 +1,23 @@
+{
+  "tournament_id": "20260410_pauper_dummy",
+  "timestamp": "2026-04-10T14:00:00.000000",
+  "standings": [
+    {"name": "Foo Bar", "rank": 1, "points": 15, "wins": 5, "losses": 0, "draws": 0, "omw": "52.0%", "gwp": "71.4%", "ogwp": "49.5%", "games": 5},
+    {"name": "Frederikke Stejlgaard", "rank": 2, "points": 12, "wins": 4, "losses": 1, "draws": 0, "omw": "52.0%", "gwp": "69.2%", "ogwp": "53.1%", "games": 5},
+    {"name": "Christian Hansen", "rank": 3, "points": 12, "wins": 4, "losses": 1, "draws": 0, "omw": "48.0%", "gwp": "57.1%", "ogwp": "47.7%", "games": 5},
+    {"name": "Jonathan Mohr", "rank": 4, "points": 9, "wins": 3, "losses": 2, "draws": 0, "omw": "76.0%", "gwp": "53.8%", "ogwp": "63.6%", "games": 5},
+    {"name": "Freya Gade Ravnsborg", "rank": 5, "points": 9, "wins": 3, "losses": 2, "draws": 0, "omw": "73.3%", "gwp": "57.1%", "ogwp": "62.9%", "games": 5},
+    {"name": "Leo Dyrkjøb", "rank": 6, "points": 9, "wins": 3, "losses": 2, "draws": 0, "omw": "58.7%", "gwp": "53.3%", "ogwp": "54.3%", "games": 5},
+    {"name": "gui morgado", "rank": 7, "points": 9, "wins": 3, "losses": 2, "draws": 0, "omw": "50.7%", "gwp": "66.7%", "ogwp": "48.6%", "games": 5},
+    {"name": "Jørgen Hoel", "rank": 8, "points": 9, "wins": 3, "losses": 2, "draws": 0, "omw": "48.0%", "gwp": "66.7%", "ogwp": "47.3%", "games": 5},
+    {"name": "Erika C", "rank": 9, "points": 7, "wins": 2, "losses": 2, "draws": 1, "omw": "65.0%", "gwp": "50.0%", "ogwp": "53.6%", "games": 5},
+    {"name": "Aslak Hansen", "rank": 10, "points": 7, "wins": 2, "losses": 2, "draws": 1, "omw": "51.7%", "gwp": "50.0%", "ogwp": "53.9%", "games": 5},
+    {"name": "Austin McKeand", "rank": 11, "points": 6, "wins": 2, "losses": 3, "draws": 0, "omw": "54.7%", "gwp": "46.2%", "ogwp": "53.3%", "games": 5},
+    {"name": "Jennifer Sorensen", "rank": 12, "points": 6, "wins": 2, "losses": 3, "draws": 0, "omw": "52.0%", "gwp": "41.7%", "ogwp": "51.9%", "games": 5},
+    {"name": "Poul Henningsen", "rank": 13, "points": 6, "wins": 2, "losses": 3, "draws": 0, "omw": "50.7%", "gwp": "41.7%", "ogwp": "53.1%", "games": 5},
+    {"name": "Birger Jarl", "rank": 14, "points": 6, "wins": 2, "losses": 3, "draws": 0, "omw": "36.7%", "gwp": "50.0%", "ogwp": "38.1%", "games": 5},
+    {"name": "Frederik VIII", "rank": 15, "points": 3, "wins": 1, "losses": 3, "draws": 0, "omw": "57.8%", "gwp": "33.3%", "ogwp": "48.8%", "games": 4},
+    {"name": "Princess Alexandra", "rank": 16, "points": 3, "wins": 1, "losses": 4, "draws": 0, "omw": "50.7%", "gwp": "33.3%", "ogwp": "54.0%", "games": 5},
+    {"name": "Peder the Great", "rank": 17, "points": 3, "wins": 1, "losses": 4, "draws": 0, "omw": "49.3%", "gwp": "35.7%", "ogwp": "49.0%", "games": 5}
+  ]
+}

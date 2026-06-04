@@ -1,0 +1,8 @@
+timestamp,tournament_id,players,htm_parsed_to_json,elo_calculated,file
+2026-01-10T10:00:00.000000,20260110_pauper_dummy,17,yes,yes,events/20260110_pauper_dummy.json
+2026-02-15T14:00:00.000000,20260215_pauper_dummy,17,yes,yes,events/20260215_pauper_dummy.json
+2026-02-18T11:00:00.000000,20260218_pauper_dummy,17,yes,yes,events/20260218_pauper_dummy.json
+2026-03-01T09:53:32.306899,20260301_pauper_lyngby,17,yes,yes,events/20260301_pauper_lyngby.json
+2026-04-10T14:00:00.000000,20260410_pauper_dummy,17,yes,yes,events/20260410_pauper_dummy.json
+2026-07-12T15:00:00.000000,20260712_pauper_dummy,17,yes,yes,events/20260712_pauper_dummy.json
+2026-09-20T16:00:00.000000,20260920_pauper_dummy,17,yes,yes,events/20260920_pauper_dummy.json

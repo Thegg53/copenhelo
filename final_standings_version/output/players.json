@@ -1,0 +1,1423 @@
+{
+  "Foo Bar": {
+    "name": "Foo Bar",
+    "rating": 1716.3,
+    "matches": [],
+    "history": [
+      {
+        "tournament": "20260110_pauper_dummy",
+        "date": "2026-06-04T10:42:32.435457",
+        "rank": 1,
+        "record": "5-0-0",
+        "points": 15,
+        "rating_before": 1500,
+        "rating_after": 1564.0,
+        "change": 64.0
+      },
+      {
+        "tournament": "20260215_pauper_dummy",
+        "date": "2026-06-04T10:42:32.436556",
+        "rank": 16,
+        "record": "1-4-0",
+        "points": 3,
+        "rating_before": 1564.0,
+        "rating_after": 1516.1,
+        "change": -47.90000000000009
+      },
+      {
+        "tournament": "20260218_pauper_dummy",
+        "date": "2026-06-04T10:42:32.436901",
+        "rank": 1,
+        "record": "5-0-0",
+        "points": 15,
+        "rating_before": 1516.1,
+        "rating_after": 1577.3,
+        "change": 61.200000000000045
+      },
+      {
+        "tournament": "20260410_pauper_dummy",
+        "date": "2026-06-04T10:42:32.438149",
+        "rank": 1,
+        "record": "5-0-0",
+        "points": 15,
+        "rating_before": 1577.3,
+        "rating_after": 1631.6,
+        "change": 54.299999999999955
+      },
+      {
+        "tournament": "20260712_pauper_dummy",
+        "date": "2026-06-04T10:42:32.438640",
+        "rank": 1,
+        "record": "5-0-0",
+        "points": 15,
+        "rating_before": 1631.6,
+        "rating_after": 1677.9,
+        "change": 46.30000000000018
+      },
+      {
+        "tournament": "20260920_pauper_dummy",
+        "date": "2026-06-04T10:42:32.439219",
+        "rank": 1,
+        "record": "5-0-0",
+        "points": 15,
+        "rating_before": 1677.9,
+        "rating_after": 1716.3,
+        "change": 38.399999999999864
+      }
+    ]
+  },
+  "Leo Dyrkj\u00f8b": {
+    "name": "Leo Dyrkj\u00f8b",
+    "rating": 1562.9,
+    "matches": [],
+    "history": [
+      {
+        "tournament": "20260110_pauper_dummy",
+        "date": "2026-06-04T10:42:32.435479",
+        "rank": 2,
+        "record": "4-1-0",
+        "points": 12,
+        "rating_before": 1500,
+        "rating_after": 1538.5,
+        "change": 38.5
+      },
+      {
+        "tournament": "20260215_pauper_dummy",
+        "date": "2026-06-04T10:42:32.436442",
+        "rank": 4,
+        "record": "3-2-0",
+        "points": 9,
+        "rating_before": 1538.5,
+        "rating_after": 1544.8,
+        "change": 6.2999999999999545
+      },
+      {
+        "tournament": "20260218_pauper_dummy",
+        "date": "2026-06-04T10:42:32.436975",
+        "rank": 9,
+        "record": "2-2-1",
+        "points": 7,
+        "rating_before": 1544.8,
+        "rating_after": 1533.4,
+        "change": -11.399999999999864
+      },
+      {
+        "tournament": "20260301_pauper_lyngby",
+        "date": "2026-06-04T10:42:32.437657",
+        "rank": 4,
+        "record": "3-2-0",
+        "points": 9,
+        "rating_before": 1533.4,
+        "rating_after": 1541.5,
+        "change": 8.099999999999909
+      },
+      {
+        "tournament": "20260410_pauper_dummy",
+        "date": "2026-06-04T10:42:32.438200",
+        "rank": 6,
+        "record": "3-2-0",
+        "points": 9,
+        "rating_before": 1541.5,
+        "rating_after": 1549.1,
+        "change": 7.599999999999909
+      },
+      {
+        "tournament": "20260712_pauper_dummy",
+        "date": "2026-06-04T10:42:32.438703",
+        "rank": 7,
+        "record": "3-2-0",
+        "points": 9,
+        "rating_before": 1549.1,
+        "rating_after": 1556.7,
+        "change": 7.600000000000136
+      },
+      {
+        "tournament": "20260920_pauper_dummy",
+        "date": "2026-06-04T10:42:32.439266",
+        "rank": 5,
+        "record": "3-2-0",
+        "points": 9,
+        "rating_before": 1556.7,
+        "rating_after": 1562.9,
+        "change": 6.2000000000000455
+      }
+    ]
+  },
+  "Jonathan Mohr": {
+    "name": "Jonathan Mohr",
+    "rating": 1595.7,
+    "matches": [],
+    "history": [
+      {
+        "tournament": "20260110_pauper_dummy",
+        "date": "2026-06-04T10:42:32.435490",
+        "rank": 3,
+        "record": "4-1-0",
+        "points": 12,
+        "rating_before": 1500,
+        "rating_after": 1538.5,
+        "change": 38.5
+      },
+      {
+        "tournament": "20260215_pauper_dummy",
+        "date": "2026-06-04T10:42:32.436471",
+        "rank": 7,
+        "record": "3-2-0",
+        "points": 9,
+        "rating_before": 1538.5,
+        "rating_after": 1544.8,
+        "change": 6.2999999999999545
+      },
+      {
+        "tournament": "20260301_pauper_lyngby",
+        "date": "2026-06-04T10:42:32.437689",
+        "rank": 7,
+        "record": "3-2-0",
+        "points": 9,
+        "rating_before": 1544.8,
+        "rating_after": 1551.0,
+        "change": 6.2000000000000455
+      },
+      {
+        "tournament": "20260410_pauper_dummy",
+        "date": "2026-06-04T10:42:32.438180",
+        "rank": 4,
+        "record": "3-2-0",
+        "points": 9,
+        "rating_before": 1551.0,
+        "rating_after": 1557.0,
+        "change": 6.0
+      },
+      {
+        "tournament": "20260712_pauper_dummy",
+        "date": "2026-06-04T10:42:32.438680",
+        "rank": 5,
+        "record": "3-2-0",
+        "points": 9,
+        "rating_before": 1557.0,
+        "rating_after": 1563.3,
+        "change": 6.2999999999999545
+      },
+      {
+        "tournament": "20260920_pauper_dummy",
+        "date": "2026-06-04T10:42:32.439236",
+        "rank": 2,
+        "record": "4-1-0",
+        "points": 12,
+        "rating_before": 1563.3,
+        "rating_after": 1595.7,
+        "change": 32.40000000000009
+      }
+    ]
+  },
+  "Erika C": {
+    "name": "Erika C",
+    "rating": 1527.9,
+    "matches": [],
+    "history": [
+      {
+        "tournament": "20260110_pauper_dummy",
+        "date": "2026-06-04T10:42:32.435500",
+        "rank": 4,
+        "record": "3-2-0",
+        "points": 9,
+        "rating_before": 1500,
+        "rating_after": 1511.3,
+        "change": 11.299999999999955
+      },
+      {
+        "tournament": "20260215_pauper_dummy",
+        "date": "2026-06-04T10:42:32.436491",
+        "rank": 9,
+        "record": "3-2-0",
+        "points": 9,
+        "rating_before": 1511.3,
+        "rating_after": 1522.2,
+        "change": 10.900000000000091
+      },
+      {
+        "tournament": "20260218_pauper_dummy",
+        "date": "2026-06-04T10:42:32.436921",
+        "rank": 3,
+        "record": "4-1-0",
+        "points": 12,
+        "rating_before": 1522.2,
+        "rating_after": 1556.9,
+        "change": 34.700000000000045
+      },
+      {
+        "tournament": "20260301_pauper_lyngby",
+        "date": "2026-06-04T10:42:32.437711",
+        "rank": 9,
+        "record": "2-2-1",
+        "points": 7,
+        "rating_before": 1556.9,
+        "rating_after": 1546.1,
+        "change": -10.800000000000182
+      },
+      {
+        "tournament": "20260410_pauper_dummy",
+        "date": "2026-06-04T10:42:32.438228",
+        "rank": 9,
+        "record": "2-2-1",
+        "points": 7,
+        "rating_before": 1546.1,
+        "rating_after": 1538.0,
+        "change": -8.099999999999909
+      },
+      {
+        "tournament": "20260712_pauper_dummy",
+        "date": "2026-06-04T10:42:32.438722",
+        "rank": 9,
+        "record": "2-2-1",
+        "points": 7,
+        "rating_before": 1538.0,
+        "rating_after": 1532.5,
+        "change": -5.5
+      },
+      {
+        "tournament": "20260920_pauper_dummy",
+        "date": "2026-06-04T10:42:32.439303",
+        "rank": 9,
+        "record": "2-2-1",
+        "points": 7,
+        "rating_before": 1532.5,
+        "rating_after": 1527.9,
+        "change": -4.599999999999909
+      }
+    ]
+  },
+  "S\u00f8ren Kierkegaard": {
+    "name": "S\u00f8ren Kierkegaard",
+    "rating": 1491.9,
+    "matches": [],
+    "history": [
+      {
+        "tournament": "20260110_pauper_dummy",
+        "date": "2026-06-04T10:42:32.435509",
+        "rank": 5,
+        "record": "3-2-0",
+        "points": 9,
+        "rating_before": 1500,
+        "rating_after": 1511.3,
+        "change": 11.299999999999955
+      },
+      {
+        "tournament": "20260218_pauper_dummy",
+        "date": "2026-06-04T10:42:32.437011",
+        "rank": 13,
+        "record": "2-3-0",
+        "points": 6,
+        "rating_before": 1511.3,
+        "rating_after": 1498.1,
+        "change": -13.200000000000045
+      },
+      {
+        "tournament": "20260712_pauper_dummy",
+        "date": "2026-06-04T10:42:32.438759",
+        "rank": 13,
+        "record": "2-3-0",
+        "points": 6,
+        "rating_before": 1498.1,
+        "rating_after": 1491.9,
+        "change": -6.199999999999818
+      }
+    ]
+  },
+  "Mads Duppnt": {
+    "name": "Mads Duppnt",
+    "rating": 1481.6,
+    "matches": [],
+    "history": [
+      {
+        "tournament": "20260110_pauper_dummy",
+        "date": "2026-06-04T10:42:32.435519",
+        "rank": 6,
+        "record": "3-2-0",
+        "points": 9,
+        "rating_before": 1500,
+        "rating_after": 1511.3,
+        "change": 11.299999999999955
+      },
+      {
+        "tournament": "20260215_pauper_dummy",
+        "date": "2026-06-04T10:42:32.436529",
+        "rank": 13,
+        "record": "2-3-0",
+        "points": 6,
+        "rating_before": 1511.3,
+        "rating_after": 1499.7,
+        "change": -11.599999999999909
+      },
+      {
+        "tournament": "20260218_pauper_dummy",
+        "date": "2026-06-04T10:42:32.437002",
+        "rank": 12,
+        "record": "2-3-0",
+        "points": 6,
+        "rating_before": 1499.7,
+        "rating_after": 1488.4,
+        "change": -11.299999999999955
+      },
+      {
+        "tournament": "20260301_pauper_lyngby",
+        "date": "2026-06-04T10:42:32.437753",
+        "rank": 13,
+        "record": "2-3-0",
+        "points": 6,
+        "rating_before": 1488.4,
+        "rating_after": 1481.6,
+        "change": -6.800000000000182
+      }
+    ]
+  },
+  "Austin McKeand": {
+    "name": "Austin McKeand",
+    "rating": 1505.0,
+    "matches": [],
+    "history": [
+      {
+        "tournament": "20260110_pauper_dummy",
+        "date": "2026-06-04T10:42:32.435529",
+        "rank": 7,
+        "record": "3-2-0",
+        "points": 9,
+        "rating_before": 1500,
+        "rating_after": 1511.3,
+        "change": 11.299999999999955
+      },
+      {
+        "tournament": "20260215_pauper_dummy",
+        "date": "2026-06-04T10:42:32.436409",
+        "rank": 1,
+        "record": "5-0-0",
+        "points": 15,
+        "rating_before": 1511.3,
+        "rating_after": 1574.9,
+        "change": 63.600000000000136
+      },
+      {
+        "tournament": "20260301_pauper_lyngby",
+        "date": "2026-06-04T10:42:32.437784",
+        "rank": 16,
+        "record": "1-4-0",
+        "points": 3,
+        "rating_before": 1574.9,
+        "rating_after": 1526.2,
+        "change": -48.700000000000045
+      },
+      {
+        "tournament": "20260410_pauper_dummy",
+        "date": "2026-06-04T10:42:32.438247",
+        "rank": 11,
+        "record": "2-3-0",
+        "points": 6,
+        "rating_before": 1526.2,
+        "rating_after": 1513.9,
+        "change": -12.299999999999955
+      },
+      {
+        "tournament": "20260712_pauper_dummy",
+        "date": "2026-06-04T10:42:32.438750",
+        "rank": 12,
+        "record": "2-3-0",
+        "points": 6,
+        "rating_before": 1513.9,
+        "rating_after": 1505.0,
+        "change": -8.900000000000091
+      }
+    ]
+  },
+  "gui morgado": {
+    "name": "gui morgado",
+    "rating": 1554.1,
+    "matches": [],
+    "history": [
+      {
+        "tournament": "20260110_pauper_dummy",
+        "date": "2026-06-04T10:42:32.435542",
+        "rank": 8,
+        "record": "3-2-0",
+        "points": 9,
+        "rating_before": 1500,
+        "rating_after": 1511.3,
+        "change": 11.299999999999955
+      },
+      {
+        "tournament": "20260215_pauper_dummy",
+        "date": "2026-06-04T10:42:32.436452",
+        "rank": 5,
+        "record": "3-2-0",
+        "points": 9,
+        "rating_before": 1511.3,
+        "rating_after": 1522.2,
+        "change": 10.900000000000091
+      },
+      {
+        "tournament": "20260218_pauper_dummy",
+        "date": "2026-06-04T10:42:32.436984",
+        "rank": 10,
+        "record": "2-2-1",
+        "points": 7,
+        "rating_before": 1522.2,
+        "rating_after": 1514.7,
+        "change": -7.5
+      },
+      {
+        "tournament": "20260301_pauper_lyngby",
+        "date": "2026-06-04T10:42:32.437670",
+        "rank": 5,
+        "record": "3-2-0",
+        "points": 9,
+        "rating_before": 1514.7,
+        "rating_after": 1526.0,
+        "change": 11.299999999999955
+      },
+      {
+        "tournament": "20260410_pauper_dummy",
+        "date": "2026-06-04T10:42:32.438209",
+        "rank": 7,
+        "record": "3-2-0",
+        "points": 9,
+        "rating_before": 1526.0,
+        "rating_after": 1536.3,
+        "change": 10.299999999999955
+      },
+      {
+        "tournament": "20260712_pauper_dummy",
+        "date": "2026-06-04T10:42:32.438690",
+        "rank": 6,
+        "record": "3-2-0",
+        "points": 9,
+        "rating_before": 1536.3,
+        "rating_after": 1546.1,
+        "change": 9.799999999999955
+      },
+      {
+        "tournament": "20260920_pauper_dummy",
+        "date": "2026-06-04T10:42:32.439275",
+        "rank": 6,
+        "record": "3-2-0",
+        "points": 9,
+        "rating_before": 1546.1,
+        "rating_after": 1554.1,
+        "change": 8.0
+      }
+    ]
+  },
+  "J\u00f8rgen Hoel": {
+    "name": "J\u00f8rgen Hoel",
+    "rating": 1545.7,
+    "matches": [],
+    "history": [
+      {
+        "tournament": "20260110_pauper_dummy",
+        "date": "2026-06-04T10:42:32.435553",
+        "rank": 9,
+        "record": "2-2-1",
+        "points": 7,
+        "rating_before": 1500,
+        "rating_after": 1496.3,
+        "change": -3.7000000000000455
+      },
+      {
+        "tournament": "20260215_pauper_dummy",
+        "date": "2026-06-04T10:42:32.436462",
+        "rank": 6,
+        "record": "3-2-0",
+        "points": 9,
+        "rating_before": 1496.3,
+        "rating_after": 1509.8,
+        "change": 13.5
+      },
+      {
+        "tournament": "20260218_pauper_dummy",
+        "date": "2026-06-04T10:42:32.436993",
+        "rank": 11,
+        "record": "2-3-0",
+        "points": 6,
+        "rating_before": 1509.8,
+        "rating_after": 1496.8,
+        "change": -13.0
+      },
+      {
+        "tournament": "20260301_pauper_lyngby",
+        "date": "2026-06-04T10:42:32.437680",
+        "rank": 6,
+        "record": "3-2-0",
+        "points": 9,
+        "rating_before": 1496.8,
+        "rating_after": 1511.2,
+        "change": 14.400000000000091
+      },
+      {
+        "tournament": "20260410_pauper_dummy",
+        "date": "2026-06-04T10:42:32.438219",
+        "rank": 8,
+        "record": "3-2-0",
+        "points": 9,
+        "rating_before": 1511.2,
+        "rating_after": 1524.0,
+        "change": 12.799999999999955
+      },
+      {
+        "tournament": "20260712_pauper_dummy",
+        "date": "2026-06-04T10:42:32.438712",
+        "rank": 8,
+        "record": "3-2-0",
+        "points": 9,
+        "rating_before": 1524.0,
+        "rating_after": 1535.9,
+        "change": 11.900000000000091
+      },
+      {
+        "tournament": "20260920_pauper_dummy",
+        "date": "2026-06-04T10:42:32.439294",
+        "rank": 8,
+        "record": "3-2-0",
+        "points": 9,
+        "rating_before": 1535.9,
+        "rating_after": 1545.7,
+        "change": 9.799999999999955
+      }
+    ]
+  },
+  "devin anglin": {
+    "name": "devin anglin",
+    "rating": 1491.8,
+    "matches": [],
+    "history": [
+      {
+        "tournament": "20260110_pauper_dummy",
+        "date": "2026-06-04T10:42:32.435612",
+        "rank": 10,
+        "record": "2-2-1",
+        "points": 7,
+        "rating_before": 1500,
+        "rating_after": 1496.3,
+        "change": -3.7000000000000455
+      },
+      {
+        "tournament": "20260215_pauper_dummy",
+        "date": "2026-06-04T10:42:32.436538",
+        "rank": 14,
+        "record": "2-3-0",
+        "points": 6,
+        "rating_before": 1496.3,
+        "rating_after": 1487.2,
+        "change": -9.099999999999909
+      },
+      {
+        "tournament": "20260218_pauper_dummy",
+        "date": "2026-06-04T10:42:32.436957",
+        "rank": 7,
+        "record": "3-2-0",
+        "points": 9,
+        "rating_before": 1487.2,
+        "rating_after": 1500.6,
+        "change": 13.399999999999864
+      },
+      {
+        "tournament": "20260301_pauper_lyngby",
+        "date": "2026-06-04T10:42:32.437765",
+        "rank": 14,
+        "record": "2-3-0",
+        "points": 6,
+        "rating_before": 1500.6,
+        "rating_after": 1491.8,
+        "change": -8.799999999999955
+      }
+    ]
+  },
+  "Christian Hansen": {
+    "name": "Christian Hansen",
+    "rating": 1602.0,
+    "matches": [],
+    "history": [
+      {
+        "tournament": "20260110_pauper_dummy",
+        "date": "2026-06-04T10:42:32.435622",
+        "rank": 11,
+        "record": "2-3-0",
+        "points": 6,
+        "rating_before": 1500,
+        "rating_after": 1488.7,
+        "change": -11.299999999999955
+      },
+      {
+        "tournament": "20260215_pauper_dummy",
+        "date": "2026-06-04T10:42:32.436432",
+        "rank": 3,
+        "record": "2-3-0",
+        "points": 6,
+        "rating_before": 1488.7,
+        "rating_after": 1480.9,
+        "change": -7.7999999999999545
+      },
+      {
+        "tournament": "20260218_pauper_dummy",
+        "date": "2026-06-04T10:42:32.436966",
+        "rank": 8,
+        "record": "3-2-0",
+        "points": 9,
+        "rating_before": 1480.9,
+        "rating_after": 1495.4,
+        "change": 14.5
+      },
+      {
+        "tournament": "20260301_pauper_lyngby",
+        "date": "2026-06-04T10:42:32.437647",
+        "rank": 3,
+        "record": "4-1-0",
+        "points": 12,
+        "rating_before": 1495.4,
+        "rating_after": 1537.3,
+        "change": 41.899999999999864
+      },
+      {
+        "tournament": "20260410_pauper_dummy",
+        "date": "2026-06-04T10:42:32.438171",
+        "rank": 3,
+        "record": "4-1-0",
+        "points": 12,
+        "rating_before": 1537.3,
+        "rating_after": 1572.9,
+        "change": 35.600000000000136
+      },
+      {
+        "tournament": "20260712_pauper_dummy",
+        "date": "2026-06-04T10:42:32.438661",
+        "rank": 3,
+        "record": "4-1-0",
+        "points": 12,
+        "rating_before": 1572.9,
+        "rating_after": 1603.7,
+        "change": 30.799999999999955
+      },
+      {
+        "tournament": "20260920_pauper_dummy",
+        "date": "2026-06-04T10:42:32.439256",
+        "rank": 4,
+        "record": "3-2-0",
+        "points": 9,
+        "rating_before": 1603.7,
+        "rating_after": 1602.0,
+        "change": -1.7000000000000455
+      }
+    ]
+  },
+  "Frederikke Stejlgaard": {
+    "name": "Frederikke Stejlgaard",
+    "rating": 1633.0,
+    "matches": [],
+    "history": [
+      {
+        "tournament": "20260110_pauper_dummy",
+        "date": "2026-06-04T10:42:32.435632",
+        "rank": 12,
+        "record": "2-3-0",
+        "points": 6,
+        "rating_before": 1500,
+        "rating_after": 1488.7,
+        "change": -11.299999999999955
+      },
+      {
+        "tournament": "20260215_pauper_dummy",
+        "date": "2026-06-04T10:42:32.436422",
+        "rank": 2,
+        "record": "3-2-0",
+        "points": 9,
+        "rating_before": 1488.7,
+        "rating_after": 1503.5,
+        "change": 14.799999999999955
+      },
+      {
+        "tournament": "20260301_pauper_lyngby",
+        "date": "2026-06-04T10:42:32.437637",
+        "rank": 2,
+        "record": "4-1-0",
+        "points": 12,
+        "rating_before": 1503.5,
+        "rating_after": 1544.0,
+        "change": 40.5
+      },
+      {
+        "tournament": "20260410_pauper_dummy",
+        "date": "2026-06-04T10:42:32.438161",
+        "rank": 2,
+        "record": "4-1-0",
+        "points": 12,
+        "rating_before": 1544.0,
+        "rating_after": 1578.4,
+        "change": 34.40000000000009
+      },
+      {
+        "tournament": "20260712_pauper_dummy",
+        "date": "2026-06-04T10:42:32.438651",
+        "rank": 2,
+        "record": "4-1-0",
+        "points": 12,
+        "rating_before": 1578.4,
+        "rating_after": 1608.3,
+        "change": 29.899999999999864
+      },
+      {
+        "tournament": "20260920_pauper_dummy",
+        "date": "2026-06-04T10:42:32.439246",
+        "rank": 3,
+        "record": "4-1-0",
+        "points": 12,
+        "rating_before": 1608.3,
+        "rating_after": 1633.0,
+        "change": 24.700000000000045
+      }
+    ]
+  },
+  "Georg Brandes": {
+    "name": "Georg Brandes",
+    "rating": 1484.1,
+    "matches": [],
+    "history": [
+      {
+        "tournament": "20260110_pauper_dummy",
+        "date": "2026-06-04T10:42:32.435648",
+        "rank": 13,
+        "record": "2-3-0",
+        "points": 6,
+        "rating_before": 1500,
+        "rating_after": 1488.7,
+        "change": -11.299999999999955
+      },
+      {
+        "tournament": "20260712_pauper_dummy",
+        "date": "2026-06-04T10:42:32.438768",
+        "rank": 14,
+        "record": "2-3-0",
+        "points": 6,
+        "rating_before": 1488.7,
+        "rating_after": 1484.1,
+        "change": -4.600000000000136
+      }
+    ]
+  },
+  "Viggo Adamsen": {
+    "name": "Viggo Adamsen",
+    "rating": 1460.1,
+    "matches": [],
+    "history": [
+      {
+        "tournament": "20260110_pauper_dummy",
+        "date": "2026-06-04T10:42:32.435657",
+        "rank": 14,
+        "record": "2-3-0",
+        "points": 6,
+        "rating_before": 1500,
+        "rating_after": 1488.7,
+        "change": -11.299999999999955
+      },
+      {
+        "tournament": "20260218_pauper_dummy",
+        "date": "2026-06-04T10:42:32.437029",
+        "rank": 15,
+        "record": "1-3-0",
+        "points": 3,
+        "rating_before": 1488.7,
+        "rating_after": 1460.0,
+        "change": -28.700000000000045
+      },
+      {
+        "tournament": "20260920_pauper_dummy",
+        "date": "2026-06-04T10:42:32.439341",
+        "rank": 13,
+        "record": "2-3-0",
+        "points": 6,
+        "rating_before": 1460.0,
+        "rating_after": 1460.1,
+        "change": 0.09999999999990905
+      }
+    ]
+  },
+  "Margrethe II": {
+    "name": "Margrethe II",
+    "rating": 1448.9,
+    "matches": [],
+    "history": [
+      {
+        "tournament": "20260110_pauper_dummy",
+        "date": "2026-06-04T10:42:32.435666",
+        "rank": 15,
+        "record": "1-3-0",
+        "points": 3,
+        "rating_before": 1500,
+        "rating_after": 1469.5,
+        "change": -30.5
+      },
+      {
+        "tournament": "20260712_pauper_dummy",
+        "date": "2026-06-04T10:42:32.438780",
+        "rank": 15,
+        "record": "1-3-0",
+        "points": 3,
+        "rating_before": 1469.5,
+        "rating_after": 1448.9,
+        "change": -20.59999999999991
+      }
+    ]
+  },
+  "Tycho Brahe": {
+    "name": "Tycho Brahe",
+    "rating": 1434.2,
+    "matches": [],
+    "history": [
+      {
+        "tournament": "20260110_pauper_dummy",
+        "date": "2026-06-04T10:42:32.435675",
+        "rank": 16,
+        "record": "1-4-0",
+        "points": 3,
+        "rating_before": 1500,
+        "rating_after": 1461.5,
+        "change": -38.5
+      },
+      {
+        "tournament": "20260712_pauper_dummy",
+        "date": "2026-06-04T10:42:32.438798",
+        "rank": 17,
+        "record": "1-4-0",
+        "points": 3,
+        "rating_before": 1461.5,
+        "rating_after": 1434.2,
+        "change": -27.299999999999955
+      }
+    ]
+  },
+  "Absalon": {
+    "name": "Absalon",
+    "rating": 1415.6,
+    "matches": [],
+    "history": [
+      {
+        "tournament": "20260110_pauper_dummy",
+        "date": "2026-06-04T10:42:32.435684",
+        "rank": 17,
+        "record": "1-4-0",
+        "points": 3,
+        "rating_before": 1500,
+        "rating_after": 1461.5,
+        "change": -38.5
+      },
+      {
+        "tournament": "20260218_pauper_dummy",
+        "date": "2026-06-04T10:42:32.437038",
+        "rank": 16,
+        "record": "1-4-0",
+        "points": 3,
+        "rating_before": 1461.5,
+        "rating_after": 1429.5,
+        "change": -32.0
+      },
+      {
+        "tournament": "20260920_pauper_dummy",
+        "date": "2026-06-04T10:42:32.439359",
+        "rank": 15,
+        "record": "1-3-0",
+        "points": 3,
+        "rating_before": 1429.5,
+        "rating_after": 1415.6,
+        "change": -13.900000000000091
+      }
+    ]
+  },
+  "Freya Gade Ravnsborg": {
+    "name": "Freya Gade Ravnsborg",
+    "rating": 1553.2,
+    "matches": [],
+    "history": [
+      {
+        "tournament": "20260215_pauper_dummy",
+        "date": "2026-06-04T10:42:32.436480",
+        "rank": 8,
+        "record": "3-2-0",
+        "points": 9,
+        "rating_before": 1500,
+        "rating_after": 1512.8,
+        "change": 12.799999999999955
+      },
+      {
+        "tournament": "20260301_pauper_lyngby",
+        "date": "2026-06-04T10:42:32.437701",
+        "rank": 8,
+        "record": "3-2-0",
+        "points": 9,
+        "rating_before": 1512.8,
+        "rating_after": 1524.4,
+        "change": 11.600000000000136
+      },
+      {
+        "tournament": "20260410_pauper_dummy",
+        "date": "2026-06-04T10:42:32.438190",
+        "rank": 5,
+        "record": "3-2-0",
+        "points": 9,
+        "rating_before": 1524.4,
+        "rating_after": 1534.9,
+        "change": 10.5
+      },
+      {
+        "tournament": "20260712_pauper_dummy",
+        "date": "2026-06-04T10:42:32.438671",
+        "rank": 4,
+        "record": "3-2-0",
+        "points": 9,
+        "rating_before": 1534.9,
+        "rating_after": 1544.9,
+        "change": 10.0
+      },
+      {
+        "tournament": "20260920_pauper_dummy",
+        "date": "2026-06-04T10:42:32.439285",
+        "rank": 7,
+        "record": "3-2-0",
+        "points": 9,
+        "rating_before": 1544.9,
+        "rating_after": 1553.2,
+        "change": 8.299999999999955
+      }
+    ]
+  },
+  "John Smith": {
+    "name": "John Smith",
+    "rating": 1497.9,
+    "matches": [],
+    "history": [
+      {
+        "tournament": "20260215_pauper_dummy",
+        "date": "2026-06-04T10:42:32.436501",
+        "rank": 10,
+        "record": "2-2-1",
+        "points": 7,
+        "rating_before": 1500,
+        "rating_after": 1497.9,
+        "change": -2.099999999999909
+      }
+    ]
+  },
+  "Aslak Hansen": {
+    "name": "Aslak Hansen",
+    "rating": 1494.6,
+    "matches": [],
+    "history": [
+      {
+        "tournament": "20260215_pauper_dummy",
+        "date": "2026-06-04T10:42:32.436510",
+        "rank": 11,
+        "record": "2-3-0",
+        "points": 6,
+        "rating_before": 1500,
+        "rating_after": 1490.3,
+        "change": -9.700000000000045
+      },
+      {
+        "tournament": "20260218_pauper_dummy",
+        "date": "2026-06-04T10:42:32.436939",
+        "rank": 5,
+        "record": "3-2-0",
+        "points": 9,
+        "rating_before": 1490.3,
+        "rating_after": 1503.2,
+        "change": 12.900000000000091
+      },
+      {
+        "tournament": "20260301_pauper_lyngby",
+        "date": "2026-06-04T10:42:32.437732",
+        "rank": 11,
+        "record": "2-3-0",
+        "points": 6,
+        "rating_before": 1503.2,
+        "rating_after": 1493.9,
+        "change": -9.299999999999955
+      },
+      {
+        "tournament": "20260410_pauper_dummy",
+        "date": "2026-06-04T10:42:32.438237",
+        "rank": 10,
+        "record": "2-2-1",
+        "points": 7,
+        "rating_before": 1493.9,
+        "rating_after": 1494.6,
+        "change": 0.6999999999998181
+      }
+    ]
+  },
+  "Yuxiang Zhuang": {
+    "name": "Yuxiang Zhuang",
+    "rating": 1483.7,
+    "matches": [],
+    "history": [
+      {
+        "tournament": "20260215_pauper_dummy",
+        "date": "2026-06-04T10:42:32.436519",
+        "rank": 12,
+        "record": "2-3-0",
+        "points": 6,
+        "rating_before": 1500,
+        "rating_after": 1490.3,
+        "change": -9.700000000000045
+      },
+      {
+        "tournament": "20260218_pauper_dummy",
+        "date": "2026-06-04T10:42:32.436948",
+        "rank": 6,
+        "record": "3-2-0",
+        "points": 9,
+        "rating_before": 1490.3,
+        "rating_after": 1503.2,
+        "change": 12.900000000000091
+      },
+      {
+        "tournament": "20260301_pauper_lyngby",
+        "date": "2026-06-04T10:42:32.437744",
+        "rank": 12,
+        "record": "2-3-0",
+        "points": 6,
+        "rating_before": 1503.2,
+        "rating_after": 1493.9,
+        "change": -9.299999999999955
+      },
+      {
+        "tournament": "20260712_pauper_dummy",
+        "date": "2026-06-04T10:42:32.438740",
+        "rank": 11,
+        "record": "2-3-0",
+        "points": 6,
+        "rating_before": 1493.9,
+        "rating_after": 1488.4,
+        "change": -5.5
+      },
+      {
+        "tournament": "20260920_pauper_dummy",
+        "date": "2026-06-04T10:42:32.439322",
+        "rank": 11,
+        "record": "2-3-0",
+        "points": 6,
+        "rating_before": 1488.4,
+        "rating_after": 1483.7,
+        "change": -4.7000000000000455
+      }
+    ]
+  },
+  "Garret O'Connell": {
+    "name": "Garret O'Connell",
+    "rating": 1461.3,
+    "matches": [],
+    "history": [
+      {
+        "tournament": "20260215_pauper_dummy",
+        "date": "2026-06-04T10:42:32.436547",
+        "rank": 15,
+        "record": "1-3-0",
+        "points": 3,
+        "rating_before": 1500,
+        "rating_after": 1471.0,
+        "change": -29.0
+      },
+      {
+        "tournament": "20260218_pauper_dummy",
+        "date": "2026-06-04T10:42:32.436930",
+        "rank": 4,
+        "record": "3-2-0",
+        "points": 9,
+        "rating_before": 1471.0,
+        "rating_after": 1487.2,
+        "change": 16.200000000000045
+      },
+      {
+        "tournament": "20260301_pauper_lyngby",
+        "date": "2026-06-04T10:42:32.437775",
+        "rank": 15,
+        "record": "1-3-0",
+        "points": 3,
+        "rating_before": 1487.2,
+        "rating_after": 1461.4,
+        "change": -25.799999999999955
+      },
+      {
+        "tournament": "20260920_pauper_dummy",
+        "date": "2026-06-04T10:42:32.439331",
+        "rank": 12,
+        "record": "2-3-0",
+        "points": 6,
+        "rating_before": 1461.4,
+        "rating_after": 1461.3,
+        "change": -0.10000000000013642
+      }
+    ]
+  },
+  "Jane Doe": {
+    "name": "Jane Doe",
+    "rating": 1463.0,
+    "matches": [],
+    "history": [
+      {
+        "tournament": "20260215_pauper_dummy",
+        "date": "2026-06-04T10:42:32.436565",
+        "rank": 17,
+        "record": "1-4-0",
+        "points": 3,
+        "rating_before": 1500,
+        "rating_after": 1463.0,
+        "change": -37.0
+      }
+    ]
+  },
+  "Emma Gad": {
+    "name": "Emma Gad",
+    "rating": 1523.0,
+    "matches": [],
+    "history": [
+      {
+        "tournament": "20260218_pauper_dummy",
+        "date": "2026-06-04T10:42:32.436912",
+        "rank": 2,
+        "record": "4-1-0",
+        "points": 12,
+        "rating_before": 1500,
+        "rating_after": 1538.5,
+        "change": 38.5
+      },
+      {
+        "tournament": "20260301_pauper_lyngby",
+        "date": "2026-06-04T10:42:32.437723",
+        "rank": 10,
+        "record": "2-2-1",
+        "points": 7,
+        "rating_before": 1538.5,
+        "rating_after": 1530.8,
+        "change": -7.7000000000000455
+      },
+      {
+        "tournament": "20260712_pauper_dummy",
+        "date": "2026-06-04T10:42:32.438731",
+        "rank": 10,
+        "record": "2-2-1",
+        "points": 7,
+        "rating_before": 1530.8,
+        "rating_after": 1526.6,
+        "change": -4.2000000000000455
+      },
+      {
+        "tournament": "20260920_pauper_dummy",
+        "date": "2026-06-04T10:42:32.439312",
+        "rank": 10,
+        "record": "2-2-1",
+        "points": 7,
+        "rating_before": 1526.6,
+        "rating_after": 1523.0,
+        "change": -3.599999999999909
+      }
+    ]
+  },
+  "Christian X": {
+    "name": "Christian X",
+    "rating": 1484.0,
+    "matches": [],
+    "history": [
+      {
+        "tournament": "20260218_pauper_dummy",
+        "date": "2026-06-04T10:42:32.437020",
+        "rank": 14,
+        "record": "2-3-0",
+        "points": 6,
+        "rating_before": 1500,
+        "rating_after": 1488.7,
+        "change": -11.299999999999955
+      },
+      {
+        "tournament": "20260920_pauper_dummy",
+        "date": "2026-06-04T10:42:32.439350",
+        "rank": 14,
+        "record": "2-3-0",
+        "points": 6,
+        "rating_before": 1488.7,
+        "rating_after": 1484.0,
+        "change": -4.7000000000000455
+      }
+    ]
+  },
+  "Poul Henningsen": {
+    "name": "Poul Henningsen",
+    "rating": 1460.1,
+    "matches": [],
+    "history": [
+      {
+        "tournament": "20260218_pauper_dummy",
+        "date": "2026-06-04T10:42:32.437047",
+        "rank": 17,
+        "record": "1-4-0",
+        "points": 3,
+        "rating_before": 1500,
+        "rating_after": 1461.4,
+        "change": -38.59999999999991
+      },
+      {
+        "tournament": "20260410_pauper_dummy",
+        "date": "2026-06-04T10:42:32.438266",
+        "rank": 13,
+        "record": "2-3-0",
+        "points": 6,
+        "rating_before": 1461.4,
+        "rating_after": 1460.1,
+        "change": -1.300000000000182
+      }
+    ]
+  },
+  "Erik Christensen": {
+    "name": "Erik Christensen",
+    "rating": 1566.5,
+    "matches": [],
+    "history": [
+      {
+        "tournament": "20260301_pauper_lyngby",
+        "date": "2026-06-04T10:42:32.437617",
+        "rank": 1,
+        "record": "5-0-0",
+        "points": 15,
+        "rating_before": 1500,
+        "rating_after": 1566.5,
+        "change": 66.5
+      }
+    ]
+  },
+  "Esben Roenne Green": {
+    "name": "Esben Roenne Green",
+    "rating": 1464.0,
+    "matches": [],
+    "history": [
+      {
+        "tournament": "20260301_pauper_lyngby",
+        "date": "2026-06-04T10:42:32.437796",
+        "rank": 17,
+        "record": "1-4-0",
+        "points": 3,
+        "rating_before": 1500,
+        "rating_after": 1464.0,
+        "change": -36.0
+      }
+    ]
+  },
+  "Jennifer Sorensen": {
+    "name": "Jennifer Sorensen",
+    "rating": 1492.1,
+    "matches": [],
+    "history": [
+      {
+        "tournament": "20260410_pauper_dummy",
+        "date": "2026-06-04T10:42:32.438256",
+        "rank": 12,
+        "record": "2-3-0",
+        "points": 6,
+        "rating_before": 1500,
+        "rating_after": 1492.1,
+        "change": -7.900000000000091
+      }
+    ]
+  },
+  "Birger Jarl": {
+    "name": "Birger Jarl",
+    "rating": 1459.6,
+    "matches": [],
+    "history": [
+      {
+        "tournament": "20260410_pauper_dummy",
+        "date": "2026-06-04T10:42:32.438275",
+        "rank": 14,
+        "record": "2-3-0",
+        "points": 6,
+        "rating_before": 1500,
+        "rating_after": 1492.1,
+        "change": -7.900000000000091
+      },
+      {
+        "tournament": "20260712_pauper_dummy",
+        "date": "2026-06-04T10:42:32.438789",
+        "rank": 16,
+        "record": "1-4-0",
+        "points": 3,
+        "rating_before": 1492.1,
+        "rating_after": 1459.6,
+        "change": -32.5
+      }
+    ]
+  },
+  "Frederik VIII": {
+    "name": "Frederik VIII",
+    "rating": 1443.6,
+    "matches": [],
+    "history": [
+      {
+        "tournament": "20260410_pauper_dummy",
+        "date": "2026-06-04T10:42:32.438284",
+        "rank": 15,
+        "record": "1-3-0",
+        "points": 3,
+        "rating_before": 1500,
+        "rating_after": 1472.9,
+        "change": -27.09999999999991
+      },
+      {
+        "tournament": "20260920_pauper_dummy",
+        "date": "2026-06-04T10:42:32.439368",
+        "rank": 16,
+        "record": "1-4-0",
+        "points": 3,
+        "rating_before": 1472.9,
+        "rating_after": 1443.6,
+        "change": -29.300000000000182
+      }
+    ]
+  },
+  "Princess Alexandra": {
+    "name": "Princess Alexandra",
+    "rating": 1464.9,
+    "matches": [],
+    "history": [
+      {
+        "tournament": "20260410_pauper_dummy",
+        "date": "2026-06-04T10:42:32.438294",
+        "rank": 16,
+        "record": "1-4-0",
+        "points": 3,
+        "rating_before": 1500,
+        "rating_after": 1464.9,
+        "change": -35.09999999999991
+      }
+    ]
+  },
+  "Peder the Great": {
+    "name": "Peder the Great",
+    "rating": 1436.9,
+    "matches": [],
+    "history": [
+      {
+        "tournament": "20260410_pauper_dummy",
+        "date": "2026-06-04T10:42:32.438303",
+        "rank": 17,
+        "record": "1-4-0",
+        "points": 3,
+        "rating_before": 1500,
+        "rating_after": 1464.9,
+        "change": -35.09999999999991
+      },
+      {
+        "tournament": "20260920_pauper_dummy",
+        "date": "2026-06-04T10:42:32.439377",
+        "rank": 17,
+        "record": "1-4-0",
+        "points": 3,
+        "rating_before": 1464.9,
+        "rating_after": 1436.9,
+        "change": -28.0
+      }
+    ]
+  }
+}
