@@ -1,0 +1,150 @@
+{
+  "tournament_id": "20251301_pauper_lyngby",
+  "timestamp": "2026-06-04T11:07:30.012387",
+  "standings": [
+    {
+      "name": "Christian Hansen",
+      "rank": 1,
+      "points": 12,
+      "wins": 4,
+      "losses": 0,
+      "draws": 0,
+      "omw": "58.3%",
+      "gwp": "72.7%",
+      "ogwp": "58.1%",
+      "games": 4
+    },
+    {
+      "name": "Josef N",
+      "rank": 2,
+      "points": 9,
+      "wins": 3,
+      "losses": 1,
+      "draws": 0,
+      "omw": "62.5%",
+      "gwp": "77.8%",
+      "ogwp": "50.7%",
+      "games": 4
+    },
+    {
+      "name": "Freya Gade Ravnsborg",
+      "rank": 3,
+      "points": 9,
+      "wins": 3,
+      "losses": 1,
+      "draws": 0,
+      "omw": "58.3%",
+      "gwp": "70.0%",
+      "ogwp": "50.1%",
+      "games": 4
+    },
+    {
+      "name": "Frederikke Stejlgaard",
+      "rank": 4,
+      "points": 6,
+      "wins": 2,
+      "losses": 2,
+      "draws": 0,
+      "omw": "64.6%",
+      "gwp": "44.4%",
+      "ogwp": "58.2%",
+      "games": 4
+    },
+    {
+      "name": "Esben Roenne Green",
+      "rank": 5,
+      "points": 6,
+      "wins": 2,
+      "losses": 2,
+      "draws": 0,
+      "omw": "52.1%",
+      "gwp": "50.0%",
+      "ogwp": "51.4%",
+      "games": 4
+    },
+    {
+      "name": "Jonathan Mohr",
+      "rank": 6,
+      "points": 6,
+      "wins": 2,
+      "losses": 2,
+      "draws": 0,
+      "omw": "52.1%",
+      "gwp": "50.0%",
+      "ogwp": "50.6%",
+      "games": 4
+    },
+    {
+      "name": "Emma Gad",
+      "rank": 7,
+      "points": 6,
+      "wins": 2,
+      "losses": 2,
+      "draws": 0,
+      "omw": "52.1%",
+      "gwp": "40.0%",
+      "ogwp": "55.8%",
+      "games": 4
+    },
+    {
+      "name": "Nikolaj Rasmussen",
+      "rank": 8,
+      "points": 6,
+      "wins": 2,
+      "losses": 2,
+      "draws": 0,
+      "omw": "47.9%",
+      "gwp": "40.0%",
+      "ogwp": "50.3%",
+      "games": 4
+    },
+    {
+      "name": "Erik Christensen",
+      "rank": 9,
+      "points": 6,
+      "wins": 2,
+      "losses": 2,
+      "draws": 0,
+      "omw": "44.4%",
+      "gwp": "55.6%",
+      "ogwp": "43.3%",
+      "games": 4
+    },
+    {
+      "name": "Mads Dupont",
+      "rank": 10,
+      "points": 3,
+      "wins": 1,
+      "losses": 3,
+      "draws": 0,
+      "omw": "66.7%",
+      "gwp": "40.0%",
+      "ogwp": "54.2%",
+      "games": 4
+    },
+    {
+      "name": "eva carle",
+      "rank": 11,
+      "points": 3,
+      "wins": 1,
+      "losses": 3,
+      "draws": 0,
+      "omw": "50.0%",
+      "gwp": "40.0%",
+      "ogwp": "47.5%",
+      "games": 4
+    },
+    {
+      "name": "Marten Aun",
+      "rank": 12,
+      "points": 0,
+      "wins": 0,
+      "losses": 2,
+      "draws": 0,
+      "omw": "62.5%",
+      "gwp": "33.3%",
+      "ogwp": "55.0%",
+      "games": 2
+    }
+  ]
+}

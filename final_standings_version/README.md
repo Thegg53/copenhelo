@@ -1,78 +1,60 @@
-# Final Standings ELO System
+# ELO Rating System
 
-This folder contains an alternative ELO rating system that calculates ratings **from tournament final standings only**, without requiring round-by-round match data.
+Extract tournament standings from HTML, calculate ELO ratings, generate leaderboard.
+
+## Quick Start
+
+```bash
+# 1. Extract tournaments from HTML
+python extract_standings.py input/*.htm
+
+# 2. Calculate ratings
+python elo_calculator.py
+
+# 3. Generate leaderboard
+python leaderboard_generator.py
+```
+
+Output: `../dummy.html` with interactive player rankings + history.
 
 ## How It Works
 
-Uses a simplified USCF performance rating method:
+**Extract** → EventLink HTML to JSON standings  
+**Calculate** → USCF performance rating (K-factor 64, default 1500)  
+**Generate** → Interactive HTML leaderboard  
 
-1. **Extract final standings** from EventLink HTML tournament exports
-2. **Calculate field strength** by averaging opponent ratings (excluding the player)
-3. **Determine performance rating** - the rating that would explain the player's actual score
-4. **Update player rating** based on how far their performance rating is from their current rating
+Ratings process tournaments chronologically from `parsed_events.csv`. Dummy tournaments automatically excluded.
 
-### Key Formula
+## Key Files
 
-```
-Expected Score vs Field Avg = 1 / (1 + 10^((field_avg - rating) / 400))
-Performance Rating = Rating that would produce actual_score against field_avg
-New Rating = Current Rating + K * (Performance Rating - Current Rating) / 400
-```
+| File | Purpose |
+|------|---------|
+| `elo_calculator.py` | Calculates cumulative player ratings |
+| `leaderboard_generator.py` | Generates HTML output |
+| `extract_standings.py` | Parses HTML tournament files |
+| `parsed_events.csv` | Tracks processing state |
+| `output/players.json` | Player ratings + history |
 
 ## Configuration
 
-- **K-Factor**: 40 (bi-weekly tournaments with variable attendance)
-- **Default Rating**: 1500
-- **Penalties/Rewards**: 
-  - Good performance vs weak field = smaller gain
-  - Poor performance vs weak field = penalty
-  - Good performance vs strong field = bigger gain
+In `elo_calculator.py`:
+- `K_FACTOR = 64` — Rating volatility (higher = bigger swings)
+- `DEFAULT_RATING = 1500` — Starting rating
 
-## Usage
+## Data Reset
 
 ```bash
-cd /path/to/copenhelo
-python3 final_standings_version/elo_from_standings.py <path-to-standings-html> [tournament-name]
+# Clear everything for fresh calculation
+echo '{}' > output/players.json
+echo '{}' > output/tournaments.json
+# Edit parsed_events.csv: mark all as elo_calculated=no
 ```
 
-Or with a specific HTML file:
+Then run the quick start again.
 
-```python
-from final_standings_version.elo_from_standings import TournamentProcessor
+## Notes
 
-processor = TournamentProcessor(Path("final_standings_version/output/player_ratings.txt"))
-processor.process_tournament(
-    standings_html=Path("events/MyTournament.htm"),
-    tournament_name="My Tournament (2026-06-03)"
-)
-```
-
-## Output
-
-The script prints a table showing:
-- **Name**: Player name
-- **Rank**: Final placement
-- **Record**: W-L-D record
-- **Old Elo**: Rating before tournament
-- **Field Avg**: Average rating of opponents (excluding player)
-- **Perf**: Performance rating from this tournament
-- **New Elo**: Updated rating
-- **Change**: Rating adjustment
-
-Ratings are automatically saved to `output/player_ratings.txt` and used as baseline for the next tournament.
-
-## Advantages
-
-✅ Works with old tournaments where round data isn't available
-✅ Only needs final standings HTML
-✅ Field strength automatically factored in
-✅ Single consolidated update per tournament (more stable)
-✅ Progressive rating evolution across tournaments
-
-## Limitations
-
-⚠️ Assumes field average as opponent for all games (approximation)
-⚠️ Cannot see if a player played mostly top-8 vs bottom field
-⚠️ Doesn't capture individual match variation
-
-For more detailed match-level analysis, see the main ELO system in `scripts/elo_calculator.py`.
+- Field strength automatically adjusted (uses avg opponent rating)
+- Players start at 1500, evolve across tournaments
+- No minimum rating (can go below 1500)
+- Tournament order matters (must be chronological)

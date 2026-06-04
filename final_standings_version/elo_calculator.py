@@ -317,7 +317,7 @@ def load_tournaments_from_json(tournaments_file: Path) -> set:
         return set()
 
 
-def process_all_standings(events_dir: Path, output_dir: Path):
+def process_all_standings(events_dir: Path, output_dir: Path, exclude_dummy: bool = True):
     """
     Process all extracted standings files and calculate ratings.
     Skips tournaments that have already been processed.
@@ -325,6 +325,7 @@ def process_all_standings(events_dir: Path, output_dir: Path):
     Args:
         events_dir: Directory containing extracted standings JSON files
         output_dir: Directory to save output (players.json, tournaments.json)
+        exclude_dummy: If True, skip tournaments with 'dummy' in the name (default: True)
     """
     output_dir.mkdir(parents=True, exist_ok=True)
     
@@ -357,6 +358,12 @@ def process_all_standings(events_dir: Path, output_dir: Path):
                 data = json.load(f)
             
             tournament_id = data['tournament_id']
+            
+            # Skip dummy tournaments if exclude_dummy is True
+            if exclude_dummy and 'dummy' in tournament_id.lower():
+                print(f"Skipping: {tournament_id} (dummy tournament)")
+                skipped_count += 1
+                continue
             
             # Check if already processed
             if tournament_id in processed_tournaments:
