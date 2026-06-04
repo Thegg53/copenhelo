@@ -1,7 +1,8 @@
-.PHONY: help install run-parse run-elo run-standings-elo run-leaderboard run-players run-tournaments run recalculate
+.PHONY: help install run-parse run-elo run-standings-elo run-leaderboard run-players run-tournaments run recalculate final_standings_reset
 
 VENV_DIR := .venv
 PYTHON := $(VENV_DIR)/bin/python
+FSV := final_standings_version
 
 help:
 	@echo "Commands:"
@@ -11,6 +12,9 @@ help:
 	@echo "  make run-elo            - Calculate ratings only"
 	@echo "  make run-standings-elo  - Calculate ELO from final standings"
 	@echo "  make recalculate        - Clear data and recalculate from scratch"
+	@echo ""
+	@echo "Final Standings Version:"
+	@echo "  make final_standings_reset - Full pipeline (reset + extract + calculate + generate)"
 
 install: $(VENV_DIR)
 	@echo "✓ Virtual environment ready"
@@ -50,3 +54,15 @@ run: run-parse run-elo run-leaderboard run-players run-tournaments
 recalculate: $(VENV_DIR)
 	@echo "Recalculating ratings from scratch..."
 	$(PYTHON) scripts/recalculate_history.py
+
+final_standings_reset: $(VENV_DIR)
+	@echo "Resetting output files..."
+	@echo '{}' > $(FSV)/output/players.json
+	@echo '{}' > $(FSV)/output/tournaments.json
+	@echo "Extracting tournaments from HTML..."
+	cd $(FSV) && $(PYTHON) extract_standings.py ../input/*.htm 2>/dev/null || true
+	@echo "Calculating ELO ratings..."
+	cd $(FSV) && $(PYTHON) elo_calculator.py
+	@echo "Generating leaderboard..."
+	cd $(FSV) && $(PYTHON) leaderboard_generator.py
+	@echo "✓ Pipeline complete: dummy.html"

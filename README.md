@@ -14,6 +14,16 @@ make install
 
 This creates a Python virtual environment and installs dependencies.
 
+## Alternative: Final Standings Version
+
+For a simpler pipeline that works with **final standings only** (no round-by-round data needed):
+
+```bash
+make final_standings_reset
+```
+
+See [final_standings_version/README.md](final_standings_version/README.md) for details. This extracts from EventLink HTML, calculates cumulative ELO ratings, and generates an interactive leaderboard.
+
 ## Data Structure
 
 ### Input Format

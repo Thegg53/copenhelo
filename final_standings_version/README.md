@@ -4,6 +4,16 @@ Extract tournament standings from HTML, calculate ELO ratings, generate leaderbo
 
 ## Quick Start
 
+Run the full pipeline:
+
+```bash
+make final_standings_reset
+```
+
+This clears output, extracts all HTML tournaments, calculates ratings, and generates the leaderboard.
+
+Or run steps individually:
+
 ```bash
 # 1. Extract tournaments from HTML
 python extract_standings.py input/*.htm
