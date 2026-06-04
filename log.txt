@@ -41,3 +41,16 @@
 [2026-06-03T13:41:34.538278] Generated players page: players.html (9 players)
 [2026-06-03T13:41:34.839794] Starting tournaments page generation
 [2026-06-03T13:41:34.840216] Generated tournaments page: tournaments.html (1 tournaments)
+[2026-06-04T02:55:51.742665] Starting tournament parsing
+[2026-06-04T02:55:51.742777] Skipping tournament 20260530_pauper_baltzer (already parsed)
+[2026-06-04T02:55:51.742781] Tournament parsing complete: 0 processed, 1 skipped
+[2026-06-04T02:55:51.773326] Starting ELO calculation
+[2026-06-04T02:55:51.773450] Skipping tournament 20260530_pauper_baltzer (already processed)
+[2026-06-04T02:55:51.774395] ELO calculation complete: 0 processed, 1 skipped
+[2026-06-04T02:55:51.798031] Starting leaderboard generation
+[2026-06-04T02:55:51.798485] Generated leaderboard: leaderboard.html (9 players)
+[2026-06-04T02:55:51.798497] Leaderboard generation complete
+[2026-06-04T02:55:51.822401] Starting player pages generation
+[2026-06-04T02:55:51.823025] Generated players page: players.html (9 players)
+[2026-06-04T02:55:51.847080] Starting tournaments page generation
+[2026-06-04T02:55:51.847338] Generated tournaments page: tournaments.html (1 tournaments)
