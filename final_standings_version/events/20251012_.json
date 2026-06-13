@@ -1,0 +1,162 @@
+{
+  "tournament_id": "20251012_",
+  "timestamp": "2026-06-13T21:34:31.664818",
+  "standings": [
+    {
+      "name": "Marcus Wenzel",
+      "rank": 1,
+      "points": 12,
+      "wins": 4,
+      "losses": 0,
+      "draws": 0,
+      "omw": "50.0%",
+      "gwp": "88.9%",
+      "ogwp": "48.9%",
+      "games": 4
+    },
+    {
+      "name": "gui morgado",
+      "rank": 2,
+      "points": 9,
+      "wins": 3,
+      "losses": 1,
+      "draws": 0,
+      "omw": "60.4%",
+      "gwp": "66.7%",
+      "ogwp": "56.9%",
+      "games": 4
+    },
+    {
+      "name": "eva carle",
+      "rank": 3,
+      "points": 9,
+      "wins": 3,
+      "losses": 1,
+      "draws": 0,
+      "omw": "47.9%",
+      "gwp": "60.0%",
+      "ogwp": "47.5%",
+      "games": 4
+    },
+    {
+      "name": "Freya Gade Ravnsborg",
+      "rank": 4,
+      "points": 7,
+      "wins": 2,
+      "losses": 1,
+      "draws": 1,
+      "omw": "64.6%",
+      "gwp": "50.0%",
+      "ogwp": "63.6%",
+      "games": 4
+    },
+    {
+      "name": "Nikolaj Rasmussen",
+      "rank": 5,
+      "points": 7,
+      "wins": 2,
+      "losses": 1,
+      "draws": 1,
+      "omw": "60.4%",
+      "gwp": "55.6%",
+      "ogwp": "55.5%",
+      "games": 4
+    },
+    {
+      "name": "Patrick De haas Madsen",
+      "rank": 6,
+      "points": 6,
+      "wins": 2,
+      "losses": 2,
+      "draws": 0,
+      "omw": "61.1%",
+      "gwp": "50.0%",
+      "ogwp": "57.4%",
+      "games": 4
+    },
+    {
+      "name": "Emma Gad",
+      "rank": 7,
+      "points": 6,
+      "wins": 2,
+      "losses": 2,
+      "draws": 0,
+      "omw": "52.1%",
+      "gwp": "44.4%",
+      "ogwp": "55.3%",
+      "games": 4
+    },
+    {
+      "name": "Eva \u00d8sterby",
+      "rank": 8,
+      "points": 6,
+      "wins": 2,
+      "losses": 2,
+      "draws": 0,
+      "omw": "47.2%",
+      "gwp": "50.0%",
+      "ogwp": "46.3%",
+      "games": 4
+    },
+    {
+      "name": "Jonas Borglund",
+      "rank": 9,
+      "points": 6,
+      "wins": 2,
+      "losses": 2,
+      "draws": 0,
+      "omw": "44.4%",
+      "gwp": "55.6%",
+      "ogwp": "44.8%",
+      "games": 4
+    },
+    {
+      "name": "Leo Dyrkj\u00f8b",
+      "rank": 10,
+      "points": 6,
+      "wins": 2,
+      "losses": 2,
+      "draws": 0,
+      "omw": "43.8%",
+      "gwp": "60.0%",
+      "ogwp": "41.9%",
+      "games": 4
+    },
+    {
+      "name": "Jeppe Brohus",
+      "rank": 11,
+      "points": 3,
+      "wins": 1,
+      "losses": 3,
+      "draws": 0,
+      "omw": "68.8%",
+      "gwp": "33.3%",
+      "ogwp": "66.4%",
+      "games": 4
+    },
+    {
+      "name": "Christian Hansen",
+      "rank": 12,
+      "points": 3,
+      "wins": 1,
+      "losses": 3,
+      "draws": 0,
+      "omw": "64.6%",
+      "gwp": "45.5%",
+      "ogwp": "59.7%",
+      "games": 4
+    },
+    {
+      "name": "Jonathan Mohr",
+      "rank": 13,
+      "points": 3,
+      "wins": 1,
+      "losses": 3,
+      "draws": 0,
+      "omw": "58.3%",
+      "gwp": "40.0%",
+      "ogwp": "58.5%",
+      "games": 4
+    }
+  ]
+}

@@ -59,10 +59,12 @@ final_standings_reset: $(VENV_DIR)
 	@echo "Resetting output files..."
 	@echo '{}' > $(FSV)/output/players.json
 	@echo '{}' > $(FSV)/output/tournaments.json
+	@echo "Clearing parsed events cache..."
+	@echo "timestamp,tournament_id,players,htm_parsed_to_json,elo_calculated,file" > $(FSV)/events/parsed_events.csv
 	@echo "Extracting tournaments from HTML..."
-	cd $(FSV) && $(PYTHON) extract_standings.py ../input/*.htm 2>/dev/null || true
+	cd $(FSV) && ../$(PYTHON) extract_standings.py ./input/*.htm 2>/dev/null || true
 	@echo "Calculating ELO ratings..."
-	cd $(FSV) && $(PYTHON) elo_calculator.py $(if $(INCLUDE_DUMMY),--include-dummy,)
+	cd $(FSV) && ../$(PYTHON) elo_calculator.py
 	@echo "Generating leaderboard..."
-	cd $(FSV) && $(PYTHON) leaderboard_generator.py
+	cd $(FSV) && ../$(PYTHON) leaderboard_generator.py
 	@echo "✓ Pipeline complete: dummy.html"

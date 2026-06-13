@@ -1,0 +1,162 @@
+{
+  "tournament_id": "20260104",
+  "timestamp": "2026-06-13T21:34:31.855703",
+  "standings": [
+    {
+      "name": "Frederikke Stejlgaard",
+      "rank": 1,
+      "points": 12,
+      "wins": 4,
+      "losses": 0,
+      "draws": 0,
+      "omw": "62.5%",
+      "gwp": "72.7%",
+      "ogwp": "63.9%",
+      "games": 4
+    },
+    {
+      "name": "Erik Christensen",
+      "rank": 2,
+      "points": 9,
+      "wins": 3,
+      "losses": 1,
+      "draws": 0,
+      "omw": "64.6%",
+      "gwp": "66.7%",
+      "ogwp": "57.8%",
+      "games": 4
+    },
+    {
+      "name": "Milos Brandt",
+      "rank": 3,
+      "points": 9,
+      "wins": 3,
+      "losses": 1,
+      "draws": 0,
+      "omw": "58.3%",
+      "gwp": "77.8%",
+      "ogwp": "52.9%",
+      "games": 4
+    },
+    {
+      "name": "Jonas Borgland",
+      "rank": 4,
+      "points": 9,
+      "wins": 3,
+      "losses": 1,
+      "draws": 0,
+      "omw": "52.8%",
+      "gwp": "75.0%",
+      "ogwp": "51.9%",
+      "games": 4
+    },
+    {
+      "name": "Aslak Hansen",
+      "rank": 5,
+      "points": 6,
+      "wins": 2,
+      "losses": 2,
+      "draws": 0,
+      "omw": "69.4%",
+      "gwp": "55.6%",
+      "ogwp": "61.3%",
+      "games": 4
+    },
+    {
+      "name": "Nikolaj Rasmussen",
+      "rank": 6,
+      "points": 6,
+      "wins": 2,
+      "losses": 2,
+      "draws": 0,
+      "omw": "60.4%",
+      "gwp": "55.6%",
+      "ogwp": "53.6%",
+      "games": 4
+    },
+    {
+      "name": "Eva \u00d8sterby",
+      "rank": 7,
+      "points": 6,
+      "wins": 2,
+      "losses": 2,
+      "draws": 0,
+      "omw": "52.1%",
+      "gwp": "50.0%",
+      "ogwp": "50.3%",
+      "games": 4
+    },
+    {
+      "name": "Esben Roenne Green",
+      "rank": 8,
+      "points": 6,
+      "wins": 2,
+      "losses": 2,
+      "draws": 0,
+      "omw": "52.1%",
+      "gwp": "50.0%",
+      "ogwp": "47.5%",
+      "games": 4
+    },
+    {
+      "name": "Christian Hansen",
+      "rank": 9,
+      "points": 6,
+      "wins": 2,
+      "losses": 2,
+      "draws": 0,
+      "omw": "41.7%",
+      "gwp": "40.0%",
+      "ogwp": "41.7%",
+      "games": 4
+    },
+    {
+      "name": "Konrad  The Wise",
+      "rank": 10,
+      "points": 4,
+      "wins": 1,
+      "losses": 2,
+      "draws": 1,
+      "omw": "47.9%",
+      "gwp": "33.3%",
+      "ogwp": "50.0%",
+      "games": 4
+    },
+    {
+      "name": "Mads Dupont",
+      "rank": 11,
+      "points": 3,
+      "wins": 1,
+      "losses": 3,
+      "draws": 0,
+      "omw": "45.8%",
+      "gwp": "33.3%",
+      "ogwp": "44.7%",
+      "games": 4
+    },
+    {
+      "name": "Frederik Munch",
+      "rank": 12,
+      "points": 1,
+      "wins": 0,
+      "losses": 3,
+      "draws": 1,
+      "omw": "52.1%",
+      "gwp": "33.3%",
+      "ogwp": "51.0%",
+      "games": 4
+    },
+    {
+      "name": "Erika C",
+      "rank": 13,
+      "points": 0,
+      "wins": 0,
+      "losses": 2,
+      "draws": 0,
+      "omw": "62.5%",
+      "gwp": "33.3%",
+      "ogwp": "58.3%",
+      "games": 2
+    }
+  ]
+}

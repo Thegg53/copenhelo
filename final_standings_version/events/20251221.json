@@ -1,0 +1,90 @@
+{
+  "tournament_id": "20251221",
+  "timestamp": "2026-06-13T21:34:31.821757",
+  "standings": [
+    {
+      "name": "Freya Gade Ravnsborg",
+      "rank": 1,
+      "points": 12,
+      "wins": 4,
+      "losses": 0,
+      "draws": 0,
+      "omw": "56.3%",
+      "gwp": "72.7%",
+      "ogwp": "55.6%",
+      "games": 4
+    },
+    {
+      "name": "Leo Dyrkj\u00f8b",
+      "rank": 2,
+      "points": 9,
+      "wins": 3,
+      "losses": 1,
+      "draws": 0,
+      "omw": "62.5%",
+      "gwp": "77.8%",
+      "ogwp": "54.5%",
+      "games": 4
+    },
+    {
+      "name": "Jonas Borgland",
+      "rank": 3,
+      "points": 6,
+      "wins": 2,
+      "losses": 2,
+      "draws": 0,
+      "omw": "75.0%",
+      "gwp": "44.4%",
+      "ogwp": "68.7%",
+      "games": 4
+    },
+    {
+      "name": "Esben Roenne Green",
+      "rank": 4,
+      "points": 6,
+      "wins": 2,
+      "losses": 2,
+      "draws": 0,
+      "omw": "64.6%",
+      "gwp": "45.5%",
+      "ogwp": "61.3%",
+      "games": 4
+    },
+    {
+      "name": "Erik Christensen",
+      "rank": 5,
+      "points": 6,
+      "wins": 2,
+      "losses": 2,
+      "draws": 0,
+      "omw": "61.1%",
+      "gwp": "54.5%",
+      "ogwp": "52.7%",
+      "games": 4
+    },
+    {
+      "name": "Emma Gad",
+      "rank": 6,
+      "points": 6,
+      "wins": 2,
+      "losses": 2,
+      "draws": 0,
+      "omw": "52.8%",
+      "gwp": "55.6%",
+      "ogwp": "54.1%",
+      "games": 4
+    },
+    {
+      "name": "Christian Hansen",
+      "rank": 7,
+      "points": 3,
+      "wins": 1,
+      "losses": 3,
+      "draws": 0,
+      "omw": "50.0%",
+      "gwp": "40.0%",
+      "ogwp": "51.9%",
+      "games": 4
+    }
+  ]
+}

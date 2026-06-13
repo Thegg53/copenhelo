@@ -1,0 +1,78 @@
+{
+  "tournament_id": "20260215",
+  "timestamp": "2026-06-13T21:34:31.923081",
+  "standings": [
+    {
+      "name": "Christian Hansen",
+      "rank": 1,
+      "points": 9,
+      "wins": 3,
+      "losses": 0,
+      "draws": 0,
+      "omw": "44.4%",
+      "gwp": "75.0%",
+      "ogwp": "46.2%",
+      "games": 3
+    },
+    {
+      "name": "Emma Gad",
+      "rank": 2,
+      "points": 6,
+      "wins": 2,
+      "losses": 1,
+      "draws": 0,
+      "omw": "66.7%",
+      "gwp": "62.5%",
+      "ogwp": "56.9%",
+      "games": 3
+    },
+    {
+      "name": "Erik Christensen",
+      "rank": 3,
+      "points": 6,
+      "wins": 2,
+      "losses": 1,
+      "draws": 0,
+      "omw": "44.4%",
+      "gwp": "62.5%",
+      "ogwp": "43.1%",
+      "games": 3
+    },
+    {
+      "name": "Esben Roenne Green",
+      "rank": 4,
+      "points": 3,
+      "wins": 1,
+      "losses": 2,
+      "draws": 0,
+      "omw": "55.6%",
+      "gwp": "33.3%",
+      "ogwp": "56.0%",
+      "games": 3
+    },
+    {
+      "name": "Aksel Johansen",
+      "rank": 5,
+      "points": 3,
+      "wins": 1,
+      "losses": 2,
+      "draws": 0,
+      "omw": "55.6%",
+      "gwp": "42.9%",
+      "ogwp": "47.2%",
+      "games": 3
+    },
+    {
+      "name": "gui morgado",
+      "rank": 6,
+      "points": 0,
+      "wins": 0,
+      "losses": 3,
+      "draws": 0,
+      "omw": "66.7%",
+      "gwp": "33.3%",
+      "ogwp": "60.1%",
+      "games": 3
+    }
+  ]
+}

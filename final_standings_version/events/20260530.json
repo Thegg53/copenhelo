@@ -1,0 +1,114 @@
+{
+  "tournament_id": "20260530",
+  "timestamp": "2026-06-13T21:34:32.125176",
+  "standings": [
+    {
+      "name": "Erik Christensen",
+      "rank": 1,
+      "points": 9,
+      "wins": 3,
+      "losses": 1,
+      "draws": 0,
+      "omw": "66.7%",
+      "gwp": "66.7%",
+      "ogwp": "61.6%",
+      "games": 4
+    },
+    {
+      "name": "Jonas Borgland",
+      "rank": 2,
+      "points": 9,
+      "wins": 3,
+      "losses": 1,
+      "draws": 0,
+      "omw": "58.3%",
+      "gwp": "63.6%",
+      "ogwp": "58.6%",
+      "games": 4
+    },
+    {
+      "name": "Casper Albrektsen",
+      "rank": 3,
+      "points": 9,
+      "wins": 3,
+      "losses": 1,
+      "draws": 0,
+      "omw": "56.3%",
+      "gwp": "66.7%",
+      "ogwp": "55.3%",
+      "games": 4
+    },
+    {
+      "name": "Josef-Nam Nguyen",
+      "rank": 4,
+      "points": 6,
+      "wins": 2,
+      "losses": 2,
+      "draws": 0,
+      "omw": "68.8%",
+      "gwp": "54.5%",
+      "ogwp": "61.7%",
+      "games": 4
+    },
+    {
+      "name": "Eva \u00d8sterby",
+      "rank": 5,
+      "points": 6,
+      "wins": 2,
+      "losses": 2,
+      "draws": 0,
+      "omw": "56.3%",
+      "gwp": "50.0%",
+      "ogwp": "55.3%",
+      "games": 4
+    },
+    {
+      "name": "Edoardo Cravero",
+      "rank": 6,
+      "points": 6,
+      "wins": 2,
+      "losses": 2,
+      "draws": 0,
+      "omw": "52.7%",
+      "gwp": "50.0%",
+      "ogwp": "50.0%",
+      "games": 4
+    },
+    {
+      "name": "Gregoire  Sanguinetti",
+      "rank": 7,
+      "points": 6,
+      "wins": 2,
+      "losses": 2,
+      "draws": 0,
+      "omw": "52.0%",
+      "gwp": "54.5%",
+      "ogwp": "49.2%",
+      "games": 4
+    },
+    {
+      "name": "Mads thode schultz",
+      "rank": 8,
+      "points": 6,
+      "wins": 2,
+      "losses": 2,
+      "draws": 0,
+      "omw": "45.8%",
+      "gwp": "50.0%",
+      "ogwp": "48.1%",
+      "games": 4
+    },
+    {
+      "name": "Christoffer Nielsen",
+      "rank": 9,
+      "points": 3,
+      "wins": 1,
+      "losses": 3,
+      "draws": 0,
+      "omw": "50.0%",
+      "gwp": "33.3%",
+      "ogwp": "51.5%",
+      "games": 4
+    }
+  ]
+}

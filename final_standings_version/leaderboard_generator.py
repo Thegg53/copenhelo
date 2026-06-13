@@ -39,10 +39,19 @@ def generate_leaderboard(output_file: Path):
         # Generate history table HTML
         history_rows = []
         for event in history:
+            # Extract date from tournament ID (first 8 chars: YYYYMMDD)
+            tournament_id = event['tournament']
+            date_str = tournament_id[:8]
+            try:
+                date_obj = datetime.strptime(date_str, '%Y%m%d')
+                formatted_date = date_obj.strftime('%Y-%m-%d')
+            except ValueError:
+                formatted_date = date_str
+            
             history_rows.append(f"""
           <tr>
             <td>{event['tournament']}</td>
-            <td>{event['date'][:10]}</td>
+            <td>{formatted_date}</td>
             <td>{event['rank']}</td>
             <td>{event['record']}</td>
             <td>{event['points']}</td>
