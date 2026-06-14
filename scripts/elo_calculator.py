@@ -47,13 +47,14 @@ class ELOCalculator:
 class TournamentDataProcessor:
     """Process tournament data and calculate ratings."""
     
-    def __init__(self, output_dir: Path, log_func=None):
+    def __init__(self, output_dir: Path, opt_in_set: set = None, log_func=None):
         self.output_dir = output_dir
         self.output_dir.mkdir(parents=True, exist_ok=True)
         self.players_file = output_dir / 'players.json'
         self.tournaments_file = output_dir / 'tournaments.json'
         self.log_buffer = []  # Buffer for logs
         self.log_func = log_func or self._default_log
+        self.opted_in_players = opt_in_set or set()  # Set of players who opted in
         
         self.players: Dict[str, Dict] = self._load_or_init_players()
         self.tournaments: Dict[str, Dict] = self._load_or_init_tournaments()
@@ -144,6 +145,10 @@ class TournamentDataProcessor:
                     p1_rating_before = self.players[p1_name]['rating']
                     p2_rating_before = self.players[p2_name]['rating']
                     
+                    # Check if opponent has opted in - use 1500 if not
+                    p1_opponent_rating = p2_rating_before if p2_name in self.opted_in_players else ELOCalculator.DEFAULT_RATING
+                    p2_opponent_rating = p1_rating_before if p1_name in self.opted_in_players else ELOCalculator.DEFAULT_RATING
+                    
                     # Determine scores (1.0 = win, 0.0 = loss, 0.5 = draw)
                     p1_wins, p2_wins = result
                     if p1_wins > p2_wins:
@@ -160,15 +165,15 @@ class TournamentDataProcessor:
                         p2_score = 0.5
                         result_code = 'D'
                     
-                    # Calculate new ratings
+                    # Calculate new ratings using opponent's rating (1500 if not opted in)
                     p1_new_rating = ELOCalculator.calculate_new_rating(
                         p1_rating_before,
-                        p2_rating_before,
+                        p1_opponent_rating,
                         p1_score
                     )
                     p2_new_rating = ELOCalculator.calculate_new_rating(
                         p2_rating_before,
-                        p1_rating_before,
+                        p2_opponent_rating,
                         p2_score
                     )
                     
@@ -221,9 +226,21 @@ class TournamentDataProcessor:
                     })
     
     def save(self):
-        """Save player and tournament data to JSON files."""
+        """Save player and tournament data to JSON files.
+        Only includes players who have opted in."""
+        # Filter players to only include those who opted in
+        filtered_players = {
+            name: data for name, data in self.players.items()
+            if name in self.opted_in_players
+        }
+        
+        # Log filtering info
+        if len(filtered_players) < len(self.players):
+            filtered_out = len(self.players) - len(filtered_players)
+            self.log(f"Filtering: {filtered_out} non-opted-in players excluded from output")
+        
         with open(self.players_file, 'w') as f:
-            json.dump(self.players, f, indent=2, default=str)
+            json.dump(filtered_players, f, indent=2, default=str)
         
         with open(self.tournaments_file, 'w') as f:
             json.dump(self.tournaments, f, indent=2, default=str)
@@ -249,8 +266,17 @@ def main():
     events_dir = repo_root / 'events'
     output_dir = repo_root / 'output'
     log_file = repo_root / 'log.txt'
+    opt_in_file = repo_root / 'input' / 'opt_in.csv'
     
-    processor = TournamentDataProcessor(output_dir)
+    # Load opt-in list
+    opted_in_players = set()
+    if opt_in_file.exists():
+        with open(opt_in_file, 'r') as f:
+            opted_in_players = {line.strip() for line in f if line.strip()}
+    else:
+        print(f"Warning: {opt_in_file} not found. All players will be treated as opted in.")
+    
+    processor = TournamentDataProcessor(output_dir, opt_in_set=opted_in_players)
     
     processor.log("Starting ELO calculation")
     

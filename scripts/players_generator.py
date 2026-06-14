@@ -13,11 +13,12 @@ from typing import List, Dict
 class PlayersGenerator:
     """Generate detailed player pages with match history."""
     
-    def __init__(self, output_dir: Path, log_file: Path = None):
+    def __init__(self, output_dir: Path, log_file: Path = None, opted_in_players: set = None):
         self.output_dir = output_dir
         self.players_file = output_dir / 'players.json'
         self.log_file = log_file or Path('log.txt')
         self.log_buffer = []
+        self.opted_in_players = opted_in_players or set()
     
     def log(self, message: str):
         """Buffer message to be logged at end."""
@@ -62,6 +63,9 @@ class PlayersGenerator:
         history = player.get('history', [])
         for match in history:
             opponent = match['opponent']
+            # Hide opponent name if they haven't opted in
+            if opponent not in self.opted_in_players:
+                opponent = "Hidden Opponent"
             result = match['result_code']
             rating_change = match['rating_change']
             new_rating = match['rating_after']
@@ -400,8 +404,15 @@ def main():
     repo_root = Path(__file__).parent.parent
     output_dir = repo_root / 'output'
     log_file = repo_root / 'log.txt'
+    opt_in_file = repo_root / 'input' / 'opt_in.csv'
     
-    generator = PlayersGenerator(output_dir, log_file)
+    # Load opted-in players
+    opted_in_players = set()
+    if opt_in_file.exists():
+        with open(opt_in_file, 'r') as f:
+            opted_in_players = {line.strip() for line in f if line.strip()}
+    
+    generator = PlayersGenerator(output_dir, log_file, opted_in_players)
     generator.log("Starting player pages generation")
     generator.generate()
     generator.log("Player pages generation complete")

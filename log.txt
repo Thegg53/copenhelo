@@ -54,50 +54,117 @@
 [2026-06-04T02:55:51.823025] Generated players page: players.html (9 players)
 [2026-06-04T02:55:51.847080] Starting tournaments page generation
 [2026-06-04T02:55:51.847338] Generated tournaments page: tournaments.html (1 tournaments)
-[2026-06-14T02:53:56.433536] Starting tournament parsing
-[2026-06-14T02:53:56.433691] Skipping tournament 20260530_pauper_baltzer (already parsed)
-[2026-06-14T02:53:56.433702] Parsing tournament: 20260606_pauper_lyngby
-[2026-06-14T02:53:56.447589]   Parsed round 1: 6 matches
-[2026-06-14T02:53:56.461091]   Parsed round 2: 6 matches
-[2026-06-14T02:53:56.473569]   Parsed round 3: 6 matches
-[2026-06-14T02:53:56.485787]   Parsed round 4: 6 matches
-[2026-06-14T02:53:56.486329] Parsed tournament 20260606_pauper_lyngby: 4 rounds, 24 matches -> events/20260606_pauper_lyngby.json
-[2026-06-14T02:53:56.486337] Tournament parsing complete: 1 processed, 1 skipped
-[2026-06-14T02:53:56.528393] Starting ELO calculation
-[2026-06-14T02:53:56.528559] Skipping tournament 20260530_pauper_baltzer (already processed)
-[2026-06-14T02:53:56.528633] Processing tournament: 20260606_pauper_lyngby
-[2026-06-14T02:53:56.528666]     Olav Joergensen (W) Thor Weis [+16.0 -16.0]
-[2026-06-14T02:53:56.528681]     Eva Østerby (W) Gregoire  Sanguinetti [+15.7 -15.7]
-[2026-06-14T02:53:56.528695]     Stefan Leone (W) gui morgado [+16.0 -16.0]
-[2026-06-14T02:53:56.528706]     Alexander Graulund (W) Mads Dupont [+16.0 -16.0]
-[2026-06-14T02:53:56.528718]     Jonathan Mohr (L) Esben Roenne Green [-16.0 +16.0]
-[2026-06-14T02:53:56.528728]     Erika C (W) Erik Christensen [+16.9 -16.9]
-[2026-06-14T02:53:56.528733]   Round 1: 6 matches
-[2026-06-14T02:53:56.528747]     Erik Christensen (L) gui morgado [-16.9 +16.9]
-[2026-06-14T02:53:56.528757]     Olav Joergensen (W) Stefan Leone [+16.0 -16.0]
-[2026-06-14T02:53:56.528766]     Eva Østerby (L) Alexander Graulund [-16.2 +16.2]
-[2026-06-14T02:53:56.528776]     Jonathan Mohr (L) Thor Weis [-16.0 +16.0]
-[2026-06-14T02:53:56.528785]     Gregoire  Sanguinetti (L) Mads Dupont [-15.9 +15.9]
-[2026-06-14T02:53:56.528792]     Esben Roenne Green (L) Erika C [-16.0 +16.0]
-[2026-06-14T02:53:56.528796]   Round 2: 6 matches
-[2026-06-14T02:53:56.528804]     Erik Christensen (L) Gregoire  Sanguinetti [-16.9 +16.9]
-[2026-06-14T02:53:56.528811]     Alexander Graulund (W) Stefan Leone [+14.5 -14.5]
-[2026-06-14T02:53:56.528818]     Thor Weis (W) Esben Roenne Green [+16.0 -16.0]
-[2026-06-14T02:53:56.528824]     Mads Dupont (W) gui morgado [+16.0 -16.0]
-[2026-06-14T02:53:56.528831]     Eva Østerby (L) Jonathan Mohr [-17.6 +17.6]
-[2026-06-14T02:53:56.528837]     Erika C (L) Olav Joergensen [-16.0 +16.0]
-[2026-06-14T02:53:56.528843]   Round 3: 6 matches
-[2026-06-14T02:53:56.528850]     Gregoire  Sanguinetti (W) Jonathan Mohr [+16.1 -16.1]
-[2026-06-14T02:53:56.528857]     Olav Joergensen (W) Alexander Graulund [+15.9 -15.9]
-[2026-06-14T02:53:56.528863]     Mads Dupont (L) Stefan Leone [-17.4 +17.4]
-[2026-06-14T02:53:56.528872]     Esben Roenne Green (W) Eva Østerby [+16.1 -16.1]
-[2026-06-14T02:53:56.528879]     Thor Weis (W) Erika C [+16.0 -16.0]
-[2026-06-14T02:53:56.528884]   Round 4: 6 matches
-[2026-06-14T02:53:56.531207] ELO calculation complete: 1 processed, 1 skipped
-[2026-06-14T02:53:56.561957] Starting leaderboard generation
-[2026-06-14T02:53:56.562807] Generated leaderboard: leaderboard.html (18 players)
-[2026-06-14T02:53:56.562834] Leaderboard generation complete
-[2026-06-14T02:53:56.593844] Starting player pages generation
-[2026-06-14T02:53:56.594933] Generated players page: players.html (18 players)
-[2026-06-14T02:53:56.626884] Starting tournaments page generation
-[2026-06-14T02:53:56.627463] Generated tournaments page: tournaments.html (2 tournaments)
+[2026-06-14T12:19:12.857340] Starting tournament parsing
+[2026-06-14T12:19:12.857912] Skipping tournament 20260530_pauper_baltzer (already parsed)
+[2026-06-14T12:19:12.857951] Parsing tournament: 20260606_pauper_lyngby
+[2026-06-14T12:19:12.906493]   Parsed round 1: 6 matches
+[2026-06-14T12:19:12.959315]   Parsed round 2: 6 matches
+[2026-06-14T12:19:13.012179]   Parsed round 3: 6 matches
+[2026-06-14T12:19:13.060877]   Parsed round 4: 6 matches
+[2026-06-14T12:19:13.062650] Parsed tournament 20260606_pauper_lyngby: 4 rounds, 24 matches -> events/20260606_pauper_lyngby.json
+[2026-06-14T12:19:13.062723] Tournament parsing complete: 1 processed, 1 skipped
+[2026-06-14T12:19:21.155445] ============================================================
+[2026-06-14T12:19:21.155524] RECALCULATING HISTORY FROM SCRATCH
+[2026-06-14T12:19:21.155542] ============================================================
+[2026-06-14T12:19:21.156368] Found 2 tournament(s)
+[2026-06-14T12:19:21.159655] Cleared existing player and tournament data
+[2026-06-14T12:19:21.159913] Processing tournament: 20260530_pauper_baltzer
+[2026-06-14T12:19:21.160239]   Round 1: 5 matches
+[2026-06-14T12:19:21.160450]   Round 2: 5 matches
+[2026-06-14T12:19:21.160702]   Round 3: 5 matches
+[2026-06-14T12:19:21.160867]   Round 4: 5 matches
+[2026-06-14T12:19:21.161174] Processing tournament: 20260606_pauper_lyngby
+[2026-06-14T12:19:21.161473]   Round 1: 6 matches
+[2026-06-14T12:19:21.161765]   Round 2: 6 matches
+[2026-06-14T12:19:21.162051]   Round 3: 6 matches
+[2026-06-14T12:19:21.162244]   Round 4: 6 matches
+[2026-06-14T12:19:21.171844] Recalculation complete!
+[2026-06-14T12:19:21.171891]   Tournaments processed: 2
+[2026-06-14T12:19:21.171922]   Players in database: 18
+[2026-06-14T12:19:21.171935] ============================================================
+[2026-06-14T12:19:29.332960] Starting tournament parsing
+[2026-06-14T12:19:29.333471] Skipping tournament 20260530_pauper_baltzer (already parsed)
+[2026-06-14T12:19:29.333535] Skipping tournament 20260606_pauper_lyngby (already parsed)
+[2026-06-14T12:19:29.333576] Tournament parsing complete: 0 processed, 2 skipped
+[2026-06-14T12:19:29.472249] Starting ELO calculation
+[2026-06-14T12:19:29.472979] Skipping tournament 20260530_pauper_baltzer (already processed)
+[2026-06-14T12:19:29.473034] Skipping tournament 20260606_pauper_lyngby (already processed)
+[2026-06-14T12:19:29.483867] ELO calculation complete: 0 processed, 2 skipped
+[2026-06-14T12:19:29.601475] Starting leaderboard generation
+[2026-06-14T12:19:29.604158] Generated leaderboard: leaderboard.html (18 players)
+[2026-06-14T12:19:29.604313] Leaderboard generation complete
+[2026-06-14T12:19:29.700700] Starting player pages generation
+[2026-06-14T12:19:29.703957] Generated players page: players.html (18 players)
+[2026-06-14T12:19:29.801683] Starting tournaments page generation
+[2026-06-14T12:19:29.802888] Generated tournaments page: tournaments.html (2 tournaments)
+[2026-06-14T12:21:54.173785] ============================================================
+[2026-06-14T12:21:54.173837] RECALCULATING HISTORY FROM SCRATCH
+[2026-06-14T12:21:54.173854] ============================================================
+[2026-06-14T12:21:54.174102] Loaded 8 opted-in players from opt_in.csv
+[2026-06-14T12:21:54.174920] Found 2 tournament(s)
+[2026-06-14T12:21:54.176681] Cleared existing player and tournament data
+[2026-06-14T12:21:54.176915] Processing tournament: 20260530_pauper_baltzer
+[2026-06-14T12:21:54.177262]   Round 1: 5 matches
+[2026-06-14T12:21:54.177504]   Round 2: 5 matches
+[2026-06-14T12:21:54.177753]   Round 3: 5 matches
+[2026-06-14T12:21:54.177973]   Round 4: 5 matches
+[2026-06-14T12:21:54.178258] Processing tournament: 20260606_pauper_lyngby
+[2026-06-14T12:21:54.178582]   Round 1: 6 matches
+[2026-06-14T12:21:54.178831]   Round 2: 6 matches
+[2026-06-14T12:21:54.179130]   Round 3: 6 matches
+[2026-06-14T12:21:54.179357]   Round 4: 6 matches
+[2026-06-14T12:21:54.183991] Recalculation complete!
+[2026-06-14T12:21:54.184031]   Tournaments processed: 2
+[2026-06-14T12:21:54.184055]   Total players calculated: 18
+[2026-06-14T12:21:54.184071]   Players in output (opted-in): 8
+[2026-06-14T12:21:54.184085] ============================================================
+[2026-06-14T12:22:02.963589] Starting tournament parsing
+[2026-06-14T12:22:02.964004] Skipping tournament 20260530_pauper_baltzer (already parsed)
+[2026-06-14T12:22:02.964042] Skipping tournament 20260606_pauper_lyngby (already parsed)
+[2026-06-14T12:22:02.964076] Tournament parsing complete: 0 processed, 2 skipped
+[2026-06-14T12:22:03.108984] Starting ELO calculation
+[2026-06-14T12:22:03.109795] Skipping tournament 20260530_pauper_baltzer (already processed)
+[2026-06-14T12:22:03.109851] Skipping tournament 20260606_pauper_lyngby (already processed)
+[2026-06-14T12:22:03.114435] ELO calculation complete: 0 processed, 2 skipped
+[2026-06-14T12:22:03.219991] Starting leaderboard generation
+[2026-06-14T12:22:03.221372] Generated leaderboard: leaderboard.html (3 players)
+[2026-06-14T12:22:03.221446] Leaderboard generation complete
+[2026-06-14T12:22:03.326817] Starting player pages generation
+[2026-06-14T12:22:03.328449] Generated players page: players.html (3 players)
+[2026-06-14T12:22:03.425165] Starting tournaments page generation
+[2026-06-14T12:22:03.426476] Generated tournaments page: tournaments.html (2 tournaments)
+[2026-06-14T12:23:13.588308] ============================================================
+[2026-06-14T12:23:13.588377] RECALCULATING HISTORY FROM SCRATCH
+[2026-06-14T12:23:13.588401] ============================================================
+[2026-06-14T12:23:13.588684] Loaded 8 opted-in players from opt_in.csv
+[2026-06-14T12:23:13.589283] Found 2 tournament(s)
+[2026-06-14T12:23:13.590303] Cleared existing player and tournament data
+[2026-06-14T12:23:13.590556] Processing tournament: 20260530_pauper_baltzer
+[2026-06-14T12:23:13.590859]   Round 1: 5 matches
+[2026-06-14T12:23:13.591068]   Round 2: 5 matches
+[2026-06-14T12:23:13.591251]   Round 3: 5 matches
+[2026-06-14T12:23:13.591427]   Round 4: 5 matches
+[2026-06-14T12:23:13.591704] Processing tournament: 20260606_pauper_lyngby
+[2026-06-14T12:23:13.592045]   Round 1: 6 matches
+[2026-06-14T12:23:13.592360]   Round 2: 6 matches
+[2026-06-14T12:23:13.592845]   Round 3: 6 matches
+[2026-06-14T12:23:13.593114]   Round 4: 6 matches
+[2026-06-14T12:23:13.596795] Recalculation complete!
+[2026-06-14T12:23:13.596847]   Tournaments processed: 2
+[2026-06-14T12:23:13.596870]   Total players calculated: 18
+[2026-06-14T12:23:13.596887]   Players in output (opted-in): 8
+[2026-06-14T12:23:13.596903] ============================================================
+[2026-06-14T12:24:10.009993] Starting leaderboard generation
+[2026-06-14T12:24:10.011441] Generated leaderboard: leaderboard.html (3 players)
+[2026-06-14T12:24:10.011539] Leaderboard generation complete
+[2026-06-14T12:24:10.108252] Starting player pages generation
+[2026-06-14T12:24:10.109988] Generated players page: players.html (3 players)
+[2026-06-14T12:24:10.204337] Starting tournaments page generation
+[2026-06-14T12:24:10.205545] Generated tournaments page: tournaments.html (2 tournaments)
+[2026-06-14T12:26:18.535947] Starting leaderboard generation
+[2026-06-14T12:26:18.537689] Generated leaderboard: leaderboard.html (3 players)
+[2026-06-14T12:26:18.537776] Leaderboard generation complete
+[2026-06-14T12:26:18.653403] Starting player pages generation
+[2026-06-14T12:26:18.654904] Generated players page: players.html (3 players)
+[2026-06-14T12:26:18.761691] Starting tournaments page generation
+[2026-06-14T12:26:18.763005] Generated tournaments page: tournaments.html (2 tournaments)

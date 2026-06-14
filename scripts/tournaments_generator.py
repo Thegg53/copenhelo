@@ -13,11 +13,12 @@ from typing import List, Dict
 class TournamentsGenerator:
     """Generate detailed tournament pages with match results."""
     
-    def __init__(self, output_dir: Path, log_file: Path = None):
+    def __init__(self, output_dir: Path, log_file: Path = None, opted_in_players: set = None):
         self.output_dir = output_dir
         self.tournaments_file = output_dir / 'tournaments.json'
         self.log_file = log_file or Path('log.txt')
         self.log_buffer = []
+        self.opted_in_players = opted_in_players or set()
     
     def log(self, message: str):
         """Buffer message to be logged at end."""
@@ -117,7 +118,15 @@ class TournamentsGenerator:
             match_rows = []
             for match in matches:
                 player1 = match.get('player1', 'Unknown')
+                # Hide player1 name if they haven't opted in
+                if player1 not in self.opted_in_players:
+                    player1 = "Hidden Player"
+                
                 player2 = match.get('player2', 'BYE' if match.get('has_bye') else 'Unknown')
+                # Hide player2 name if they haven't opted in
+                if player2 != 'BYE' and player2 not in self.opted_in_players:
+                    player2 = "Hidden Player"
+                
                 result = match.get('result')
                 
                 # Handle None results
@@ -411,8 +420,15 @@ def main():
     repo_root = Path(__file__).parent.parent
     output_dir = repo_root / 'output'
     log_file = repo_root / 'log.txt'
+    opt_in_file = repo_root / 'input' / 'opt_in.csv'
     
-    generator = TournamentsGenerator(output_dir, log_file)
+    # Load opted-in players
+    opted_in_players = set()
+    if opt_in_file.exists():
+        with open(opt_in_file, 'r') as f:
+            opted_in_players = {line.strip() for line in f if line.strip()}
+    
+    generator = TournamentsGenerator(output_dir, log_file, opted_in_players)
     generator.log("Starting tournaments page generation")
     generator.generate()
     generator.log("Tournaments page generation complete")

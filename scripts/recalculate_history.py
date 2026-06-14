@@ -17,13 +17,7 @@ def main():
     events_dir = repo_root / 'events'
     output_dir = repo_root / 'output'
     log_file = repo_root / 'log.txt'
-    
-def main():
-    """Main entry point."""
-    repo_root = Path(__file__).parent.parent
-    events_dir = repo_root / 'events'
-    output_dir = repo_root / 'output'
-    log_file = repo_root / 'log.txt'
+    opt_in_file = repo_root / 'input' / 'opt_in.csv'
     
     log_buffer = []
     
@@ -47,6 +41,15 @@ def main():
     log_message("RECALCULATING HISTORY FROM SCRATCH")
     log_message("=" * 60)
     
+    # Load opt-in list
+    opted_in_players = set()
+    if opt_in_file.exists():
+        with open(opt_in_file, 'r') as f:
+            opted_in_players = {line.strip() for line in f if line.strip()}
+        log_message(f"Loaded {len(opted_in_players)} opted-in players from opt_in.csv")
+    else:
+        log_message(f"Warning: {opt_in_file} not found. All players will be treated as opted in.")
+    
     # Find all tournament JSON files
     if not events_dir.exists():
         log_message("Error: events/ directory not found.")
@@ -62,7 +65,7 @@ def main():
     log_message(f"Found {len(tournament_files)} tournament(s)")
     
     # Create fresh processor (will load existing data but we'll clear it)
-    processor = TournamentDataProcessor(output_dir, log_func=log_message)
+    processor = TournamentDataProcessor(output_dir, opt_in_set=opted_in_players, log_func=log_message)
     
     # Clear all existing data
     processor.players = {}
@@ -106,7 +109,8 @@ def main():
     # Summary
     log_message(f"Recalculation complete!")
     log_message(f"  Tournaments processed: {processed_count}")
-    log_message(f"  Players in database: {len(processor.players)}")
+    log_message(f"  Total players calculated: {len(processor.players)}")
+    log_message(f"  Players in output (opted-in): {len(processor.opted_in_players)}")
     log_message("=" * 60)
     
     flush_logs()
