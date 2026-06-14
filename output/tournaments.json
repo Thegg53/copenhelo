@@ -1,13 +1,14 @@
 {
   "20260530_pauper_baltzer": {
     "id": "20260530_pauper_baltzer",
+    "created_at": "2026-06-14T12:36:04.616142",
     "rounds": {
       "1": {
         "matches": [
           {
             "table": "1",
-            "player1": "Mads thode schultz",
-            "player2": "Christoffer Nielsen",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
             "result": [
               2,
               0
@@ -16,7 +17,7 @@
           },
           {
             "table": "2",
-            "player1": "Josef-Nam Nguyen",
+            "player1": "Hidden Player",
             "player2": "Erik Christensen",
             "result": [
               2,
@@ -26,8 +27,8 @@
           },
           {
             "table": "3",
-            "player1": "Casper Albrektsen",
-            "player2": "Edoardo Cravero",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
             "result": [
               2,
               0
@@ -36,7 +37,7 @@
           },
           {
             "table": "4",
-            "player1": "Gregoire  Sanguinetti",
+            "player1": "Hidden Player",
             "player2": "Eva \u00d8sterby",
             "result": [
               2,
@@ -46,20 +47,20 @@
           },
           {
             "table": null,
-            "player1": "Jonas Borgland",
+            "player1": "Hidden Player",
             "player2": null,
             "result": null,
             "has_bye": true
           }
         ],
-        "processed_at": "2026-06-14T12:23:13.590610"
+        "processed_at": "2026-06-14T12:36:04.616156"
       },
       "2": {
         "matches": [
           {
             "table": "1",
-            "player1": "Gregoire  Sanguinetti",
-            "player2": "Jonas Borgland",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
             "result": [
               1,
               2
@@ -68,8 +69,8 @@
           },
           {
             "table": "2",
-            "player1": "Josef-Nam Nguyen",
-            "player2": "Mads thode schultz",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
             "result": [
               2,
               1
@@ -78,7 +79,7 @@
           },
           {
             "table": "3",
-            "player1": "Casper Albrektsen",
+            "player1": "Hidden Player",
             "player2": "Eva \u00d8sterby",
             "result": [
               2,
@@ -88,8 +89,8 @@
           },
           {
             "table": "4",
-            "player1": "Edoardo Cravero",
-            "player2": "Christoffer Nielsen",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
             "result": [
               2,
               1
@@ -104,14 +105,14 @@
             "has_bye": true
           }
         ],
-        "processed_at": "2026-06-14T12:23:13.590881"
+        "processed_at": "2026-06-14T12:36:04.616554"
       },
       "3": {
         "matches": [
           {
             "table": "1",
-            "player1": "Josef-Nam Nguyen",
-            "player2": "Jonas Borgland",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
             "result": [
               1,
               2
@@ -120,7 +121,7 @@
           },
           {
             "table": "2",
-            "player1": "Casper Albrektsen",
+            "player1": "Hidden Player",
             "player2": "Erik Christensen",
             "result": [
               0,
@@ -130,8 +131,8 @@
           },
           {
             "table": "3",
-            "player1": "Gregoire  Sanguinetti",
-            "player2": "Mads thode schultz",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
             "result": [
               1,
               2
@@ -140,7 +141,7 @@
           },
           {
             "table": "4",
-            "player1": "Edoardo Cravero",
+            "player1": "Hidden Player",
             "player2": "Eva \u00d8sterby",
             "result": [
               1,
@@ -150,19 +151,19 @@
           },
           {
             "table": null,
-            "player1": "Christoffer Nielsen",
+            "player1": "Hidden Player",
             "player2": null,
             "result": null,
             "has_bye": true
           }
         ],
-        "processed_at": "2026-06-14T12:23:13.591087"
+        "processed_at": "2026-06-14T12:36:04.616847"
       },
       "4": {
         "matches": [
           {
             "table": "1",
-            "player1": "Jonas Borgland",
+            "player1": "Hidden Player",
             "player2": "Erik Christensen",
             "result": [
               1,
@@ -172,8 +173,8 @@
           },
           {
             "table": "2",
-            "player1": "Josef-Nam Nguyen",
-            "player2": "Casper Albrektsen",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
             "result": [
               1,
               2
@@ -182,7 +183,7 @@
           },
           {
             "table": "3",
-            "player1": "Mads thode schultz",
+            "player1": "Hidden Player",
             "player2": "Eva \u00d8sterby",
             "result": [
               0,
@@ -192,8 +193,8 @@
           },
           {
             "table": "4",
-            "player1": "Gregoire  Sanguinetti",
-            "player2": "Christoffer Nielsen",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
             "result": [
               2,
               0
@@ -202,26 +203,26 @@
           },
           {
             "table": null,
-            "player1": "Edoardo Cravero",
+            "player1": "Hidden Player",
             "player2": null,
             "result": null,
             "has_bye": true
           }
         ],
-        "processed_at": "2026-06-14T12:23:13.591269"
+        "processed_at": "2026-06-14T12:36:04.617119"
       }
-    },
-    "created_at": "2026-06-14T12:23:13.590600"
+    }
   },
   "20260606_pauper_lyngby": {
     "id": "20260606_pauper_lyngby",
+    "created_at": "2026-06-14T12:36:04.617756",
     "rounds": {
       "1": {
         "matches": [
           {
             "table": "1",
-            "player1": "Olav Joergensen",
-            "player2": "Thor Weis",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
             "result": [
               2,
               1
@@ -231,7 +232,7 @@
           {
             "table": "2",
             "player1": "Eva \u00d8sterby",
-            "player2": "Gregoire  Sanguinetti",
+            "player2": "Hidden Player",
             "result": [
               2,
               1
@@ -240,7 +241,7 @@
           },
           {
             "table": "3",
-            "player1": "Stefan Leone",
+            "player1": "Hidden Player",
             "player2": "gui morgado",
             "result": [
               2,
@@ -250,8 +251,8 @@
           },
           {
             "table": "4",
-            "player1": "Alexander Graulund",
-            "player2": "Mads Dupont",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
             "result": [
               2,
               1
@@ -260,8 +261,8 @@
           },
           {
             "table": "5",
-            "player1": "Jonathan Mohr",
-            "player2": "Esben Roenne Green",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
             "result": [
               0,
               2
@@ -270,7 +271,7 @@
           },
           {
             "table": "6",
-            "player1": "Erika C",
+            "player1": "Hidden Player",
             "player2": "Erik Christensen",
             "result": [
               2,
@@ -279,7 +280,7 @@
             "has_bye": false
           }
         ],
-        "processed_at": "2026-06-14T12:23:13.591754"
+        "processed_at": "2026-06-14T12:36:04.617768"
       },
       "2": {
         "matches": [
@@ -295,8 +296,8 @@
           },
           {
             "table": "2",
-            "player1": "Olav Joergensen",
-            "player2": "Stefan Leone",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
             "result": [
               2,
               1
@@ -306,7 +307,7 @@
           {
             "table": "3",
             "player1": "Eva \u00d8sterby",
-            "player2": "Alexander Graulund",
+            "player2": "Hidden Player",
             "result": [
               1,
               2
@@ -315,8 +316,8 @@
           },
           {
             "table": "4",
-            "player1": "Jonathan Mohr",
-            "player2": "Thor Weis",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
             "result": [
               0,
               2
@@ -325,8 +326,8 @@
           },
           {
             "table": "5",
-            "player1": "Gregoire  Sanguinetti",
-            "player2": "Mads Dupont",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
             "result": [
               1,
               2
@@ -335,8 +336,8 @@
           },
           {
             "table": "6",
-            "player1": "Esben Roenne Green",
-            "player2": "Erika C",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
             "result": [
               1,
               2
@@ -344,14 +345,14 @@
             "has_bye": false
           }
         ],
-        "processed_at": "2026-06-14T12:23:13.592064"
+        "processed_at": "2026-06-14T12:36:04.618193"
       },
       "3": {
         "matches": [
           {
             "table": "1",
             "player1": "Erik Christensen",
-            "player2": "Gregoire  Sanguinetti",
+            "player2": "Hidden Player",
             "result": [
               1,
               2
@@ -360,8 +361,8 @@
           },
           {
             "table": "2",
-            "player1": "Alexander Graulund",
-            "player2": "Stefan Leone",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
             "result": [
               2,
               1
@@ -370,8 +371,8 @@
           },
           {
             "table": "3",
-            "player1": "Thor Weis",
-            "player2": "Esben Roenne Green",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
             "result": [
               2,
               1
@@ -380,7 +381,7 @@
           },
           {
             "table": "4",
-            "player1": "Mads Dupont",
+            "player1": "Hidden Player",
             "player2": "gui morgado",
             "result": [
               2,
@@ -391,7 +392,7 @@
           {
             "table": "5",
             "player1": "Eva \u00d8sterby",
-            "player2": "Jonathan Mohr",
+            "player2": "Hidden Player",
             "result": [
               0,
               2
@@ -400,8 +401,8 @@
           },
           {
             "table": "6",
-            "player1": "Erika C",
-            "player2": "Olav Joergensen",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
             "result": [
               0,
               2
@@ -409,14 +410,14 @@
             "has_bye": false
           }
         ],
-        "processed_at": "2026-06-14T12:23:13.592379"
+        "processed_at": "2026-06-14T12:36:04.618616"
       },
       "4": {
         "matches": [
           {
             "table": "1",
-            "player1": "Gregoire  Sanguinetti",
-            "player2": "Jonathan Mohr",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
             "result": [
               2,
               0
@@ -425,8 +426,8 @@
           },
           {
             "table": "2",
-            "player1": "Olav Joergensen",
-            "player2": "Alexander Graulund",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
             "result": [
               2,
               1
@@ -435,8 +436,8 @@
           },
           {
             "table": "3",
-            "player1": "Mads Dupont",
-            "player2": "Stefan Leone",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
             "result": [
               0,
               2
@@ -445,7 +446,7 @@
           },
           {
             "table": "4",
-            "player1": "Esben Roenne Green",
+            "player1": "Hidden Player",
             "player2": "Eva \u00d8sterby",
             "result": [
               2,
@@ -455,8 +456,8 @@
           },
           {
             "table": "6",
-            "player1": "Thor Weis",
-            "player2": "Erika C",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
             "result": [
               2,
               0
@@ -471,9 +472,8 @@
             "has_bye": true
           }
         ],
-        "processed_at": "2026-06-14T12:23:13.592887"
+        "processed_at": "2026-06-14T12:36:04.618972"
       }
-    },
-    "created_at": "2026-06-14T12:23:13.591745"
+    }
   }
 }

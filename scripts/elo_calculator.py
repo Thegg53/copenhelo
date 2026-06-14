@@ -227,12 +227,53 @@ class TournamentDataProcessor:
     
     def save(self):
         """Save player and tournament data to JSON files.
-        Only includes players who have opted in."""
+        Only includes players who have opted in, and sanitizes opponent names."""
         # Filter players to only include those who opted in
         filtered_players = {
             name: data for name, data in self.players.items()
             if name in self.opted_in_players
         }
+        
+        # Sanitize opponent names in match history for privacy
+        for player_name, player_data in filtered_players.items():
+            # Sanitize matches list - remove opponent names for non-opted-in players
+            if 'matches' in player_data:
+                for match in player_data['matches']:
+                    if 'opponent' in match and match['opponent'] not in self.opted_in_players:
+                        match['opponent'] = 'Hidden Opponent'
+            
+            # Sanitize history list - remove opponent names for non-opted-in players
+            if 'history' in player_data:
+                for match in player_data['history']:
+                    if 'opponent' in match and match['opponent'] not in self.opted_in_players:
+                        match['opponent'] = 'Hidden Opponent'
+        
+        # Sanitize tournament data for privacy
+        sanitized_tournaments = {}
+        for tournament_id, tournament_data in self.tournaments.items():
+            sanitized_tournaments[tournament_id] = {
+                'id': tournament_data.get('id'),
+                'created_at': tournament_data.get('created_at'),
+                'rounds': {}
+            }
+            
+            for round_key, round_data in tournament_data.get('rounds', {}).items():
+                sanitized_rounds = []
+                for match in round_data.get('matches', []):
+                    sanitized_match = dict(match)
+                    # Replace player1 if not opted in
+                    if 'player1' in sanitized_match and sanitized_match['player1'] not in self.opted_in_players:
+                        sanitized_match['player1'] = 'Hidden Player'
+                    # Replace player2 if not opted in and not a bye
+                    if 'player2' in sanitized_match and not sanitized_match.get('has_bye', False):
+                        if sanitized_match['player2'] not in self.opted_in_players:
+                            sanitized_match['player2'] = 'Hidden Player'
+                    sanitized_rounds.append(sanitized_match)
+                
+                sanitized_tournaments[tournament_id]['rounds'][round_key] = {
+                    'matches': sanitized_rounds,
+                    'processed_at': round_data.get('processed_at')
+                }
         
         # Log filtering info
         if len(filtered_players) < len(self.players):
@@ -243,7 +284,7 @@ class TournamentDataProcessor:
             json.dump(filtered_players, f, indent=2, default=str)
         
         with open(self.tournaments_file, 'w') as f:
-            json.dump(self.tournaments, f, indent=2, default=str)
+            json.dump(sanitized_tournaments, f, indent=2, default=str)
     
     def flush_logs(self):
         """Write all buffered logs to file (append to file)."""

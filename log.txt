@@ -168,3 +168,59 @@
 [2026-06-14T12:26:18.654904] Generated players page: players.html (3 players)
 [2026-06-14T12:26:18.761691] Starting tournaments page generation
 [2026-06-14T12:26:18.763005] Generated tournaments page: tournaments.html (2 tournaments)
+[2026-06-14T12:33:44.347838] ============================================================
+[2026-06-14T12:33:44.347903] RECALCULATING HISTORY FROM SCRATCH
+[2026-06-14T12:33:44.347926] ============================================================
+[2026-06-14T12:33:44.348208] Loaded 8 opted-in players from opt_in.csv
+[2026-06-14T12:33:44.349065] Found 2 tournament(s)
+[2026-06-14T12:33:44.350475] Cleared existing player and tournament data
+[2026-06-14T12:33:44.350722] Processing tournament: 20260530_pauper_baltzer
+[2026-06-14T12:33:44.351083]   Round 1: 5 matches
+[2026-06-14T12:33:44.351325]   Round 2: 5 matches
+[2026-06-14T12:33:44.351568]   Round 3: 5 matches
+[2026-06-14T12:33:44.351793]   Round 4: 5 matches
+[2026-06-14T12:33:44.352056] Processing tournament: 20260606_pauper_lyngby
+[2026-06-14T12:33:44.352419]   Round 1: 6 matches
+[2026-06-14T12:33:44.352745]   Round 2: 6 matches
+[2026-06-14T12:33:44.353057]   Round 3: 6 matches
+[2026-06-14T12:33:44.353322]   Round 4: 6 matches
+[2026-06-14T12:33:44.357890] Recalculation complete!
+[2026-06-14T12:33:44.357951]   Tournaments processed: 2
+[2026-06-14T12:33:44.357969]   Total players calculated: 18
+[2026-06-14T12:33:44.357985]   Players in output (opted-in): 8
+[2026-06-14T12:33:44.358003] ============================================================
+[2026-06-14T12:34:12.868606] Starting leaderboard generation
+[2026-06-14T12:34:12.869933] Generated leaderboard: leaderboard.html (3 players)
+[2026-06-14T12:34:12.869995] Leaderboard generation complete
+[2026-06-14T12:34:12.973756] Starting player pages generation
+[2026-06-14T12:34:12.975539] Generated players page: players.html (3 players)
+[2026-06-14T12:34:13.090816] Starting tournaments page generation
+[2026-06-14T12:34:13.092244] Generated tournaments page: tournaments.html (2 tournaments)
+[2026-06-14T12:36:04.613333] ============================================================
+[2026-06-14T12:36:04.613395] RECALCULATING HISTORY FROM SCRATCH
+[2026-06-14T12:36:04.613416] ============================================================
+[2026-06-14T12:36:04.613754] Loaded 8 opted-in players from opt_in.csv
+[2026-06-14T12:36:04.614743] Found 2 tournament(s)
+[2026-06-14T12:36:04.615811] Cleared existing player and tournament data
+[2026-06-14T12:36:04.616094] Processing tournament: 20260530_pauper_baltzer
+[2026-06-14T12:36:04.616495]   Round 1: 5 matches
+[2026-06-14T12:36:04.616820]   Round 2: 5 matches
+[2026-06-14T12:36:04.617089]   Round 3: 5 matches
+[2026-06-14T12:36:04.617363]   Round 4: 5 matches
+[2026-06-14T12:36:04.617713] Processing tournament: 20260606_pauper_lyngby
+[2026-06-14T12:36:04.618162]   Round 1: 6 matches
+[2026-06-14T12:36:04.618589]   Round 2: 6 matches
+[2026-06-14T12:36:04.618944]   Round 3: 6 matches
+[2026-06-14T12:36:04.619287]   Round 4: 6 matches
+[2026-06-14T12:36:04.624939] Recalculation complete!
+[2026-06-14T12:36:04.625000]   Tournaments processed: 2
+[2026-06-14T12:36:04.625029]   Total players calculated: 18
+[2026-06-14T12:36:04.625057]   Players in output (opted-in): 8
+[2026-06-14T12:36:04.625080] ============================================================
+[2026-06-14T12:36:04.742435] Starting leaderboard generation
+[2026-06-14T12:36:04.744147] Generated leaderboard: leaderboard.html (3 players)
+[2026-06-14T12:36:04.744221] Leaderboard generation complete
+[2026-06-14T12:36:04.864541] Starting player pages generation
+[2026-06-14T12:36:04.866569] Generated players page: players.html (3 players)
+[2026-06-14T12:36:05.006318] Starting tournaments page generation
+[2026-06-14T12:36:05.007844] Generated tournaments page: tournaments.html (2 tournaments)
