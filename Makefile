@@ -1,4 +1,4 @@
-.PHONY: help install run-parse run-elo run-standings-elo run-leaderboard run-players run-tournaments run recalculate final_standings_reset
+.PHONY: help install run-parse run-elo run-standings-elo run-leaderboard run-players run-tournaments run test recalculate final_standings_reset
 
 VENV_DIR := .venv
 PYTHON := $(VENV_DIR)/bin/python
@@ -12,6 +12,7 @@ help:
 	@echo "  make run-elo            - Calculate ratings only"
 	@echo "  make run-standings-elo  - Calculate ELO from final standings"
 	@echo "  make recalculate        - Clear data and recalculate from scratch"
+	@echo "  make test               - Run pytest test suite"
 	@echo ""
 	@echo "Final Standings Version:"
 	@echo "  make final_standings_reset - Full pipeline (reset + extract + calculate + generate)"
@@ -50,6 +51,10 @@ run-tournaments: $(VENV_DIR)
 
 run: run-parse run-elo run-leaderboard run-players run-tournaments
 	@echo "✓ All tasks complete"
+
+test: $(VENV_DIR)
+	@echo "Running tests..."
+	$(PYTHON) -m pytest tests/ -v
 
 recalculate: $(VENV_DIR)
 	@echo "Recalculating ratings from scratch..."
