@@ -8,7 +8,12 @@ from pathlib import Path
 # Add scripts directory to path
 sys.path.insert(0, str(Path(__file__).parent.parent / 'scripts'))
 
-from elo_calculator import TournamentDataProcessor
+from elo_calculator import (
+    filter_opted_in_players,
+    sanitize_opponent_names,
+    sanitize_tournament_names,
+    save_results
+)
 
 
 class TestPrivacySanitization:
@@ -19,35 +24,27 @@ class TestPrivacySanitization:
         if not opted_in_players:
             pytest.skip("No opted-in players in test data")
         
-        processor = TournamentDataProcessor(temp_output_dir, opt_in_set=opted_in_players)
-        
         # Add some sample players
-        processor.players = {
+        players = {
             'Player A': {'name': 'Player A', 'rating': 1500},
             'Player B': {'name': 'Player B', 'rating': 1600},
         }
         
         # Simulate Player A being opted-in, Player B not
-        opted_in_players.add('Player A')
-        processor.opted_in_players = opted_in_players
+        opted_in = {'Player A'}
         
-        # Save and check filtering
-        processor.save()
+        # Filter players
+        filtered = filter_opted_in_players(players, opted_in)
         
-        # Load the saved players
-        with open(temp_output_dir / 'players.json', 'r') as f:
-            saved_players = json.load(f)
-        
-        assert 'Player A' in saved_players
-        assert 'Player B' not in saved_players
+        assert 'Player A' in filtered
+        assert 'Player B' not in filtered
     
     def test_opponent_names_sanitized_in_match_history(self, temp_output_dir):
         """Test that non-opted-in opponent names are replaced with 'Hidden Opponent'."""
         opted_in = {'Player A', 'Player B'}
-        processor = TournamentDataProcessor(temp_output_dir, opt_in_set=opted_in)
         
         # Create player with matches against opted-in and non-opted-in players
-        processor.players = {
+        players = {
             'Player A': {
                 'name': 'Player A',
                 'rating': 1500,
@@ -62,12 +59,9 @@ class TestPrivacySanitization:
             }
         }
         
-        processor.save()
-        
-        with open(temp_output_dir / 'players.json', 'r') as f:
-            saved_players = json.load(f)
-        
-        player_a = saved_players['Player A']
+        # Sanitize opponent names
+        sanitized = sanitize_opponent_names(players, opted_in)
+        player_a = sanitized['Player A']
         
         # Check matches
         assert player_a['matches'][0]['opponent'] == 'Player B'  # Opted-in, not hidden
@@ -80,9 +74,8 @@ class TestPrivacySanitization:
     def test_tournament_player_names_sanitized(self, temp_output_dir):
         """Test that non-opted-in player names are replaced in tournament data."""
         opted_in = {'Player A', 'Player B'}
-        processor = TournamentDataProcessor(temp_output_dir, opt_in_set=opted_in)
         
-        processor.tournaments = {
+        tournaments = {
             '001': {
                 'id': '001',
                 'rounds': {
@@ -98,12 +91,10 @@ class TestPrivacySanitization:
             }
         }
         
-        processor.save()
+        # Sanitize tournament names
+        sanitized = sanitize_tournament_names(tournaments, opted_in)
         
-        with open(temp_output_dir / 'tournaments.json', 'r') as f:
-            saved_tournaments = json.load(f)
-        
-        matches = saved_tournaments['001']['rounds']['1']['matches']
+        matches = sanitized['001']['rounds']['1']['matches']
         
         # First match: both opted-in
         assert matches[0]['player1'] == 'Player A'
@@ -116,9 +107,8 @@ class TestPrivacySanitization:
     def test_no_non_opted_in_names_in_json_output(self, temp_output_dir):
         """Test that no non-opted-in player names appear anywhere in output JSON."""
         opted_in = {'Player A'}
-        processor = TournamentDataProcessor(temp_output_dir, opt_in_set=opted_in)
         
-        processor.players = {
+        players = {
             'Player A': {
                 'name': 'Player A',
                 'rating': 1500,
@@ -131,7 +121,7 @@ class TestPrivacySanitization:
             }
         }
         
-        processor.tournaments = {
+        tournaments = {
             '001': {
                 'id': '001',
                 'rounds': {
@@ -146,7 +136,13 @@ class TestPrivacySanitization:
             }
         }
         
-        processor.save()
+        # Apply privacy filters
+        filtered_players = filter_opted_in_players(players, opted_in)
+        sanitized_players = sanitize_opponent_names(filtered_players, opted_in)
+        sanitized_tournaments = sanitize_tournament_names(tournaments, opted_in)
+        
+        # Save results
+        save_results(sanitized_players, sanitized_tournaments, temp_output_dir)
         
         # Read all output JSON as one string
         with open(temp_output_dir / 'players.json', 'r') as f:

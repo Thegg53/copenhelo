@@ -2,13 +2,40 @@
 """
 Recalculate ELO history from scratch.
 Useful when input tournaments have outdated dates or need to be reordered.
+Functional implementation.
 """
 
 import json
 from pathlib import Path
 from datetime import datetime
 import sys
-from elo_calculator import TournamentDataProcessor, ELOCalculator
+from elo_calculator import (
+    load_opted_in_players,
+    process_round,
+    filter_opted_in_players,
+    sanitize_opponent_names,
+    sanitize_tournament_names,
+    save_results,
+    init_tournament
+)
+
+
+def log_message(buffer: list, message: str) -> list:
+    """Buffer and print log message."""
+    timestamp = datetime.now().isoformat()
+    buffer.append(f"[{timestamp}] {message}")
+    print(message)
+    return buffer
+
+
+def flush_logs(buffer: list, log_file: Path) -> None:
+    """Write all buffered logs to file."""
+    if not buffer:
+        return
+    
+    new_entries = "\n".join(buffer) + "\n"
+    with open(log_file, 'a') as f:
+        f.write(new_entries)
 
 
 def main():
@@ -21,56 +48,39 @@ def main():
     
     log_buffer = []
     
-    def log_message(msg: str):
-        """Buffer log message."""
-        timestamp = datetime.now().isoformat()
-        log_buffer.append(f"[{timestamp}] {msg}")
-        print(msg)
+    def log_func(msg: str):
+        nonlocal log_buffer
+        log_buffer = log_message(log_buffer, msg)
     
-    def flush_logs():
-        """Write all buffered logs to file (append to file)."""
-        if not log_buffer:
-            return
-        
-        # Append entries to end of file
-        new_entries = "\n".join(log_buffer) + "\n"
-        with open(log_file, 'a') as f:
-            f.write(new_entries)
-    
-    log_message("=" * 60)
-    log_message("RECALCULATING HISTORY FROM SCRATCH")
-    log_message("=" * 60)
+    log_func("=" * 60)
+    log_func("RECALCULATING HISTORY FROM SCRATCH")
+    log_func("=" * 60)
     
     # Load opt-in list
-    opted_in_players = set()
-    if opt_in_file.exists():
-        with open(opt_in_file, 'r') as f:
-            opted_in_players = {line.strip() for line in f if line.strip()}
-        log_message(f"Loaded {len(opted_in_players)} opted-in players from opt_in.csv")
+    opted_in_players = load_opted_in_players(opt_in_file)
+    if opted_in_players:
+        log_func(f"Loaded {len(opted_in_players)} opted-in players from opt_in.csv")
     else:
-        log_message(f"Warning: {opt_in_file} not found. All players will be treated as opted in.")
+        log_func(f"Warning: {opt_in_file} not found. All players will be treated as opted in.")
     
     # Find all tournament JSON files
     if not events_dir.exists():
-        log_message("Error: events/ directory not found.")
-        flush_logs()
+        log_func("Error: events/ directory not found.")
+        flush_logs(log_buffer, log_file)
         return
     
     tournament_files = sorted(events_dir.glob('*.json'))
     if not tournament_files:
-        log_message("No tournament files found in events/")
-        flush_logs()
+        log_func("No tournament files found in events/")
+        flush_logs(log_buffer, log_file)
         return
     
-    log_message(f"Found {len(tournament_files)} tournament(s)")
+    log_func(f"Found {len(tournament_files)} tournament(s)")
     
-    # Create fresh processor (will load existing data but we'll clear it)
-    processor = TournamentDataProcessor(output_dir, opt_in_set=opted_in_players, log_func=log_message)
-    
-    # Clear all existing data
-    processor.players = {}
-    processor.tournaments = {}
-    log_message("Cleared existing player and tournament data")
+    # Initialize fresh data structures
+    players = {}
+    tournaments = {}
+    log_func("Cleared existing player and tournament data")
     
     processed_count = 0
     
@@ -82,7 +92,7 @@ def main():
             with open(tournament_file, 'r') as f:
                 tournament_data = json.load(f)
             
-            log_message(f"Processing tournament: {tournament_id}")
+            log_func(f"Processing tournament: {tournament_id}")
             
             # Process each round in order
             sorted_rounds = sorted(
@@ -93,27 +103,37 @@ def main():
             for round_key, round_data in sorted_rounds:
                 round_num = int(round_key)
                 matches = round_data['matches']
-                processor.process_tournament(tournament_id, round_num, matches)
-                log_message(f"  Round {round_num}: {len(matches)} matches")
+                
+                # Process round with functional API
+                players, tournaments = process_round(
+                    tournament_id, round_num, matches, players, tournaments,
+                    opted_in_players, log_func
+                )
+                log_func(f"  Round {round_num}: {len(matches)} matches")
             
             processed_count += 1
         
         except Exception as e:
-            log_message(f"Error processing {tournament_id}: {str(e)}")
+            log_func(f"Error processing {tournament_id}: {str(e)}")
             import traceback
-            log_message(traceback.format_exc())
+            log_func(traceback.format_exc())
     
-    # Save the recalculated data
-    processor.save()
+    # Filter and sanitize output
+    filtered_players = filter_opted_in_players(players, opted_in_players)
+    sanitized_players = sanitize_opponent_names(filtered_players, opted_in_players)
+    sanitized_tournaments = sanitize_tournament_names(tournaments, opted_in_players)
+    
+    # Save results
+    save_results(sanitized_players, sanitized_tournaments, output_dir)
     
     # Summary
-    log_message(f"Recalculation complete!")
-    log_message(f"  Tournaments processed: {processed_count}")
-    log_message(f"  Total players calculated: {len(processor.players)}")
-    log_message(f"  Players in output (opted-in): {len(processor.opted_in_players)}")
-    log_message("=" * 60)
+    log_func(f"Recalculation complete!")
+    log_func(f"  Tournaments processed: {processed_count}")
+    log_func(f"  Total players calculated: {len(players)}")
+    log_func(f"  Players in output (opted-in): {len(filtered_players)}")
+    log_func("=" * 60)
     
-    flush_logs()
+    flush_logs(log_buffer, log_file)
 
 
 if __name__ == '__main__':

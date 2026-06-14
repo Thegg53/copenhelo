@@ -8,7 +8,7 @@ from pathlib import Path
 # Add scripts directory to path
 sys.path.insert(0, str(Path(__file__).parent.parent / 'scripts'))
 
-from elo_calculator import ELOCalculator
+from elo_calculator import calculate_new_rating, DEFAULT_RATING, K_FACTOR
 
 
 class TestELOCalculator:
@@ -16,11 +16,11 @@ class TestELOCalculator:
     
     def test_default_rating(self):
         """Test that default rating is 1500."""
-        assert ELOCalculator.DEFAULT_RATING == 1500
+        assert DEFAULT_RATING == 1500
     
     def test_k_factor(self):
         """Test that K-factor is 32."""
-        assert ELOCalculator.K_FACTOR == 32
+        assert K_FACTOR == 32
     
     def test_calculate_new_rating_win_equal(self):
         """Test rating increase for winning against equal opponent."""
@@ -28,7 +28,7 @@ class TestELOCalculator:
         opponent_rating = 1500
         score = 1.0  # Win
         
-        new_rating = ELOCalculator.calculate_new_rating(
+        new_rating = calculate_new_rating(
             current_rating,
             opponent_rating,
             score
@@ -43,7 +43,7 @@ class TestELOCalculator:
         opponent_rating = 1500
         score = 0.0  # Loss
         
-        new_rating = ELOCalculator.calculate_new_rating(
+        new_rating = calculate_new_rating(
             current_rating,
             opponent_rating,
             score
@@ -58,7 +58,7 @@ class TestELOCalculator:
         opponent_rating = 1500
         score = 0.5  # Draw
         
-        new_rating = ELOCalculator.calculate_new_rating(
+        new_rating = calculate_new_rating(
             current_rating,
             opponent_rating,
             score
@@ -73,7 +73,7 @@ class TestELOCalculator:
         opponent_rating = 1600
         score = 1.0  # Win
         
-        new_rating = ELOCalculator.calculate_new_rating(
+        new_rating = calculate_new_rating(
             current_rating,
             opponent_rating,
             score
@@ -88,7 +88,7 @@ class TestELOCalculator:
         opponent_rating = 1400
         score = 0.0  # Loss
         
-        new_rating = ELOCalculator.calculate_new_rating(
+        new_rating = calculate_new_rating(
             current_rating,
             opponent_rating,
             score
@@ -104,7 +104,7 @@ class TestELOCalculator:
         score = 1.0
         k_factor = 16  # Lower K-factor
         
-        new_rating = ELOCalculator.calculate_new_rating(
+        new_rating = calculate_new_rating(
             current_rating,
             opponent_rating,
             score,
