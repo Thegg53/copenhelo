@@ -1,437 +1,354 @@
 #!/usr/bin/env python3
 """
-Generate tournaments detail page with match results.
+Generate HTML tournaments page from tournament data.
+Functional implementation with pure functions.
 """
 
 import json
 import re
 from pathlib import Path
 from datetime import datetime
-from typing import List, Dict
+from typing import Dict, Set, Tuple
 
 
-class TournamentsGenerator:
-    """Generate detailed tournament pages with match results."""
+def load_tournaments_data(output_dir: Path) -> Dict:
+    """Load tournaments data from JSON file."""
+    tournaments_file = output_dir / 'tournaments.json'
+    if not tournaments_file.exists():
+        return {}
     
-    def __init__(self, output_dir: Path, log_file: Path = None, opted_in_players: set = None):
-        self.output_dir = output_dir
-        self.tournaments_file = output_dir / 'tournaments.json'
-        self.log_file = log_file or Path('log.txt')
-        self.log_buffer = []
-        self.opted_in_players = opted_in_players or set()
+    with open(tournaments_file, 'r') as f:
+        return json.load(f)
+
+
+def load_opted_in_players_csv(input_dir: Path) -> Set[str]:
+    """Load opted-in player names from CSV file."""
+    opt_in_file = input_dir / 'opt_in.csv'
+    if not opt_in_file.exists():
+        return set()
     
-    def log(self, message: str):
-        """Buffer message to be logged at end."""
-        timestamp = datetime.now().isoformat()
-        self.log_buffer.append(f"[{timestamp}] {message}")
-        print(message)
-    
-    def _flush_logs(self):
-        """Write all buffered logs to file (append to file)."""
-        if not self.log_buffer:
-            return
+    with open(opt_in_file, 'r') as f:
+        return {line.strip() for line in f if line.strip()}
+
+
+def parse_tournament_id(tournament_id: str) -> Tuple[str, str]:
+    """Parse tournament ID into date and name components."""
+    parts = tournament_id.split('_', 1)
+    date = parts[0] if parts else 'Unknown'
+    name = parts[1] if len(parts) > 1 else parts[0]
+    name = name.replace('_', ' ').title()
+    return date, name
+
+
+def generate_match_rows(matches: list, opted_in_players: Set[str]) -> str:
+    """Generate table rows for tournament matches."""
+    rows = []
+    for match in matches:
+        player1 = match.get('player1', 'Unknown')
+        player2 = match.get('player2', 'Unknown')
         
-        # Append entries to end of file
-        new_entries = "\n".join(self.log_buffer) + "\n"
-        with open(self.log_file, 'a') as f:
-            f.write(new_entries)
-    
-    def _load_tournaments(self) -> Dict:
-        """Load tournament data from JSON."""
-        if not self.tournaments_file.exists():
-            return {}
+        if player1 not in opted_in_players:
+            player1 = 'Hidden Player'
+        if player2 and player2 != 'BYE' and player2 not in opted_in_players:
+            player2 = 'Hidden Player'
         
-        with open(self.tournaments_file, 'r') as f:
-            return json.load(f)
-    
-    @staticmethod
-    def _slugify(text: str) -> str:
-        """Convert text to URL-friendly slug."""
-        text = text.lower().strip()
-        text = re.sub(r'[^\w\s-]', '', text)
-        text = re.sub(r'-+', '-', text)
-        text = re.sub(r' +', '-', text)
-        return text
-    
-    @staticmethod
-    def _parse_tournament_id(tournament_id: str) -> tuple:
-        """Parse tournament ID into date and name."""
-        # Format: YYYYMMDD_format_name
-        parts = tournament_id.split('_', 1)
-        if len(parts) == 2:
-            date_str = parts[0]
-            name = parts[1].replace('_', ' ').title()
-            
-            # Parse date YYYYMMDD
-            if len(date_str) == 8:
-                year = date_str[:4]
-                month = date_str[4:6]
-                day = date_str[6:8]
-                date_obj = datetime(int(year), int(month), int(day))
-                return date_obj, name, tournament_id
-        
-        return None, tournament_id, tournament_id
-    
-    def _generate_tournament_sections(self, tournaments: Dict) -> str:
-        """Generate collapsible tournament sections."""
-        # Sort tournaments by date (newest first)
-        sorted_tournaments = sorted(
-            tournaments.items(),
-            key=lambda x: self._parse_tournament_id(x[0])[0] or datetime.min,
-            reverse=True
-        )
-        
-        sections = []
-        for tournament_raw_id, tournament_data in sorted_tournaments:
-            date_obj, tournament_name, tournament_id = self._parse_tournament_id(tournament_raw_id)
-            
-            # Format date for display in YYYY-MM-DD format
-            if date_obj:
-                date_str = date_obj.strftime('%Y-%m-%d')
+        result = match.get('result')
+        if result:
+            p1_wins, p2_wins = result
+            if p1_wins > p2_wins:
+                score_html = f'<span class="match-score"><strong>{player1}</strong> {p1_wins}-{p2_wins}</span>'
+            elif p2_wins > p1_wins:
+                score_html = f'<span class="match-score">{p1_wins}-{p2_wins} <strong>{player2}</strong></span>'
             else:
-                date_str = 'Unknown Date'
-            
-            rounds_html = self._generate_rounds_html(tournament_data)
-            
-            sections.append(f"""
-    <details id="{tournament_id}">
-      <summary class="tournament-summary">
-        <span class="tournament-title">{date_str} {tournament_name}</span>
-      </summary>
-      <div class="tournament-details">
-{rounds_html}
-      </div>
-    </details>
-            """)
+                score_html = f'<span class="match-score">{p1_wins}-{p2_wins} (Draw)</span>'
+        else:
+            score_html = f'<span class="bye-badge">BYE</span>'
         
-        return '\n'.join(sections)
+        rows.append(f"""
+          <tr>
+            <td>{player1}</td>
+            <td>{player2 if player2 else '—'}</td>
+            <td>{score_html}</td>
+          </tr>
+        """)
     
-    def _generate_rounds_html(self, tournament_data: Dict) -> str:
-        """Generate match results for all rounds."""
-        rounds = tournament_data.get('rounds', {})
-        rounds_html = []
+    return '\n'.join(rows)
+
+
+def generate_tournament_section(tournament_id: str, tournament: Dict, opted_in_players: Set[str]) -> str:
+    """Generate collapsible section for a single tournament."""
+    date, name = parse_tournament_id(tournament_id)
+    slug = tournament_id.lower().replace('_', '-')
+    
+    round_sections = []
+    for round_key, round_data in sorted(tournament.get('rounds', {}).items(), key=lambda x: int(x[0])):
+        matches = round_data.get('matches', [])
+        match_rows = generate_match_rows(matches, opted_in_players)
         
-        for round_num in sorted(rounds.keys(), key=lambda x: int(x)):
-            round_data = rounds[round_num]
-            matches = round_data.get('matches', [])
-            
-            match_rows = []
-            for match in matches:
-                player1 = match.get('player1', 'Unknown')
-                # Hide player1 name if they haven't opted in
-                if player1 not in self.opted_in_players:
-                    player1 = "Hidden Player"
-                
-                player2 = match.get('player2', 'BYE' if match.get('has_bye') else 'Unknown')
-                # Hide player2 name if they haven't opted in
-                if player2 != 'BYE' and player2 not in self.opted_in_players:
-                    player2 = "Hidden Player"
-                
-                result = match.get('result')
-                
-                # Handle None results
-                if result is None:
-                    result = [0, 0]
-                
-                score1, score2 = result[0], result[1]
-                
-                # Determine result
-                if player2 == 'BYE':
-                    result_html = '<span class="bye-badge">BYE</span>'
-                elif score1 > score2:
-                    result_html = f'<span class="match-score"><strong>{player1}</strong> {score1}-{score2}</span>'
-                elif score2 > score1:
-                    result_html = f'<span class="match-score">{score1}-{score2} <strong>{player2}</strong></span>'
-                else:
-                    result_html = f'<span class="match-score">{score1}-{score2} (Draw)</span>'
-                
-                match_rows.append(f"""
-        <tr>
-          <td>{player1}</td>
-          <td>vs</td>
-          <td>{player2}</td>
-          <td>{result_html}</td>
-        </tr>
-                """)
-            
-            match_rows_html = '\n'.join(match_rows)
-            
-            rounds_html.append(f"""
+        round_sections.append(f"""
         <div class="round">
-          <h3>Round {round_num}</h3>
+          <h3>Round {round_key}</h3>
           <table class="matches-table">
             <thead>
               <tr>
                 <th>Player 1</th>
-                <th></th>
                 <th>Player 2</th>
                 <th>Result</th>
               </tr>
             </thead>
             <tbody>
-{match_rows_html}
+{match_rows}
             </tbody>
           </table>
         </div>
-            """)
-        
-        return '\n'.join(rounds_html)
+        """)
     
-    def _generate_html(self, tournaments: Dict) -> str:
-        """Generate HTML for tournaments page."""
-        tournaments_html = self._generate_tournament_sections(tournaments)
-        
-        html = f"""<!DOCTYPE html>
+    rounds_html = '\n'.join(round_sections)
+    
+    return f"""
+      <details>
+        <summary id="{slug}">
+          <span class="tournament-date">{date}</span>
+          <span class="tournament-name">{name}</span>
+        </summary>
+        <div class="tournament-details">
+{rounds_html}
+        </div>
+      </details>
+    """
+
+
+def generate_tournaments_html(tournaments: Dict[str, Dict], opted_in_players: Set[str]) -> str:
+    """Generate complete tournaments HTML page."""
+    tournament_sections = []
+    for tournament_id in sorted(tournaments.keys(), reverse=True):
+        section = generate_tournament_section(tournament_id, tournaments[tournament_id], opted_in_players)
+        tournament_sections.append(section)
+    
+    sections_html = '\n'.join(tournament_sections)
+    
+    html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tournaments - ELO Leaderboard</title>
-    <style>
-        * {{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }}
-        
-        body {{
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }}
-        
-        .container {{
-            max-width: 1000px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
-        }}
-        
-        header {{
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 30px 20px;
-            text-align: center;
-        }}
-        
-        header h1 {{
-            font-size: 28px;
-            margin-bottom: 10px;
-        }}
-        
-        header nav {{
-            margin-top: 15px;
-        }}
-        
-        header a {{
-            color: rgba(255, 255, 255, 0.9);
-            text-decoration: none;
-            font-size: 14px;
-            margin: 0 15px;
-        }}
-        
-        header a:hover {{
-            text-decoration: underline;
-        }}
-        
-        .tournaments {{
-            padding: 20px;
-        }}
-        
-        details {{
-            margin-bottom: 20px;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            overflow: hidden;
-        }}
-        
-        details[open] {{
-            background: #f9f9f9;
-        }}
-        
-        .tournament-summary {{
-            padding: 15px 20px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: 600;
-            background: #f5f5f5;
-            border-bottom: 1px solid #e0e0e0;
-        }}
-        
-        details[open] .tournament-summary {{
-            background: #efefef;
-            border-bottom: 1px solid #d0d0d0;
-        }}
-        
-        .tournament-summary:hover {{
-            background: #eee;
-        }}
-        
-        .tournament-title {{
-            font-size: 16px;
-            color: #333;
-        }}
-        
-        .tournament-details {{
-            padding: 20px;
-            overflow-x: auto;
-        }}
-        
-        .round {{
-            margin-bottom: 25px;
-        }}
-        
-        .round h3 {{
-            margin-bottom: 12px;
-            color: #333;
-            font-size: 15px;
-        }}
-        
-        .matches-table {{
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 14px;
-            min-width: 500px;
-        }}
-        
-        .matches-table thead {{
-            background: #f5f5f5;
-        }}
-        
-        .matches-table th {{
-            padding: 10px;
-            text-align: left;
-            font-weight: 600;
-            color: #333;
-            border-bottom: 2px solid #ddd;
-            white-space: nowrap;
-        }}
-        
-        .matches-table td {{
-            padding: 10px;
-            border-bottom: 1px solid #eee;
-        }}
-        
-        .matches-table tbody tr:hover {{
-            background: #fafafa;
-        }}
-        
-        @media (max-width: 768px) {{
-            .tournament-details {{
-                padding: 15px;
-            }}
-            
-            .round h3 {{
-                font-size: 14px;
-                margin-bottom: 10px;
-            }}
-            
-            .matches-table {{
-                font-size: 12px;
-            }}
-            
-            .matches-table th,
-            .matches-table td {{
-                padding: 6px 8px;
-            }}
-        }}
-        
-        .match-score {{
-            display: inline-block;
-            background: #f0f0f0;
-            padding: 4px 8px;
-            border-radius: 4px;
-        }}
-        
-        .bye-badge {{
-            display: inline-block;
-            background: #fff3cd;
-            color: #856404;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-weight: 600;
-            font-size: 12px;
-        }}
-        
-        footer {{
-            padding: 15px 20px;
-            background: #f5f5f5;
-            border-top: 1px solid #e0e0e0;
-            text-align: center;
-            font-size: 13px;
-            color: #666;
-        }}
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tournaments</title>
+  <style>
+    * {{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }}
+    
+    body {{
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }}
+    
+    .container {{
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+    }}
+    
+    .header {{
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }}
+    
+    .header h1 {{
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }}
+    
+    .header nav {{
+      margin-top: 15px;
+    }}
+    
+    .header a {{
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: none;
+      font-size: 14px;
+      margin: 0 15px;
+    }}
+    
+    .header a:hover {{
+      text-decoration: underline;
+    }}
+    
+    .content {{
+      padding: 20px;
+    }}
+    
+    details {{
+      margin: 15px 0;
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      overflow: hidden;
+    }}
+    
+    summary {{
+      background: #f8f9fa;
+      padding: 15px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+    }}
+    
+    summary:hover {{
+      background: #e9ecef;
+    }}
+    
+    .tournament-date {{
+      color: #667eea;
+      font-weight: 700;
+      margin-right: 15px;
+      min-width: 100px;
+    }}
+    
+    .tournament-name {{
+      color: #333;
+      flex: 1;
+    }}
+    
+    .tournament-details {{
+      padding: 15px;
+      background: white;
+    }}
+    
+    .round {{
+      margin: 15px 0;
+    }}
+    
+    .round h3 {{
+      color: #667eea;
+      font-size: 1.1em;
+      margin-bottom: 10px;
+    }}
+    
+    .matches-table {{
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9em;
+    }}
+    
+    .matches-table th {{
+      background: #f8f9fa;
+      padding: 10px;
+      text-align: left;
+      font-weight: 600;
+      border-bottom: 2px solid #dee2e6;
+    }}
+    
+    .matches-table td {{
+      padding: 10px;
+      border-bottom: 1px solid #dee2e6;
+    }}
+    
+    .matches-table tr:hover {{
+      background: #f8f9fa;
+    }}
+    
+    .match-score {{
+      font-weight: 600;
+    }}
+    
+    .bye-badge {{
+      background: #fff3cd;
+      color: #856404;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.85em;
+    }}
+    
+    .footer {{
+      background: #f8f9fa;
+      padding: 20px;
+      text-align: center;
+      color: #666;
+      font-size: 0.9em;
+      border-top: 1px solid #dee2e6;
+    }}
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Tournaments</h1>
-            <nav>
-                <a href="leaderboard.html">Leaderboard</a>
-                <a href="players.html">Players</a>
-            </nav>
-        </header>
-        
-        <div class="tournaments">
-{tournaments_html}
-        </div>
-        
-        <footer>
-            Last updated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} UTC
-        </footer>
+  <div class="container">
+    <div class="header">
+      <h1>Tournaments</h1>
+      <nav>
+        <a href="leaderboard.html">Leaderboard</a>
+        <a href="players.html">Players</a>
+      </nav>
     </div>
     
-    <script>
-        // Auto-expand tournament if navigated via hash
-        document.addEventListener('DOMContentLoaded', function() {{
-            const hash = window.location.hash.slice(1);
-            if (hash) {{
-                const details = document.getElementById(hash);
-                if (details) {{
-                    details.open = true;
-                    details.scrollIntoView({{ behavior: 'smooth', block: 'start' }});
-                }}
-            }}
-        }});
-    </script>
-</body>
-</html>"""
-        return html
+    <div class="content">
+{sections_html}
+    </div>
     
-    def generate(self) -> None:
-        """Generate tournaments page."""
-        tournaments = self._load_tournaments()
-        html_content = self._generate_html(tournaments)
-        output_path = self.output_dir.parent / 'tournaments.html'
-        output_path.write_text(html_content, encoding='utf-8')
-        
-        self.log(f"Generated tournaments page: tournaments.html ({len(tournaments)} tournaments)")
-        self._flush_logs()
+    <div class="footer">
+      <p>Click tournament to expand details</p>
+    </div>
+  </div>
+</body>
+</html>
+"""
+    return html
+
+
+def log_message(buffer: list, message: str) -> list:
+    """Buffer and print log message."""
+    timestamp = datetime.now().isoformat()
+    buffer.append(f"[{timestamp}] {message}")
+    print(message)
+    return buffer
+
+
+def flush_logs(buffer: list, log_file: Path) -> None:
+    """Write all buffered logs to file."""
+    if not buffer:
+        return
+    
+    new_entries = "\n".join(buffer) + "\n"
+    with open(log_file, 'a') as f:
+        f.write(new_entries)
 
 
 def main():
     """Main entry point."""
     repo_root = Path(__file__).parent.parent
     output_dir = repo_root / 'output'
+    input_dir = repo_root / 'input'
     log_file = repo_root / 'log.txt'
-    opt_in_file = repo_root / 'input' / 'opt_in.csv'
     
-    # Load opted-in players
-    opted_in_players = set()
-    if opt_in_file.exists():
-        with open(opt_in_file, 'r') as f:
-            opted_in_players = {line.strip() for line in f if line.strip()}
+    log_buffer = []
     
-    generator = TournamentsGenerator(output_dir, log_file, opted_in_players)
-    generator.log("Starting tournaments page generation")
-    generator.generate()
-    generator.log("Tournaments page generation complete")
+    def log_func(msg: str):
+        nonlocal log_buffer
+        log_buffer = log_message(log_buffer, msg)
+    
+    log_func("Starting tournaments page generation")
+    
+    tournaments = load_tournaments_data(output_dir)
+    opted_in_players = load_opted_in_players_csv(input_dir)
+    
+    html = generate_tournaments_html(tournaments, opted_in_players)
+    
+    output_file = repo_root / 'tournaments.html'
+    with open(output_file, 'w') as f:
+        f.write(html)
+    
+    log_func(f"Generated tournaments page: tournaments.html ({len(tournaments)} tournaments)")
+    log_func("Tournaments page generation complete")
+    flush_logs(log_buffer, log_file)
 
 
 if __name__ == '__main__':

@@ -1,421 +1,339 @@
 #!/usr/bin/env python3
 """
-Generate player detail pages with match history.
+Generate HTML player detail pages from player data.
+Functional implementation with pure functions.
 """
 
 import json
-import re
 from pathlib import Path
 from datetime import datetime
-from typing import List, Dict
+from typing import Dict, Set
 
 
-class PlayersGenerator:
-    """Generate detailed player pages with match history."""
+def load_tournaments_data(output_dir: Path) -> Dict:
+    """Load tournaments data from JSON file."""
+    tournaments_file = output_dir / 'tournaments.json'
+    if not tournaments_file.exists():
+        return {}
     
-    def __init__(self, output_dir: Path, log_file: Path = None, opted_in_players: set = None):
-        self.output_dir = output_dir
-        self.players_file = output_dir / 'players.json'
-        self.log_file = log_file or Path('log.txt')
-        self.log_buffer = []
-        self.opted_in_players = opted_in_players or set()
+    with open(tournaments_file, 'r') as f:
+        return json.load(f)
+
+
+def load_opted_in_players_csv(input_dir: Path) -> Set[str]:
+    """Load opted-in player names from CSV file."""
+    opt_in_file = input_dir / 'opt_in.csv'
+    if not opt_in_file.exists():
+        return set()
     
-    def log(self, message: str):
-        """Buffer message to be logged at end."""
-        timestamp = datetime.now().isoformat()
-        self.log_buffer.append(f"[{timestamp}] {message}")
-        print(message)
-    
-    def _flush_logs(self):
-        """Write all buffered logs to file (append to file)."""
-        if not self.log_buffer:
-            return
+    with open(opt_in_file, 'r') as f:
+        return {line.strip() for line in f if line.strip()}
+
+
+def generate_match_rows(player: Dict, opted_in_players: Set[str]) -> str:
+    """Generate table rows for player match history."""
+    rows = []
+    for match in player.get('history', []):
+        opponent = match.get('opponent', 'Unknown')
+        if opponent not in opted_in_players:
+            opponent = 'Hidden Opponent'
         
-        # Append entries to end of file
-        new_entries = "\n".join(self.log_buffer) + "\n"
-        with open(self.log_file, 'a') as f:
-            f.write(new_entries)
-    
-    def _load_players(self) -> List[Dict]:
-        """Load player data from JSON."""
-        if not self.players_file.exists():
-            return []
+        result_code = match.get('result_code', '?')
+        result_class = 'win' if result_code == 'W' else ('loss' if result_code == 'L' else 'draw')
+        result_text = 'Win' if result_code == 'W' else ('Loss' if result_code == 'L' else 'Draw')
         
-        with open(self.players_file, 'r') as f:
-            players_dict = json.load(f)
-            # Convert from dict to list format
-            return list(players_dict.values())
-    
-    @staticmethod
-    def _slugify(text: str) -> str:
-        """Convert text to URL-friendly slug."""
-        text = text.lower().strip()
-        text = re.sub(r'[^\w\s-]', '', text)
-        text = re.sub(r'-+', '-', text)
-        text = re.sub(r' +', '-', text)
-        return text
-    
-    def _generate_match_rows(self, player: Dict) -> str:
-        """Generate match history rows for a player."""
-        rows = []
+        rating_change = match.get('rating_change', 0)
+        change_class = 'positive' if rating_change > 0 else ('negative' if rating_change < 0 else 'neutral')
         
-        # Use history array which contains detailed match info
-        history = player.get('history', [])
-        for match in history:
-            opponent = match['opponent']
-            # Hide opponent name if they haven't opted in
-            if opponent not in self.opted_in_players:
-                opponent = "Hidden Opponent"
-            result = match['result_code']
-            rating_change = match['rating_change']
-            new_rating = match['rating_after']
-            tournament_id = match.get('tournament', 'Unknown')
-            round_num = match.get('round', 'N/A')
-            
-            # Determine CSS class and display text for result
-            if result.upper() == 'W':
-                result_class = 'win'
-                result_text = 'Win'
-            elif result.upper() == 'L':
-                result_class = 'loss'
-                result_text = 'Loss'
-            else:
-                result_class = 'draw'
-                result_text = 'Draw'
-            
-            # Format rating change
-            change_class = 'positive' if rating_change >= 0 else 'negative'
-            change_text = f"+{rating_change:.1f}" if rating_change >= 0 else f"{rating_change:.1f}"
-            
-            rows.append(f"""
+        rows.append(f"""
             <tr>
-              <td><a href="tournaments.html#{tournament_id}">{tournament_id}</a></td>
-              <td>{round_num}</td>
+              <td>{match.get('tournament', '')}</td>
+              <td>{match.get('round', '')}</td>
               <td>{opponent}</td>
               <td><span class="result {result_class}">{result_text}</span></td>
-              <td><span class="rating-change {change_class}">{change_text}</span></td>
-              <td>{new_rating:.1f}</td>
+              <td><span class="rating-change {change_class}">{rating_change:+.1f}</span></td>
+              <td>{match.get('rating_after', '')}</td>
             </tr>
-            """)
-        
-        return '\n'.join(rows)
+        """)
     
-    def _generate_html(self, players: List[Dict]) -> str:
-        """Generate HTML for players detail page with collapsible sections."""
-        sorted_players = sorted(players, key=lambda p: p['rating'], reverse=True)
-        
-        player_sections = []
-        for player in sorted_players:
-            slug = self._slugify(player['name'])
-            matches_html = self._generate_match_rows(player)
-            
-            player_sections.append(f"""
-    <details id="{slug}">
-      <summary class="player-summary">
-        <span class="player-name">{player['name']}</span>
-        <span class="player-rating">{player['rating']}</span>
-        <span class="player-matches">{len(player['matches'])} matches</span>
-      </summary>
-      <div class="player-details">
-        <table class="match-history">
-          <thead>
-            <tr>
-              <th>Tournament</th>
-              <th>Round</th>
-              <th>Opponent</th>
-              <th>Result</th>
-              <th>Rating Change</th>
-              <th>New Rating</th>
-            </tr>
-          </thead>
-          <tbody>
-{matches_html}
-          </tbody>
-        </table>
-      </div>
-    </details>
-            """)
-        
-        sections_html = '\n'.join(player_sections)
-        
-        html = f"""<!DOCTYPE html>
+    return '\n'.join(rows)
+
+
+def generate_player_section(player: Dict, opted_in_players: Set[str]) -> str:
+    """Generate collapsible section for a single player."""
+    slug = player['name'].lower().replace(' ', '-')
+    match_rows = generate_match_rows(player, opted_in_players)
+    
+    return f"""
+        <details>
+          <summary id="{slug}">
+            <span class="player-name">{player['name']}</span>
+            <span class="player-rating">{player['rating']}</span>
+          </summary>
+          <div class="player-details">
+            <table class="matches-table">
+              <thead>
+                <tr>
+                  <th>Tournament</th>
+                  <th>Round</th>
+                  <th>Opponent</th>
+                  <th>Result</th>
+                  <th>Rating Change</th>
+                  <th>New Rating</th>
+                </tr>
+              </thead>
+              <tbody>
+{match_rows}
+              </tbody>
+            </table>
+          </div>
+        </details>
+    """
+
+
+def generate_player_pages_html(players: Dict[str, Dict], opted_in_players: Set[str]) -> str:
+    """Generate complete players HTML page."""
+    sorted_players = sorted(players.values(), key=lambda p: p['rating'], reverse=True)
+    player_sections = [generate_player_section(p, opted_in_players) for p in sorted_players]
+    sections_html = '\n'.join(player_sections)
+    
+    html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Player History - ELO Leaderboard</title>
-    <style>
-        * {{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }}
-        
-        body {{
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }}
-        
-        .container {{
-            max-width: 900px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
-        }}
-        
-        header {{
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 30px 20px;
-            text-align: center;
-        }}
-        
-        header h1 {{
-            font-size: 28px;
-            margin-bottom: 10px;
-        }}
-        
-        header a {{
-            color: rgba(255, 255, 255, 0.9);
-            text-decoration: none;
-            font-size: 14px;
-            margin: 0 10px;
-        }}
-        
-        header a:hover {{
-            text-decoration: underline;
-        }}
-        
-        .players {{
-            padding: 20px;
-        }}
-        
-        details {{
-            margin-bottom: 15px;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            overflow: hidden;
-        }}
-        
-        details[open] {{
-            background: #f9f9f9;
-        }}
-        
-        .player-summary {{
-            padding: 15px 20px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: 600;
-            background: #f5f5f5;
-            border-bottom: 1px solid #e0e0e0;
-        }}
-        
-        details[open] .player-summary {{
-            background: #efefef;
-            border-bottom: 1px solid #d0d0d0;
-        }}
-        
-        .player-summary:hover {{
-            background: #eee;
-        }}
-        
-        .player-name {{
-            font-size: 16px;
-            flex: 1;
-        }}
-        
-        .player-rating {{
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 14px;
-            margin: 0 15px;
-            min-width: 60px;
-            text-align: center;
-        }}
-        
-        .player-matches {{
-            font-size: 13px;
-            color: #666;
-            min-width: 100px;
-            text-align: right;
-        }}
-        
-        .player-details {{
-            padding: 20px;
-            overflow-x: auto;
-        }}
-        
-        .match-history {{
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 14px;
-            min-width: 600px;
-        }}
-        
-        .match-history thead {{
-            background: #f5f5f5;
-        }}
-        
-        .match-history th {{
-            padding: 10px;
-            text-align: left;
-            font-weight: 600;
-            color: #333;
-            border-bottom: 2px solid #ddd;
-            white-space: nowrap;
-        }}
-        
-        .match-history td {{
-            padding: 10px;
-            border-bottom: 1px solid #eee;
-        }}
-        
-        .match-history a {{
-            color: #667eea;
-            text-decoration: none;
-            word-break: break-word;
-        }}
-        
-        .match-history a:hover {{
-            text-decoration: underline;
-            color: #764ba2;
-        }}
-        
-        .match-history tr:hover {{
-            background: #fafafa;
-        }}
-        
-        @media (max-width: 768px) {{
-            .player-details {{
-                padding: 15px;
-            }}
-            
-            .match-history {{
-                font-size: 12px;
-            }}
-            
-            .match-history th,
-            .match-history td {{
-                padding: 6px 8px;
-            }}
-        }}
-        
-        .result {{
-            font-weight: 600;
-            padding: 4px 8px;
-            border-radius: 4px;
-            text-align: center;
-            min-width: 40px;
-        }}
-        
-        .result.win {{
-            color: #22863a;
-            background: #f0ffe4;
-        }}
-        
-        .result.loss {{
-            color: #cb2431;
-            background: #ffeef0;
-        }}
-        
-        .result.draw {{
-            color: #6f42c1;
-            background: #f5f3ff;
-        }}
-        
-        .rating-change {{
-            font-weight: 600;
-            text-align: center;
-        }}
-        
-        .rating-change.positive {{
-            color: #22863a;
-        }}
-        
-        .rating-change.negative {{
-            color: #cb2431;
-        }}
-        
-        footer {{
-            padding: 15px 20px;
-            background: #f5f5f5;
-            border-top: 1px solid #e0e0e0;
-            text-align: center;
-            font-size: 13px;
-            color: #666;
-        }}
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Player Details</title>
+  <style>
+    * {{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }}
+    
+    body {{
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }}
+    
+    .container {{
+      max-width: 1000px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+    }}
+    
+    .header {{
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }}
+    
+    .header h1 {{
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }}
+    
+    .header nav {{
+      margin-top: 15px;
+    }}
+    
+    .header a {{
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: none;
+      font-size: 14px;
+      margin: 0 15px;
+    }}
+    
+    .header a:hover {{
+      text-decoration: underline;
+    }}
+    
+    .content {{
+      padding: 20px;
+    }}
+    
+    details {{
+      margin: 15px 0;
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      overflow: hidden;
+    }}
+    
+    summary {{
+      background: #f8f9fa;
+      padding: 15px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+    }}
+    
+    summary:hover {{
+      background: #e9ecef;
+    }}
+    
+    .player-name {{
+      color: #333;
+      flex: 1;
+    }}
+    
+    .player-rating {{
+      color: #764ba2;
+      font-weight: 700;
+      margin-right: 10px;
+    }}
+    
+    .player-details {{
+      padding: 15px;
+      background: white;
+    }}
+    
+    .matches-table {{
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9em;
+    }}
+    
+    .matches-table th {{
+      background: #f8f9fa;
+      padding: 10px;
+      text-align: left;
+      font-weight: 600;
+      border-bottom: 2px solid #dee2e6;
+    }}
+    
+    .matches-table td {{
+      padding: 10px;
+      border-bottom: 1px solid #dee2e6;
+    }}
+    
+    .matches-table tr:hover {{
+      background: #f8f9fa;
+    }}
+    
+    .result {{
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.85em;
+    }}
+    
+    .result.win {{
+      background: #d4edda;
+      color: #155724;
+    }}
+    
+    .result.loss {{
+      background: #f8d7da;
+      color: #721c24;
+    }}
+    
+    .result.draw {{
+      background: #e2e3e5;
+      color: #383d41;
+    }}
+    
+    .rating-change {{
+      font-weight: 600;
+    }}
+    
+    .rating-change.positive {{
+      color: #28a745;
+    }}
+    
+    .rating-change.negative {{
+      color: #dc3545;
+    }}
+    
+    .rating-change.neutral {{
+      color: #666;
+    }}
+    
+    .footer {{
+      background: #f8f9fa;
+      padding: 20px;
+      text-align: center;
+      color: #666;
+      font-size: 0.9em;
+      border-top: 1px solid #dee2e6;
+    }}
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Player History</h1>
-            <a href="leaderboard.html">← Back to Leaderboard</a>
-            <a href="tournaments.html">Tournaments</a>
-        </header>
-        
-        <div class="players">
-{sections_html}
-        </div>
-        
-        <footer>
-            Last updated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} UTC
-        </footer>
+  <div class="container">
+    <div class="header">
+      <h1>Player Details</h1>
+      <nav>
+        <a href="leaderboard.html">Leaderboard</a>
+        <a href="tournaments.html">Tournaments</a>
+      </nav>
     </div>
     
-    <script>
-        // Auto-expand player if navigated via hash
-        document.addEventListener('DOMContentLoaded', function() {{
-            const hash = window.location.hash.slice(1);
-            if (hash) {{
-                const details = document.getElementById(hash);
-                if (details) {{
-                    details.open = true;
-                    details.scrollIntoView({{ behavior: 'smooth', block: 'start' }});
-                }}
-            }}
-        }});
-    </script>
-</body>
-</html>"""
-        return html
+    <div class="content">
+{sections_html}
+    </div>
     
-    def generate(self) -> None:
-        """Generate players detail page."""
-        players = self._load_players()
-        html_content = self._generate_html(players)
-        output_path = self.output_dir.parent / 'players.html'
-        output_path.write_text(html_content, encoding='utf-8')
-        
-        self.log(f"Generated players page: players.html ({len(players)} players)")
-        self._flush_logs()
+    <div class="footer">
+      <p>Click player name to expand details</p>
+    </div>
+  </div>
+</body>
+</html>
+"""
+    return html
+
+
+def log_message(buffer: list, message: str) -> list:
+    """Buffer and print log message."""
+    timestamp = datetime.now().isoformat()
+    buffer.append(f"[{timestamp}] {message}")
+    print(message)
+    return buffer
+
+
+def flush_logs(buffer: list, log_file: Path) -> None:
+    """Write all buffered logs to file."""
+    if not buffer:
+        return
+    
+    new_entries = "\n".join(buffer) + "\n"
+    with open(log_file, 'a') as f:
+        f.write(new_entries)
 
 
 def main():
     """Main entry point."""
     repo_root = Path(__file__).parent.parent
     output_dir = repo_root / 'output'
+    input_dir = repo_root / 'input'
     log_file = repo_root / 'log.txt'
-    opt_in_file = repo_root / 'input' / 'opt_in.csv'
     
-    # Load opted-in players
-    opted_in_players = set()
-    if opt_in_file.exists():
-        with open(opt_in_file, 'r') as f:
-            opted_in_players = {line.strip() for line in f if line.strip()}
+    log_buffer = []
     
-    generator = PlayersGenerator(output_dir, log_file, opted_in_players)
-    generator.log("Starting player pages generation")
-    generator.generate()
-    generator.log("Player pages generation complete")
+    def log_func(msg: str):
+        nonlocal log_buffer
+        log_buffer = log_message(log_buffer, msg)
+    
+    log_func("Starting player pages generation")
+    
+    players = json.loads((output_dir / 'players.json').read_text() or '{}')
+    opted_in_players = load_opted_in_players_csv(input_dir)
+    
+    html = generate_player_pages_html(players, opted_in_players)
+    
+    output_file = repo_root / 'players.html'
+    with open(output_file, 'w') as f:
+        f.write(html)
+    
+    log_func(f"Generated players page: players.html ({len(players)} players)")
+    log_func("Player pages generation complete")
+    flush_logs(log_buffer, log_file)
 
 
 if __name__ == '__main__':

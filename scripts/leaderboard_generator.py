@@ -1,84 +1,64 @@
 #!/usr/bin/env python3
 """
 Generate HTML leaderboard from player data.
+Functional implementation with pure functions.
 """
 
 import json
+import re
 from pathlib import Path
 from datetime import datetime
 from typing import List, Dict
 
 
-class LeaderboardGenerator:
-    """Generate HTML leaderboards from player data."""
+def slugify(text: str) -> str:
+    """Convert text to URL-friendly slug."""
+    text = text.lower().strip()
+    text = re.sub(r'[^\w\s-]', '', text)
+    text = re.sub(r'-+', '-', text)
+    text = re.sub(r' +', '-', text)
+    return text
+
+
+def load_players_data(output_dir: Path) -> Dict[str, Dict]:
+    """Load player data from JSON file."""
+    players_file = output_dir / 'players.json'
+    if not players_file.exists():
+        return {}
     
-    def __init__(self, output_dir: Path, log_file: Path = None):
-        self.output_dir = output_dir
-        self.players_file = output_dir / 'players.json'
-        self.log_file = log_file or Path('log.txt')
-        self.log_buffer = []
-    
-    def log(self, message: str):
-        """Buffer message to be logged at end."""
-        timestamp = datetime.now().isoformat()
-        self.log_buffer.append(f"[{timestamp}] {message}")
-        print(message)
-    
-    def flush_logs(self):
-        """Write all buffered logs to file (append to file)."""
-        if not self.log_buffer:
-            return
-        
-        # Append entries to end of file
-        new_entries = "\n".join(self.log_buffer) + "\n"
-        with open(self.log_file, 'a') as f:
-            f.write(new_entries)
-    
-    def load_players(self) -> Dict[str, Dict]:
-        """Load player data from JSON."""
-        if not self.players_file.exists():
-            return {}
-        
-        with open(self.players_file, 'r') as f:
-            return json.load(f)
-    
-    def generate_leaderboard(self):
-        """Generate main leaderboard HTML."""
-        players = self.load_players()
-        
-        # Sort by rating
-        sorted_players = sorted(
-            players.values(),
-            key=lambda p: p['rating'],
-            reverse=True
-        )
-        
-        html = self._generate_html(sorted_players)
-        
-        output_file = self.output_dir.parent / 'leaderboard.html'
-        with open(output_file, 'w') as f:
-            f.write(html)
-        
-        self.log(f"Generated leaderboard: leaderboard.html ({len(sorted_players)} players)")
-    
-    def _generate_html(self, sorted_players: List[Dict]) -> str:
-        """Generate HTML content for leaderboard."""
-        rows = []
-        for rank, player in enumerate(sorted_players, 1):
-            # Create anchor-friendly slug for player name
-            slug = self._slugify(player['name'])
-            rows.append(f"""
+    with open(players_file, 'r') as f:
+        return json.load(f)
+
+
+def sort_players_by_rating(players: Dict[str, Dict]) -> List[Dict]:
+    """Sort players by rating in descending order."""
+    return sorted(
+        players.values(),
+        key=lambda p: p['rating'],
+        reverse=True
+    )
+
+
+def generate_player_row(rank: int, player: Dict) -> str:
+    """Generate a single row for the leaderboard table."""
+    slug = slugify(player['name'])
+    return f"""
     <tr>
       <td class="rank">{rank}</td>
       <td class="name"><a href="players.html#{slug}">{player['name']}</a></td>
       <td class="rating">{player['rating']}</td>
-      <td class="matches">{len(player['matches'])}</td>
+      <td class="matches">{len(player.get('matches', []))}</td>
     </tr>
-            """)
-        
-        rows_html = '\n'.join(rows)
-        
-        html = f"""<!DOCTYPE html>
+    """
+
+
+def generate_leaderboard_html(players: Dict[str, Dict]) -> str:
+    """Generate complete leaderboard HTML."""
+    sorted_players = sort_players_by_rating(players)
+    rows = [generate_player_row(rank, player) for rank, player in enumerate(sorted_players, 1)]
+    rows_html = '\n'.join(rows)
+    
+    html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -247,17 +227,25 @@ class LeaderboardGenerator:
 </body>
 </html>
 """
-        return html
+    return html
+
+
+def log_message(buffer: list, message: str) -> list:
+    """Buffer and print log message."""
+    timestamp = datetime.now().isoformat()
+    buffer.append(f"[{timestamp}] {message}")
+    print(message)
+    return buffer
+
+
+def flush_logs(buffer: list, log_file: Path) -> None:
+    """Write all buffered logs to file."""
+    if not buffer:
+        return
     
-    @staticmethod
-    def _slugify(text: str) -> str:
-        """Convert text to URL-friendly slug."""
-        import re
-        text = text.lower().strip()
-        text = re.sub(r'[^\w\s-]', '', text)
-        text = re.sub(r'-+', '-', text)
-        text = re.sub(r' +', '-', text)
-        return text
+    new_entries = "\n".join(buffer) + "\n"
+    with open(log_file, 'a') as f:
+        f.write(new_entries)
 
 
 def main():
@@ -266,11 +254,24 @@ def main():
     output_dir = repo_root / 'output'
     log_file = repo_root / 'log.txt'
     
-    generator = LeaderboardGenerator(output_dir, log_file)
-    generator.log("Starting leaderboard generation")
-    generator.generate_leaderboard()
-    generator.log("Leaderboard generation complete")
-    generator.flush_logs()
+    log_buffer = []
+    
+    def log_func(msg: str):
+        nonlocal log_buffer
+        log_buffer = log_message(log_buffer, msg)
+    
+    log_func("Starting leaderboard generation")
+    
+    players = load_players_data(output_dir)
+    html = generate_leaderboard_html(players)
+    
+    output_file = repo_root / 'leaderboard.html'
+    with open(output_file, 'w') as f:
+        f.write(html)
+    
+    log_func(f"Generated leaderboard: leaderboard.html ({len(players)} players)")
+    log_func("Leaderboard generation complete")
+    flush_logs(log_buffer, log_file)
 
 
 if __name__ == '__main__':

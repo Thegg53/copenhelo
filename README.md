@@ -41,6 +41,30 @@ input/
 
 Files are EventLink HTML export files with pairings tables.
 
+## Opt-In System
+
+Player data visibility is controlled via `input/opt_in.csv` which contains a list of player names who have consented to have their data displayed publicly.
+
+### Configuration
+
+Add player names to `input/opt_in.csv` (one per line):
+
+```
+Foo Bar
+John Doe
+Albert Einstein
+```
+
+### Privacy Features
+
+- **Opted-in players:** Display full names and complete match history across all pages
+- **Non-opted-in players:** Replaced with "Hidden Player" or "Hidden Opponent" in output
+- **Two-level sanitization:**
+  1. Internal: Use opponent's actual rating if opted-in, otherwise use default 1500
+  2. Output: Replace non-opted-in player names in all JSON and HTML files before publishing
+
+This ensures non-consenting players cannot be identified through rating inference or any other method.
+
 ## Pipeline
 
 ### Step 1: Parse Tournaments
@@ -140,6 +164,63 @@ make recalculate
 - Clears `output/` directory
 - Re-runs ELO calculation from all `events/*.json` files
 - Useful if tournament dates need reordering
+
+## Testing
+
+Comprehensive test suite validates all core functionality:
+
+```bash
+make test
+```
+
+### Test Coverage
+
+**34 tests** across 6 test files:
+
+- **test_elo_calculator.py** (9 tests)
+  - ELO rating calculations and formulas
+  - Default ratings and K-factor handling
+  - Win/loss/draw scenarios
+
+- **test_parse_tournaments.py** (3 tests)
+  - HTML parsing and data extraction
+  - Tournament deduplication
+  - Log buffering
+
+- **test_leaderboard_generator.py** (6 tests)
+  - URL slug generation
+  - Player data loading and sorting
+  - HTML output validation
+
+- **test_players_generator.py** (5 tests)
+  - Player page generation
+  - Match history display
+  - Opt-in privacy enforcement
+
+- **test_tournaments_generator.py** (7 tests)
+  - Tournament data parsing
+  - Tournament page generation
+  - Player visibility based on opt-in
+
+- **test_privacy.py** (4 tests)
+  - Opt-in filtering verification
+  - Opponent name sanitization
+  - Player name hiding in output
+  - No non-opted-in names in JSON output
+
+### Running Tests
+
+```bash
+make test                 # Run all tests
+make test -v             # Verbose output
+make test tests/test_elo_calculator.py  # Run specific test file
+```
+
+All tests pass and validate:
+- Core ELO calculation accuracy
+- HTML generation correctness
+- Privacy system enforcement
+- Data persistence and idempotency
 
 ## Logging
 
