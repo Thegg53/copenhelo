@@ -267,7 +267,7 @@
   },
   "Erik Christensen": {
     "name": "Erik Christensen",
-    "rating": 1519.5,
+    "rating": 1468.8,
     "matches": [
       {
         "tournament": "20260530_pauper_baltzer",
@@ -294,6 +294,33 @@
         "result": [
           2,
           1
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 1,
+        "opponent": "Erika C",
+        "result": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 2,
+        "opponent": "gui morgado",
+        "result": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 3,
+        "opponent": "Gregoire  Sanguinetti",
+        "result": [
+          1,
+          2
         ]
       }
     ],
@@ -335,6 +362,45 @@
         "score": [
           2,
           1
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 1,
+        "opponent": "Erika C",
+        "result_code": "L",
+        "rating_before": 1519.5,
+        "rating_after": 1502.6,
+        "rating_change": -16.9,
+        "score": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 2,
+        "opponent": "gui morgado",
+        "result_code": "L",
+        "rating_before": 1502.6,
+        "rating_after": 1485.7,
+        "rating_change": -16.9,
+        "score": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 3,
+        "opponent": "Gregoire  Sanguinetti",
+        "result_code": "L",
+        "rating_before": 1485.7,
+        "rating_after": 1468.8,
+        "rating_change": -16.9,
+        "score": [
+          1,
+          2
         ]
       }
     ]
@@ -511,7 +577,7 @@
   },
   "Gregoire  Sanguinetti": {
     "name": "Gregoire  Sanguinetti",
-    "rating": 1498.6,
+    "rating": 1500.0,
     "matches": [
       {
         "tournament": "20260530_pauper_baltzer",
@@ -544,6 +610,42 @@
         "tournament": "20260530_pauper_baltzer",
         "round": 4,
         "opponent": "Christoffer Nielsen",
+        "result": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 1,
+        "opponent": "Eva \u00d8sterby",
+        "result": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 2,
+        "opponent": "Mads Dupont",
+        "result": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 3,
+        "opponent": "Erik Christensen",
+        "result": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 4,
+        "opponent": "Jonathan Mohr",
         "result": [
           2,
           0
@@ -602,12 +704,64 @@
           2,
           0
         ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 1,
+        "opponent": "Eva \u00d8sterby",
+        "result_code": "L",
+        "rating_before": 1498.6,
+        "rating_after": 1482.9,
+        "rating_change": -15.7,
+        "score": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 2,
+        "opponent": "Mads Dupont",
+        "result_code": "L",
+        "rating_before": 1482.9,
+        "rating_after": 1467.0,
+        "rating_change": -15.9,
+        "score": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 3,
+        "opponent": "Erik Christensen",
+        "result_code": "W",
+        "rating_before": 1467.0,
+        "rating_after": 1483.9,
+        "rating_change": 16.9,
+        "score": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 4,
+        "opponent": "Jonathan Mohr",
+        "result_code": "W",
+        "rating_before": 1483.9,
+        "rating_after": 1500.0,
+        "rating_change": 16.1,
+        "score": [
+          2,
+          0
+        ]
       }
     ]
   },
   "Eva \u00d8sterby": {
     "name": "Eva \u00d8sterby",
-    "rating": 1504.2,
+    "rating": 1470.0,
     "matches": [
       {
         "tournament": "20260530_pauper_baltzer",
@@ -643,6 +797,42 @@
         "result": [
           2,
           0
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 1,
+        "opponent": "Gregoire  Sanguinetti",
+        "result": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 2,
+        "opponent": "Alexander Graulund",
+        "result": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 3,
+        "opponent": "Jonathan Mohr",
+        "result": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 4,
+        "opponent": "Esben Roenne Green",
+        "result": [
+          0,
+          2
         ]
       }
     ],
@@ -697,6 +887,58 @@
         "score": [
           2,
           0
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 1,
+        "opponent": "Gregoire  Sanguinetti",
+        "result_code": "W",
+        "rating_before": 1504.2,
+        "rating_after": 1519.9,
+        "rating_change": 15.7,
+        "score": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 2,
+        "opponent": "Alexander Graulund",
+        "result_code": "L",
+        "rating_before": 1519.9,
+        "rating_after": 1503.7,
+        "rating_change": -16.2,
+        "score": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 3,
+        "opponent": "Jonathan Mohr",
+        "result_code": "L",
+        "rating_before": 1503.7,
+        "rating_after": 1486.1,
+        "rating_change": -17.6,
+        "score": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 4,
+        "opponent": "Esben Roenne Green",
+        "result_code": "L",
+        "rating_before": 1486.1,
+        "rating_after": 1470.0,
+        "rating_change": -16.1,
+        "score": [
+          0,
+          2
         ]
       }
     ]
@@ -770,6 +1012,848 @@
         "rating_change": -17.4,
         "score": [
           1,
+          2
+        ]
+      }
+    ]
+  },
+  "Olav Joergensen": {
+    "name": "Olav Joergensen",
+    "rating": 1563.9,
+    "matches": [
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 1,
+        "opponent": "Thor Weis",
+        "result": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 2,
+        "opponent": "Stefan Leone",
+        "result": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 3,
+        "opponent": "Erika C",
+        "result": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 4,
+        "opponent": "Alexander Graulund",
+        "result": [
+          2,
+          1
+        ]
+      }
+    ],
+    "history": [
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 1,
+        "opponent": "Thor Weis",
+        "result_code": "W",
+        "rating_before": 1500,
+        "rating_after": 1516.0,
+        "rating_change": 16.0,
+        "score": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 2,
+        "opponent": "Stefan Leone",
+        "result_code": "W",
+        "rating_before": 1516.0,
+        "rating_after": 1532.0,
+        "rating_change": 16.0,
+        "score": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 3,
+        "opponent": "Erika C",
+        "result_code": "W",
+        "rating_before": 1532.0,
+        "rating_after": 1548.0,
+        "rating_change": 16.0,
+        "score": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 4,
+        "opponent": "Alexander Graulund",
+        "result_code": "W",
+        "rating_before": 1548.0,
+        "rating_after": 1563.9,
+        "rating_change": 15.9,
+        "score": [
+          2,
+          1
+        ]
+      }
+    ]
+  },
+  "Thor Weis": {
+    "name": "Thor Weis",
+    "rating": 1532.0,
+    "matches": [
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 1,
+        "opponent": "Olav Joergensen",
+        "result": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 2,
+        "opponent": "Jonathan Mohr",
+        "result": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 3,
+        "opponent": "Esben Roenne Green",
+        "result": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 4,
+        "opponent": "Erika C",
+        "result": [
+          2,
+          0
+        ]
+      }
+    ],
+    "history": [
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 1,
+        "opponent": "Olav Joergensen",
+        "result_code": "L",
+        "rating_before": 1500,
+        "rating_after": 1484.0,
+        "rating_change": -16.0,
+        "score": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 2,
+        "opponent": "Jonathan Mohr",
+        "result_code": "W",
+        "rating_before": 1484.0,
+        "rating_after": 1500.0,
+        "rating_change": 16.0,
+        "score": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 3,
+        "opponent": "Esben Roenne Green",
+        "result_code": "W",
+        "rating_before": 1500.0,
+        "rating_after": 1516.0,
+        "rating_change": 16.0,
+        "score": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 4,
+        "opponent": "Erika C",
+        "result_code": "W",
+        "rating_before": 1516.0,
+        "rating_after": 1532.0,
+        "rating_change": 16.0,
+        "score": [
+          2,
+          0
+        ]
+      }
+    ]
+  },
+  "Stefan Leone": {
+    "name": "Stefan Leone",
+    "rating": 1502.9,
+    "matches": [
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 1,
+        "opponent": "gui morgado",
+        "result": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 2,
+        "opponent": "Olav Joergensen",
+        "result": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 3,
+        "opponent": "Alexander Graulund",
+        "result": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 4,
+        "opponent": "Mads Dupont",
+        "result": [
+          2,
+          0
+        ]
+      }
+    ],
+    "history": [
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 1,
+        "opponent": "gui morgado",
+        "result_code": "W",
+        "rating_before": 1500,
+        "rating_after": 1516.0,
+        "rating_change": 16.0,
+        "score": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 2,
+        "opponent": "Olav Joergensen",
+        "result_code": "L",
+        "rating_before": 1516.0,
+        "rating_after": 1500.0,
+        "rating_change": -16.0,
+        "score": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 3,
+        "opponent": "Alexander Graulund",
+        "result_code": "L",
+        "rating_before": 1500.0,
+        "rating_after": 1485.5,
+        "rating_change": -14.5,
+        "score": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 4,
+        "opponent": "Mads Dupont",
+        "result_code": "W",
+        "rating_before": 1485.5,
+        "rating_after": 1502.9,
+        "rating_change": 17.4,
+        "score": [
+          2,
+          0
+        ]
+      }
+    ]
+  },
+  "gui morgado": {
+    "name": "gui morgado",
+    "rating": 1484.9,
+    "matches": [
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 1,
+        "opponent": "Stefan Leone",
+        "result": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 2,
+        "opponent": "Erik Christensen",
+        "result": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 3,
+        "opponent": "Mads Dupont",
+        "result": [
+          1,
+          2
+        ]
+      }
+    ],
+    "history": [
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 1,
+        "opponent": "Stefan Leone",
+        "result_code": "L",
+        "rating_before": 1500,
+        "rating_after": 1484.0,
+        "rating_change": -16.0,
+        "score": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 2,
+        "opponent": "Erik Christensen",
+        "result_code": "W",
+        "rating_before": 1484.0,
+        "rating_after": 1500.9,
+        "rating_change": 16.9,
+        "score": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 3,
+        "opponent": "Mads Dupont",
+        "result_code": "L",
+        "rating_before": 1500.9,
+        "rating_after": 1484.9,
+        "rating_change": -16.0,
+        "score": [
+          1,
+          2
+        ]
+      }
+    ]
+  },
+  "Alexander Graulund": {
+    "name": "Alexander Graulund",
+    "rating": 1530.8,
+    "matches": [
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 1,
+        "opponent": "Mads Dupont",
+        "result": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 2,
+        "opponent": "Eva \u00d8sterby",
+        "result": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 3,
+        "opponent": "Stefan Leone",
+        "result": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 4,
+        "opponent": "Olav Joergensen",
+        "result": [
+          1,
+          2
+        ]
+      }
+    ],
+    "history": [
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 1,
+        "opponent": "Mads Dupont",
+        "result_code": "W",
+        "rating_before": 1500,
+        "rating_after": 1516.0,
+        "rating_change": 16.0,
+        "score": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 2,
+        "opponent": "Eva \u00d8sterby",
+        "result_code": "W",
+        "rating_before": 1516.0,
+        "rating_after": 1532.2,
+        "rating_change": 16.2,
+        "score": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 3,
+        "opponent": "Stefan Leone",
+        "result_code": "W",
+        "rating_before": 1532.2,
+        "rating_after": 1546.7,
+        "rating_change": 14.5,
+        "score": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 4,
+        "opponent": "Olav Joergensen",
+        "result_code": "L",
+        "rating_before": 1546.7,
+        "rating_after": 1530.8,
+        "rating_change": -15.9,
+        "score": [
+          1,
+          2
+        ]
+      }
+    ]
+  },
+  "Mads Dupont": {
+    "name": "Mads Dupont",
+    "rating": 1498.5,
+    "matches": [
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 1,
+        "opponent": "Alexander Graulund",
+        "result": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 2,
+        "opponent": "Gregoire  Sanguinetti",
+        "result": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 3,
+        "opponent": "gui morgado",
+        "result": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 4,
+        "opponent": "Stefan Leone",
+        "result": [
+          0,
+          2
+        ]
+      }
+    ],
+    "history": [
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 1,
+        "opponent": "Alexander Graulund",
+        "result_code": "L",
+        "rating_before": 1500,
+        "rating_after": 1484.0,
+        "rating_change": -16.0,
+        "score": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 2,
+        "opponent": "Gregoire  Sanguinetti",
+        "result_code": "W",
+        "rating_before": 1484.0,
+        "rating_after": 1499.9,
+        "rating_change": 15.9,
+        "score": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 3,
+        "opponent": "gui morgado",
+        "result_code": "W",
+        "rating_before": 1499.9,
+        "rating_after": 1515.9,
+        "rating_change": 16.0,
+        "score": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 4,
+        "opponent": "Stefan Leone",
+        "result_code": "L",
+        "rating_before": 1515.9,
+        "rating_after": 1498.5,
+        "rating_change": -17.4,
+        "score": [
+          0,
+          2
+        ]
+      }
+    ]
+  },
+  "Jonathan Mohr": {
+    "name": "Jonathan Mohr",
+    "rating": 1469.5,
+    "matches": [
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 1,
+        "opponent": "Esben Roenne Green",
+        "result": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 2,
+        "opponent": "Thor Weis",
+        "result": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 3,
+        "opponent": "Eva \u00d8sterby",
+        "result": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 4,
+        "opponent": "Gregoire  Sanguinetti",
+        "result": [
+          0,
+          2
+        ]
+      }
+    ],
+    "history": [
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 1,
+        "opponent": "Esben Roenne Green",
+        "result_code": "L",
+        "rating_before": 1500,
+        "rating_after": 1484.0,
+        "rating_change": -16.0,
+        "score": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 2,
+        "opponent": "Thor Weis",
+        "result_code": "L",
+        "rating_before": 1484.0,
+        "rating_after": 1468.0,
+        "rating_change": -16.0,
+        "score": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 3,
+        "opponent": "Eva \u00d8sterby",
+        "result_code": "W",
+        "rating_before": 1468.0,
+        "rating_after": 1485.6,
+        "rating_change": 17.6,
+        "score": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 4,
+        "opponent": "Gregoire  Sanguinetti",
+        "result_code": "L",
+        "rating_before": 1485.6,
+        "rating_after": 1469.5,
+        "rating_change": -16.1,
+        "score": [
+          0,
+          2
+        ]
+      }
+    ]
+  },
+  "Esben Roenne Green": {
+    "name": "Esben Roenne Green",
+    "rating": 1500.1,
+    "matches": [
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 1,
+        "opponent": "Jonathan Mohr",
+        "result": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 2,
+        "opponent": "Erika C",
+        "result": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 3,
+        "opponent": "Thor Weis",
+        "result": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 4,
+        "opponent": "Eva \u00d8sterby",
+        "result": [
+          2,
+          0
+        ]
+      }
+    ],
+    "history": [
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 1,
+        "opponent": "Jonathan Mohr",
+        "result_code": "W",
+        "rating_before": 1500,
+        "rating_after": 1516.0,
+        "rating_change": 16.0,
+        "score": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 2,
+        "opponent": "Erika C",
+        "result_code": "L",
+        "rating_before": 1516.0,
+        "rating_after": 1500.0,
+        "rating_change": -16.0,
+        "score": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 3,
+        "opponent": "Thor Weis",
+        "result_code": "L",
+        "rating_before": 1500.0,
+        "rating_after": 1484.0,
+        "rating_change": -16.0,
+        "score": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 4,
+        "opponent": "Eva \u00d8sterby",
+        "result_code": "W",
+        "rating_before": 1484.0,
+        "rating_after": 1500.1,
+        "rating_change": 16.1,
+        "score": [
+          2,
+          0
+        ]
+      }
+    ]
+  },
+  "Erika C": {
+    "name": "Erika C",
+    "rating": 1500.9,
+    "matches": [
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 1,
+        "opponent": "Erik Christensen",
+        "result": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 2,
+        "opponent": "Esben Roenne Green",
+        "result": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 3,
+        "opponent": "Olav Joergensen",
+        "result": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 4,
+        "opponent": "Thor Weis",
+        "result": [
+          0,
+          2
+        ]
+      }
+    ],
+    "history": [
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 1,
+        "opponent": "Erik Christensen",
+        "result_code": "W",
+        "rating_before": 1500,
+        "rating_after": 1516.9,
+        "rating_change": 16.9,
+        "score": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 2,
+        "opponent": "Esben Roenne Green",
+        "result_code": "W",
+        "rating_before": 1516.9,
+        "rating_after": 1532.9,
+        "rating_change": 16.0,
+        "score": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 3,
+        "opponent": "Olav Joergensen",
+        "result_code": "L",
+        "rating_before": 1532.9,
+        "rating_after": 1516.9,
+        "rating_change": -16.0,
+        "score": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 4,
+        "opponent": "Thor Weis",
+        "result_code": "L",
+        "rating_before": 1516.9,
+        "rating_after": 1500.9,
+        "rating_change": -16.0,
+        "score": [
+          0,
           2
         ]
       }

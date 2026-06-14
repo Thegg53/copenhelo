@@ -212,5 +212,268 @@
       }
     },
     "created_at": "2026-06-03T13:25:25.252931"
+  },
+  "20260606_pauper_lyngby": {
+    "id": "20260606_pauper_lyngby",
+    "rounds": {
+      "1": {
+        "matches": [
+          {
+            "table": "1",
+            "player1": "Olav Joergensen",
+            "player2": "Thor Weis",
+            "result": [
+              2,
+              1
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "2",
+            "player1": "Eva \u00d8sterby",
+            "player2": "Gregoire  Sanguinetti",
+            "result": [
+              2,
+              1
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "3",
+            "player1": "Stefan Leone",
+            "player2": "gui morgado",
+            "result": [
+              2,
+              1
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "4",
+            "player1": "Alexander Graulund",
+            "player2": "Mads Dupont",
+            "result": [
+              2,
+              1
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "5",
+            "player1": "Jonathan Mohr",
+            "player2": "Esben Roenne Green",
+            "result": [
+              0,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "6",
+            "player1": "Erika C",
+            "player2": "Erik Christensen",
+            "result": [
+              2,
+              0
+            ],
+            "has_bye": false
+          }
+        ],
+        "processed_at": "2026-06-14T02:53:56.528640"
+      },
+      "2": {
+        "matches": [
+          {
+            "table": "1",
+            "player1": "Erik Christensen",
+            "player2": "gui morgado",
+            "result": [
+              1,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "2",
+            "player1": "Olav Joergensen",
+            "player2": "Stefan Leone",
+            "result": [
+              2,
+              1
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "3",
+            "player1": "Eva \u00d8sterby",
+            "player2": "Alexander Graulund",
+            "result": [
+              1,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "4",
+            "player1": "Jonathan Mohr",
+            "player2": "Thor Weis",
+            "result": [
+              0,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "5",
+            "player1": "Gregoire  Sanguinetti",
+            "player2": "Mads Dupont",
+            "result": [
+              1,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "6",
+            "player1": "Esben Roenne Green",
+            "player2": "Erika C",
+            "result": [
+              1,
+              2
+            ],
+            "has_bye": false
+          }
+        ],
+        "processed_at": "2026-06-14T02:53:56.528739"
+      },
+      "3": {
+        "matches": [
+          {
+            "table": "1",
+            "player1": "Erik Christensen",
+            "player2": "Gregoire  Sanguinetti",
+            "result": [
+              1,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "2",
+            "player1": "Alexander Graulund",
+            "player2": "Stefan Leone",
+            "result": [
+              2,
+              1
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "3",
+            "player1": "Thor Weis",
+            "player2": "Esben Roenne Green",
+            "result": [
+              2,
+              1
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "4",
+            "player1": "Mads Dupont",
+            "player2": "gui morgado",
+            "result": [
+              2,
+              1
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "5",
+            "player1": "Eva \u00d8sterby",
+            "player2": "Jonathan Mohr",
+            "result": [
+              0,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "6",
+            "player1": "Erika C",
+            "player2": "Olav Joergensen",
+            "result": [
+              0,
+              2
+            ],
+            "has_bye": false
+          }
+        ],
+        "processed_at": "2026-06-14T02:53:56.528798"
+      },
+      "4": {
+        "matches": [
+          {
+            "table": "1",
+            "player1": "Gregoire  Sanguinetti",
+            "player2": "Jonathan Mohr",
+            "result": [
+              2,
+              0
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "2",
+            "player1": "Olav Joergensen",
+            "player2": "Alexander Graulund",
+            "result": [
+              2,
+              1
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "3",
+            "player1": "Mads Dupont",
+            "player2": "Stefan Leone",
+            "result": [
+              0,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "4",
+            "player1": "Esben Roenne Green",
+            "player2": "Eva \u00d8sterby",
+            "result": [
+              2,
+              0
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "6",
+            "player1": "Thor Weis",
+            "player2": "Erika C",
+            "result": [
+              2,
+              0
+            ],
+            "has_bye": false
+          },
+          {
+            "table": null,
+            "player1": "Erik Christensen",
+            "player2": null,
+            "result": null,
+            "has_bye": true
+          }
+        ],
+        "processed_at": "2026-06-14T02:53:56.528845"
+      }
+    },
+    "created_at": "2026-06-14T02:53:56.528638"
   }
 }
