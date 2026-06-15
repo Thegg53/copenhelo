@@ -1,7 +1,7 @@
 {
   "20260530_pauper_baltzer": {
     "id": "20260530_pauper_baltzer",
-    "created_at": "2026-06-14T13:02:28.122452",
+    "created_at": "2026-06-15T10:00:28.022625",
     "rounds": {
       "1": {
         "matches": [
@@ -53,7 +53,7 @@
             "has_bye": true
           }
         ],
-        "processed_at": "2026-06-14T13:02:28.122460"
+        "processed_at": "2026-06-15T10:00:28.022634"
       },
       "2": {
         "matches": [
@@ -105,7 +105,7 @@
             "has_bye": true
           }
         ],
-        "processed_at": "2026-06-14T13:02:28.122721"
+        "processed_at": "2026-06-15T10:00:28.022904"
       },
       "3": {
         "matches": [
@@ -157,7 +157,7 @@
             "has_bye": true
           }
         ],
-        "processed_at": "2026-06-14T13:02:28.122913"
+        "processed_at": "2026-06-15T10:00:28.023110"
       },
       "4": {
         "matches": [
@@ -209,13 +209,13 @@
             "has_bye": true
           }
         ],
-        "processed_at": "2026-06-14T13:02:28.123055"
+        "processed_at": "2026-06-15T10:00:28.023293"
       }
     }
   },
   "20260606_pauper_lyngby": {
     "id": "20260606_pauper_lyngby",
-    "created_at": "2026-06-14T13:02:28.123529",
+    "created_at": "2026-06-15T10:00:28.023898",
     "rounds": {
       "1": {
         "matches": [
@@ -252,7 +252,7 @@
           {
             "table": "4",
             "player1": "Hidden Player",
-            "player2": "Hidden Player",
+            "player2": "Mads Dupont",
             "result": [
               2,
               1
@@ -280,7 +280,7 @@
             "has_bye": false
           }
         ],
-        "processed_at": "2026-06-14T13:02:28.123536"
+        "processed_at": "2026-06-15T10:00:28.023906"
       },
       "2": {
         "matches": [
@@ -327,7 +327,7 @@
           {
             "table": "5",
             "player1": "Hidden Player",
-            "player2": "Hidden Player",
+            "player2": "Mads Dupont",
             "result": [
               1,
               2
@@ -345,7 +345,7 @@
             "has_bye": false
           }
         ],
-        "processed_at": "2026-06-14T13:02:28.123747"
+        "processed_at": "2026-06-15T10:00:28.024196"
       },
       "3": {
         "matches": [
@@ -381,7 +381,7 @@
           },
           {
             "table": "4",
-            "player1": "Hidden Player",
+            "player1": "Mads Dupont",
             "player2": "gui morgado",
             "result": [
               2,
@@ -410,7 +410,7 @@
             "has_bye": false
           }
         ],
-        "processed_at": "2026-06-14T13:02:28.123941"
+        "processed_at": "2026-06-15T10:00:28.024487"
       },
       "4": {
         "matches": [
@@ -436,7 +436,7 @@
           },
           {
             "table": "3",
-            "player1": "Hidden Player",
+            "player1": "Mads Dupont",
             "player2": "Hidden Player",
             "result": [
               0,
@@ -472,7 +472,7 @@
             "has_bye": true
           }
         ],
-        "processed_at": "2026-06-14T13:02:28.124122"
+        "processed_at": "2026-06-15T10:00:28.024749"
       }
     }
   }
