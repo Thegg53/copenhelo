@@ -12,39 +12,59 @@ The ELO rating system calculates player ratings based on tournament results. The
 
 ## Core Algorithm
 
-### Performance Rating Calculation
+### Expected Score Calculation
 
-For each tournament, we calculate a **performance rating** representing the rating level the player demonstrated in that tournament:
+For each tournament, we calculate the **expected score** using the Magic: The Gathering standard ELO formula:
 
 ```
-performance_rating = R such that:
-  expected_score(R, field_avg) = actual_score
+expected_score = 1 / (1 + 10^((field_avg - player_rating) / 1136))
 ```
 
-This uses binary search against the logistic curve: `E(R) = 1 / (1 + 10^((field_avg - R)/400))`
+Where:
+- `player_rating` is the player's current rating before the tournament
+- `field_avg` is the average rating of all opponents (excluding the player)
+- **Divisor 1136 is the MTG standard** (not chess's 400)
+
+This represents what score we'd expect the player to achieve against that field.
+
+### Why 1136 instead of Chess's 400?
+
+Magic: The Gathering has **significantly higher variance** than chess due to mana, draw variance, and sideboarding. The chess formula (400 divisor) predicts a 91% win rate for someone 400 points higher—unrealistic for Magic.
+
+The MTG Elo Project (industry standard at mtgeloproject.net) uses **1136** because it's calibrated so:
+- **200-point gap = 60% expected win rate** (vs chess's 76%)
+- Even the #1 rated player achieves only ~63% win rate
+- This properly reflects Magic's high variance
+
+Reference: "It didn't seem to us like there could ever be a situation where someone is 91% to win a match of Magic—there's too much variance in the game." —MTG Elo Project FAQ
 
 ### New Rating Calculation
 
-Once we have the performance rating, we calculate the new rating as:
+We calculate the new rating using the standard ELO formula:
 
 ```
-new_rating = current_rating + K_factor * (performance_rating - current_rating) / 400
+new_rating = current_rating + K_factor * (actual_score - expected_score)
 ```
 
-The **K-factor** determines how much the performance rating can shift the current rating. A higher K-factor means tournament results matter more.
+Where:
+- `actual_score` is the player's tournament score (0.0 to 1.0)
+- `expected_score` is calculated from the formula above
+- `K_factor` determines how much tournament results shift the rating
+
+**Key Principle**: This formula rewards over-performance and penalizes under-performance, regardless of field strength. A 75% win rate always produces a positive gain.
 
 ## Improvements
 
 ### A & B: K-factor Scaling and Dropout Handling (Unified)
 
-**Problem A**: A 5-0 record in a 3-round tournament requires lower performance than a 5-0 record in a 5-round tournament.
+**Problem A**: A 5-game tournament requires different rating swing evidence than a 3-game tournament.
 
 **Problem B**: Players who drop out (0-2, 1-2) shouldn't be penalized as heavily as those who complete the tournament.
 
-**Solution**: Use the same formula for all players based on games played:
+**Solution**: Use K-factor scaling based on games played, aligned with MTG Elo Project standards:
 
 ```
-K = 32 + (games - 3) * 12
+K = 32 * games
 ```
 
 This automatically handles both issues:
@@ -52,54 +72,112 @@ This automatically handles both issues:
 - Dropouts → fewer games → lower K-factor (less evidence = less impact)
 
 Examples:
-- 2 games (dropout): K = 20 ← Minimal K-factor impact
-- 3 games: K = 32 ← Baseline
-- 4 games: K = 44 ← Higher impact
-- 5 games: K = 56
-- 9 games (prestige): K = 104 ← Significant impact
+- 2 games (dropout): K = 64 ← Minimal K-factor impact
+- 3 games: K = 96
+- 4 games: K = 128 ← Standard tournament
+- 5 games: K = 160
+- 6 games: K = 192 ← Prestige tournament (6 swiss games only, excluding bracket)
 
-**Intuition**: More games = more evidence of skill at that level. K-factor directly reflects tournament length and completion.
+**Intuition**: More games = more evidence of skill at that level. K-factor directly reflects tournament length and completion. This is the same scaling approach used by MTG Elo Project but applied per-game.
 
 ### C: Prestige Tournament Bracket Bonuses
 
-**Problem**: In tournaments with swiss rounds + top 8 bracket, making the bracket represents additional skill proof. A finals berth (7+ wins total) should reward more than 5 wins in swiss-only.
+**Problem**: In tournaments with swiss rounds + top 8 bracket, making the bracket represents additional skill proof. The bracket is single-elimination with the strongest players, so advancing further should be rewarded.
 
-**Solution**: Prestige tournaments (name contains "prestige") get bracket stage bonuses:
+**Solution**: Prestige tournaments (name contains "prestige") use **swiss-only records** for ELO calculation and give flat rating bonuses based on bracket results:
 
 ```
-Finals (ranks 1-2):      K *= 1.5  (+50%)
-Semis (ranks 3-4):       K *= 1.3  (+30%)
-Quarters (ranks 5-8):    K *= 1.1  (+10%)
-Swiss-only (rank 9+):    K *= 1.0  (no bonus)
+For ELO calculation:
+- Use ONLY the 6 swiss games (exclude bracket games)
+- Calculate K and rating change based on swiss record
+
+Bracket bonuses (on top of ELO change):
+- Champion (3-0 bracket):        +48 rating points
+- Finalist (2-1 bracket):        +20 rating points
+- Semis (1-1 bracket):           +10 rating points
+- Quarters loser (0-1 bracket):  +3 rating points
+- Swiss-only (no bracket):       +0 rating points
 ```
 
-**Key Feature**: These bonuses are **additive, never subtractive**. They reward making the bracket but never penalize losing early in bracket play.
+**Key Details**:
+- **Only prestige tournaments** exclude bracket games
+- **Non-prestige tournaments** use the full record (all games count)
+- The bracket bonus is scaled as ~+16 per bracket win:
+  - 3 wins = +48
+  - 2 wins = +20 (one loss cancels one win)
+  - 1 win = +10 (break-even)
+  - 0 wins = +3 (just for making bracket)
 
-**Intuition**: Tournament progression = proven skill. Finals player gets more rating credit than a swiss-only player, even with similar records.
+**Rationale**:
+- **Prestige swiss-only**: Bracket games don't count in ELO because they're single-elimination (variance amplified, fewer game samples). The flat bonus recognizes making the bracket without polluting the main ELO calculation.
+- **Non-prestige full record**: Regular tournaments have all games in swiss, so all count equally.
+- **+16 per bracket win**: Three consecutive wins in single-elimination against the strongest field is significant but not overwhelming.
+
+**Example**: Prestige finalist with 6 swiss games at 75% and 2-1 bracket:
+```
+Swiss ELO calculation:
+  K = 24 * 6 = 144
+  expected_score = 50% (assuming average field)
+  change = 144 * (0.75 - 0.5) = +36
+
+Bracket bonus (2-1 record) = +20
+
+Total: +36 + +20 = +56 rating points
+(The 3 bracket games are completely excluded from ELO)
+```
+
+**Example**: Regular tournament with 4 games and 75% score:
+```
+All 4 games count (not prestige):
+  K = 32 * 4 = 128
+  expected_score = 43% (field 1523, player 1680, gap 157)
+  change = 128 * (0.75 - 0.43) = +41
+
+Bracket bonus = 0 (not prestige)
+Total: +41 rating points
+```
 
 ### Combining the Improvements
 
-The final K-factor calculation is simple:
+The final rating change is:
 
-1. Calculate base K from games played: K = 32 + (games - 3) * 12 (handles both A and B)
-2. Apply prestige bracket bonus if applicable (C)
+1. Calculate base K from games played: `K = 32 * games` (handles both A and B)
+2. For prestige tournaments with bracket: extract swiss-only record (remove bracket games)
+3. Calculate rating change using swiss record: `change = K * (actual_score - expected_score)`
+4. Apply prestige bracket bonus if applicable (C): `new_rating = current + change + bracket_bonus`
 
-Example: Prestige finalist with 9 games:
+Example: Prestige finalist with 9 total games (6 swiss + 3 bracket) and 75% swiss score:
 ```
-K_base = 32 + (9 - 3) * 12 = 104
-K_final = 104 + 15 = 119 (finals +15 bonus)
+Swiss portion: 4-1-1 (13/18 points)
+Bracket portion: 2-1 (in finals)
+
+K = 32 * 6 = 192 (only count swiss games)
+Assuming field_avg ≈ player_rating:
+  expected_score = 0.5
+  swiss_score = 13/18 ≈ 0.72
+  change = 192 * (0.72 - 0.5) ≈ +42
+
+Bracket bonus = +20 (2-1 record)
+Total: new_rating = current + 42 + 20 = current + 62
+(Note: The 3 bracket games are excluded from ELO calculation entirely)
 ```
 
-Example: Regular tournament dropout (0-2 in 5 rounds):
+Example: Standard tournament with 4 games and 75% score:
 ```
-K_base = 32 + (2 - 3) * 12 = 20
-K_final = 20 (no prestige bonus)
+K = 32 * 4 = 128
+Assuming field_avg ~1550, player_rating = 1680 (gap of -130):
+  expected_score = 1 / (1 + 10^(130/1136)) ≈ 43%
+  change = 128 * (0.75 - 0.43) ≈ +41
+Bracket bonus = 0 (not prestige)
+new_rating = current + 31
 ```
 
-Example: Prestige semi-finalist who made bracket (7 games):
+Example: Dropout with 2 games:
 ```
-K_base = 32 + (7 - 3) * 12 = 80
-K_final = 80 + 10 = 90 (semis +10 bonus)
+K = 24 * 2 = 48
+change = 48 * (actual - expected)
+Bracket bonus = 0
+new_rating = current + change
 ```
 
 ## Privacy
@@ -130,11 +208,11 @@ Unit tests in `tests/test_elo_calculator_final.py` cover:
 - Prestige bonuses for finals, semis, quarters
 
 The test suite verifies:
-- **K-factor scaling**: 2 games = K20, 3 games = K32, 4 games = K44, 5 games = K56, 9 games = K104
+- **K-factor scaling**: 2 games = K48, 3 games = K72, 4 games = K96, 5 games = K120, 9 games = K216
 - **Dropout penalty**: Early exits get lower K-factors automatically (no separate penalty logic)
-- **Prestige finals**: K × 1.5 bonus
-- **Prestige semis**: K × 1.3 bonus
-- **Prestige quarters**: K × 1.1 bonus
+- **Prestige finals**: +48 rating points
+- **Prestige semis**: +32 rating points
+- **Prestige quarters**: +16 rating points
 
 Run tests:
 ```bash

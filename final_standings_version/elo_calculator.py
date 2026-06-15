@@ -18,6 +18,25 @@ DEFAULT_RATING = 1500
 K_FACTOR = 64
 
 
+def calculate_expected_score(player_rating: float, field_avg_rating: float) -> float:
+    """
+    Calculate the expected score for a player against the field average.
+    
+    Uses divisor of 1136 following MTG Elo Project standards:
+    - 200-point rating gap = 60% expected win rate
+    - (vs chess's 400 divisor where 200-point gap = 76%)
+    - Accounts for Magic's high variance compared to chess
+    
+    Args:
+        player_rating: Player's current rating
+        field_avg_rating: Average rating of opponents (excluding this player)
+        
+    Returns:
+        Expected score as fraction (0.0 to 1.0)
+    """
+    return 1.0 / (1.0 + math.pow(10, (field_avg_rating - player_rating) / 1136))
+
+
 def calculate_performance_rating(
     current_rating: float,
     field_avg_rating: float,
@@ -25,10 +44,10 @@ def calculate_performance_rating(
     num_games: int
 ) -> float:
     """
-    Calculate performance rating using simplified USCF method.
+    Calculate expected score using standard Elo method.
     
-    Find the rating R such that a player with rating R would be expected
-    to score exactly 'score' points against the field.
+    This is a compatibility wrapper. The actual Elo gain now uses
+    (actual_score - expected_score) instead of (performance_rating - current_rating).
     
     Args:
         current_rating: Player's current rating
@@ -37,46 +56,32 @@ def calculate_performance_rating(
         num_games: Number of games played
         
     Returns:
-        Performance rating
+        The expected score (for use in standard Elo formula)
     """
-    if score == 1.0:
-        return field_avg_rating + 400
-    elif score == 0.0:
-        return field_avg_rating - 400
-    
-    # Binary search for performance rating
-    low = 0
-    high = 4000
-    
-    for _ in range(50):
-        mid = (low + high) / 2
-        expected = 1 / (1 + math.pow(10, (field_avg_rating - mid) / 400))
-        
-        if expected < score:
-            low = mid
-        else:
-            high = mid
-    
-    return round((low + high) / 2, 1)
+    # Return expected score instead of performance rating
+    # This is used in the standard Elo formula: gain = K * (actual - expected)
+    return calculate_expected_score(current_rating, field_avg_rating)
 
 
 def calculate_new_rating(
     current_rating: float,
-    performance_rating: float,
+    expected_score: float,
+    actual_score: float,
     k_factor: int = K_FACTOR
 ) -> float:
     """
-    Calculate new rating based on performance rating.
+    Calculate new rating using standard Elo formula.
     
     Args:
         current_rating: Player's rating before tournament
-        performance_rating: Performance rating from tournament
-        k_factor: K-factor (default 40)
+        expected_score: Expected score (from standard Elo calculation)
+        actual_score: Actual score achieved (0.0 to 1.0)
+        k_factor: K-factor (default 64)
         
     Returns:
         New rating
     """
-    rating_change = k_factor * (performance_rating - current_rating) / 400
+    rating_change = k_factor * (actual_score - expected_score)
     new_rating = current_rating + rating_change
     return round(new_rating, 1)
 
@@ -204,28 +209,36 @@ def calculate_k_factor(
     player: Dict
 ) -> int:
     """
-    Calculate adjusted K-factor based on tournament type and results.
+    Calculate K-factor based on games played.
+    
+    Formula: K = 32 * games (aligned with MTG Elo Project standards)
+    
+    This scales with tournament length - more games = more evidence = higher volatility:
+    - 2 games (dropout): K=64 → less impact
+    - 3 games: K=96
+    - 4 games: K=128 ← Standard tournament
+    - 5 games: K=160
+    - 6 games: K=192 ← Prestige tournament (swiss-only, excluding bracket)
+    
+    Each game is worth 32 K-factor points. Players are penalized for their 
+    losses proportionally to tournament length (more games = more evidence = larger swings).
+    
+    Note: Prestige tournaments with 9 total games (6 swiss + 3 bracket) use K=32*6=192,
+    as only the 6 swiss games count for ELO calculation.
     
     Args:
         base_k: Unused (kept for compatibility)
         tournament_id: Tournament identifier
         rank: Player's final rank
         games_played: Number of games player participated in
-        standings: Full standings list (for prestige detection)
-        player: Player standings dict with wins/losses/draws
+        standings: Full standings list (unused)
+        player: Player standings dict (unused)
     
     Returns:
         Adjusted K-factor
     """
-    # A: K-factor based on games played (same scaling for all)
-    # K = 32 + (games - 3) * 12
-    # 2 games → K=20, 3 games → K=32, 4 games → K=44, 5 games → K=56, etc.
-    k = 32 + (games_played - 3) * 12
-    
-    # B: Dropout detection (for reference - noted in standings via games_played)
-    
-    # C: Prestige tournament bracket bonus removed from K-factor
-    # (now handled as independent rating bump in process_tournament_standings)
+    # K = 32 * games (MTG Elo Project scaling)
+    k = 32 * games_played
     
     return k
 
@@ -233,8 +246,14 @@ def calculate_k_factor(
 def get_bracket_advancement_bonus(tournament_id: str, rank: int) -> float:
     """
     Get flat rating bonus for bracket advancement in prestige tournaments.
-    Independent of performance - purely for making the bracket.
-    Uses same scaling as K-factor: steps of 12 points.
+    Independent of performance - purely for making the bracket and placement.
+    No penalties for losing in bracket - only pure bonuses for reaching stages.
+    
+    Scaling based on bracket placement:
+    - Champion (3-0): +40
+    - Runner-up (2-1): +20
+    - Semis (1-1): +8
+    - Quarters (0-1): +4
     
     Args:
         tournament_id: Tournament identifier
@@ -246,14 +265,16 @@ def get_bracket_advancement_bonus(tournament_id: str, rank: int) -> float:
     if not is_prestige_tournament(tournament_id):
         return 0.0
     
-    if rank <= 2:
-        return 36.0  # Finals: +36 rating points (3×12)
+    if rank == 1:
+        return 40.0    # Champion: +40 rating points
+    elif rank == 2:
+        return 20.0    # Runner-up: +20 rating points
     elif rank <= 4:
-        return 24.0  # Semis: +24 rating points (2×12)
+        return 8.0     # Semis: +8 rating points
     elif rank <= 8:
-        return 12.0  # Quarters: +12 rating points (1×12)
+        return 4.0     # Quarters: +4 rating points
     else:
-        return 0.0   # Swiss-only: no bonus
+        return 0.0     # Swiss-only: no bonus
 
 
 def get_current_rating(name: str, players: Dict) -> float:
@@ -288,6 +309,9 @@ def process_tournament_standings(
     field_ratings = [get_current_rating(p['name'], players) for p in standings]
     total_rating = sum(field_ratings)
     
+    # Detect number of swiss games for this tournament
+    swiss_games = detect_swiss_games(standings)
+    
     results = []
     
     for player in standings:
@@ -303,29 +327,49 @@ def process_tournament_standings(
         # Calculate field average excluding this player
         field_avg = (total_rating - current_rating) / (len(standings) - 1)
         
-        # Calculate actual score (0.0 to 1.0) - use full actual record
-        actual_score = player['points'] / (games * 3)
+        # For prestige tournaments: extract swiss-only record (remove bracket games for top 8)
+        # For other tournaments: use full record
+        if is_prestige_tournament(tournament_id):
+            swiss_wins, swiss_losses, swiss_draws = extract_swiss_record(
+                player['rank'],
+                player['wins'],
+                player['losses'],
+                player['draws']
+            )
+        else:
+            # Non-prestige: use full record
+            swiss_wins, swiss_losses, swiss_draws = player['wins'], player['losses'], player['draws']
         
-        # Calculate performance rating - use full actual record
-        perf_rating = calculate_performance_rating(
+        # Calculate swiss games and points for this player
+        swiss_games_played = swiss_wins + swiss_losses + swiss_draws
+        swiss_points = swiss_wins * 3 + swiss_draws
+        
+        # Calculate actual score using swiss-only record
+        if swiss_games_played > 0:
+            actual_score = swiss_points / (swiss_games_played * 3)
+        else:
+            actual_score = 0.0
+        
+        # Calculate expected score using standard Elo method
+        expected_score = calculate_performance_rating(
             current_rating,
             field_avg,
             actual_score,
-            games
+            swiss_games_played
         )
         
-        # Calculate adjusted K-factor based on tournament type and bracket
+        # Calculate adjusted K-factor based on swiss games only
         adjusted_k = calculate_k_factor(
             K_FACTOR,
             tournament_id,
             player['rank'],
-            games,
+            swiss_games_played,
             standings,
             player
         )
         
-        # Calculate new rating with adjusted K-factor
-        new_rating = calculate_new_rating(current_rating, perf_rating, adjusted_k)
+        # Calculate new rating with adjusted K-factor using standard Elo formula (swiss-only)
+        new_rating = calculate_new_rating(current_rating, expected_score, actual_score, adjusted_k)
         
         # Add bracket advancement bonus (independent of performance)
         bracket_bonus = get_bracket_advancement_bonus(tournament_id, player['rank'])
@@ -363,7 +407,8 @@ def process_tournament_standings(
             'points': player['points'],
             'old_rating': current_rating,
             'field_avg': field_avg,
-            'perf_rating': perf_rating,
+            'expected_score': expected_score,
+            'actual_score': actual_score,
             'new_rating': new_rating_with_bracket,
             'change': new_rating_with_bracket - current_rating
         })
@@ -388,15 +433,15 @@ def process_tournament_standings(
 def print_results_table(results: List[Dict], opted_in_players: Set[str]):
     """Pretty print results table, hiding non-opted-in players."""
     print(f"\n{'Name':<25} {'Rank':<6} {'Record':<12} {'Old Elo':<10} "
-          f"{'Field Avg':<12} {'Perf':<10} {'New Elo':<10} {'Change':<10}")
-    print("-" * 115)
+          f"{'Expected':<10} {'Actual':<10} {'New Elo':<10} {'Change':<10}")
+    print("-" * 113)
     
     for r in results:
         display_name = r['name'] if r['name'] in opted_in_players else 'Hidden Player'
         change_str = f"+{r['change']:.1f}" if r['change'] >= 0 else f"{r['change']:.1f}"
         print(f"{display_name:<25} {r['rank']:<6} {r['record']:<12} "
-              f"{r['old_rating']:<10.1f} {r['field_avg']:<12.1f} "
-              f"{r['perf_rating']:<10.1f} {r['new_rating']:<10.1f} {change_str:<10}")
+              f"{r['old_rating']:<10.1f} {r['expected_score']:<10.2%} "
+              f"{r['actual_score']:<10.2%} {r['new_rating']:<10.1f} {change_str:<10}")
 
 
 def load_processed_tournaments(csv_file: Path) -> set:
