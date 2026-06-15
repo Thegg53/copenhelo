@@ -120,6 +120,142 @@ def save_tournaments(tournaments: Dict, tournaments_file: Path):
         json.dump(tournaments, f, indent=2)
 
 
+def is_prestige_tournament(tournament_id: str) -> bool:
+    """Detect if tournament is a prestige event with bracket stage."""
+    return 'prestige' in tournament_id.lower()
+
+
+def detect_swiss_baseline_games(standings: List[Dict]) -> int:
+    """Detect number of swiss rounds by finding min games (usually rank 9+)."""
+    if len(standings) <= 8:
+        return 0  # All players in bracket, assume pure bracket tournament
+    
+    # Find minimum games (likely the swiss-only players)
+    min_games = min(s['games'] for s in standings[8:])
+    return min_games
+
+
+def get_bracket_stage(rank: int) -> str:
+    """Determine which bracket stage a player reached (for prestige tournaments)."""
+    if rank <= 2:
+        return 'finals'
+    elif rank <= 4:
+        return 'semis'
+    elif rank <= 8:
+        return 'quarters'
+    else:
+        return 'swiss_only'
+
+
+def detect_swiss_games(standings: List[Dict]) -> int:
+    """
+    Detect number of swiss rounds by finding games played by rank 9+ players.
+    Returns the minimum games (which should be all swiss-only players).
+    """
+    if len(standings) <= 8:
+        return 0  # No swiss-only players, all in bracket
+    
+    # Find min games in rank 9+ (swiss-only players)
+    swiss_games = min(s['games'] for s in standings[8:])
+    return swiss_games
+
+
+def extract_swiss_record(rank: int, wins: int, losses: int, draws: int) -> tuple:
+    """
+    Extract the swiss-only record for a bracket player.
+    In prestige tournaments with 8-player bracket:
+    - Rank 1 (champion): 3 bracket games (3 wins)
+    - Rank 2 (finalist): 3 bracket games (2 wins, 1 loss)
+    - Rank 3-4 (semis): 2 bracket games (1 win, 1 loss)
+    - Rank 5-8 (quarters): 1 bracket game (1 loss)
+    
+    Args:
+        rank: Player's final rank (1-8 are bracket)
+        wins: Total wins
+        losses: Total losses
+        draws: Total draws
+        
+    Returns:
+        (swiss_wins, swiss_losses, swiss_draws)
+    """
+    if rank == 1:
+        # Champion: won all 3 bracket games
+        return (max(0, wins - 3), losses, draws)
+    elif rank == 2:
+        # Finalist: won 2, lost 1 in bracket
+        return (max(0, wins - 2), max(0, losses - 1), draws)
+    elif rank <= 4:
+        # Semis loser: won 1, lost 1 in bracket
+        return (max(0, wins - 1), max(0, losses - 1), draws)
+    elif rank <= 8:
+        # Quarters loser: lost 1 in bracket
+        return (wins, max(0, losses - 1), draws)
+    else:
+        # Swiss only: no changes
+        return (wins, losses, draws)
+
+
+def calculate_k_factor(
+    base_k: int,
+    tournament_id: str,
+    rank: int,
+    games_played: int,
+    standings: List[Dict],
+    player: Dict
+) -> int:
+    """
+    Calculate adjusted K-factor based on tournament type and results.
+    
+    Args:
+        base_k: Unused (kept for compatibility)
+        tournament_id: Tournament identifier
+        rank: Player's final rank
+        games_played: Number of games player participated in
+        standings: Full standings list (for prestige detection)
+        player: Player standings dict with wins/losses/draws
+    
+    Returns:
+        Adjusted K-factor
+    """
+    # A: K-factor based on games played (same scaling for all)
+    # K = 32 + (games - 3) * 12
+    # 2 games → K=20, 3 games → K=32, 4 games → K=44, 5 games → K=56, etc.
+    k = 32 + (games_played - 3) * 12
+    
+    # B: Dropout detection (for reference - noted in standings via games_played)
+    
+    # C: Prestige tournament bracket bonus removed from K-factor
+    # (now handled as independent rating bump in process_tournament_standings)
+    
+    return k
+
+
+def get_bracket_advancement_bonus(tournament_id: str, rank: int) -> float:
+    """
+    Get flat rating bonus for bracket advancement in prestige tournaments.
+    Independent of performance - purely for making the bracket.
+    Uses same scaling as K-factor: steps of 12 points.
+    
+    Args:
+        tournament_id: Tournament identifier
+        rank: Player's final rank (1-8 are bracket)
+        
+    Returns:
+        Rating points to add (0 for non-prestige or swiss-only)
+    """
+    if not is_prestige_tournament(tournament_id):
+        return 0.0
+    
+    if rank <= 2:
+        return 36.0  # Finals: +36 rating points (3×12)
+    elif rank <= 4:
+        return 24.0  # Semis: +24 rating points (2×12)
+    elif rank <= 8:
+        return 12.0  # Quarters: +12 rating points (1×12)
+    else:
+        return 0.0   # Swiss-only: no bonus
+
+
 def get_current_rating(name: str, players: Dict) -> float:
     """Get player's current rating, default to 1500."""
     if name in players:
@@ -167,10 +303,10 @@ def process_tournament_standings(
         # Calculate field average excluding this player
         field_avg = (total_rating - current_rating) / (len(standings) - 1)
         
-        # Calculate actual score (0.0 to 1.0)
+        # Calculate actual score (0.0 to 1.0) - use full actual record
         actual_score = player['points'] / (games * 3)
         
-        # Calculate performance rating
+        # Calculate performance rating - use full actual record
         perf_rating = calculate_performance_rating(
             current_rating,
             field_avg,
@@ -178,19 +314,33 @@ def process_tournament_standings(
             games
         )
         
-        # Calculate new rating
-        new_rating = calculate_new_rating(current_rating, perf_rating, K_FACTOR)
+        # Calculate adjusted K-factor based on tournament type and bracket
+        adjusted_k = calculate_k_factor(
+            K_FACTOR,
+            tournament_id,
+            player['rank'],
+            games,
+            standings,
+            player
+        )
+        
+        # Calculate new rating with adjusted K-factor
+        new_rating = calculate_new_rating(current_rating, perf_rating, adjusted_k)
+        
+        # Add bracket advancement bonus (independent of performance)
+        bracket_bonus = get_bracket_advancement_bonus(tournament_id, player['rank'])
+        new_rating_with_bracket = new_rating + bracket_bonus
         
         # Update player data
         if name not in players:
             players[name] = {
                 'name': name,
-                'rating': new_rating,
+                'rating': new_rating_with_bracket,
                 'matches': [],
                 'history': []
             }
         else:
-            players[name]['rating'] = new_rating
+            players[name]['rating'] = new_rating_with_bracket
         
         # Add to history
         history_entry = {
@@ -200,8 +350,8 @@ def process_tournament_standings(
             'record': f"{player['wins']}-{player['losses']}-{player['draws']}",
             'points': player['points'],
             'rating_before': current_rating,
-            'rating_after': new_rating,
-            'change': new_rating - current_rating
+            'rating_after': new_rating_with_bracket,
+            'change': new_rating_with_bracket - current_rating
         }
         players[name]['history'].append(history_entry)
         
@@ -214,8 +364,8 @@ def process_tournament_standings(
             'old_rating': current_rating,
             'field_avg': field_avg,
             'perf_rating': perf_rating,
-            'new_rating': new_rating,
-            'change': new_rating - current_rating
+            'new_rating': new_rating_with_bracket,
+            'change': new_rating_with_bracket - current_rating
         })
     
     # Sort by rating change
