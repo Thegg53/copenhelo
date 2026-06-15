@@ -6,6 +6,7 @@ Generate interactive HTML leaderboard with expandable player histories.
 import json
 from pathlib import Path
 from datetime import datetime
+from typing import Set
 
 
 def load_players(output_dir: Path) -> dict:
@@ -18,14 +19,27 @@ def load_players(output_dir: Path) -> dict:
         return json.load(f)
 
 
+def load_opted_in_players(input_dir: Path) -> Set[str]:
+    """Load opted-in player names from CSV file."""
+    opt_in_file = input_dir / 'opt_in.csv'
+    if not opt_in_file.exists():
+        return set()
+    
+    with open(opt_in_file, 'r') as f:
+        return {line.strip() for line in f if line.strip()}
+
+
 def generate_leaderboard(output_file: Path):
     """Generate interactive leaderboard HTML with expandable histories."""
     output_dir = Path(__file__).parent / 'output'
-    players = load_players(output_dir)
+    input_dir = Path(__file__).parent.parent / 'input'
     
-    # Sort by rating
+    players = load_players(output_dir)
+    opted_in_players = load_opted_in_players(input_dir)
+    
+    # Sort by rating and filter to only opted-in players
     sorted_players = sorted(
-        players.items(),
+        [(name, data) for name, data in players.items() if name in opted_in_players],
         key=lambda p: p[1]['rating'],
         reverse=True
     )
@@ -332,7 +346,8 @@ def generate_leaderboard(output_file: Path):
 
 def main():
     """Main entry point."""
-    repo_root = Path(__file__).parent.parent
+    script_dir = Path(__file__).parent
+    repo_root = script_dir.parent
     output_file = repo_root / 'dummy.html'
     generate_leaderboard(output_file)
 

@@ -1,6 +1,6 @@
 {
   "tournament_id": "20260215",
-  "timestamp": "2026-06-13T21:34:31.923081",
+  "timestamp": "2026-06-15T10:24:36.407988",
   "standings": [
     {
       "name": "Christian Hansen",
@@ -67,12 +67,12 @@
       "rank": 6,
       "points": 0,
       "wins": 0,
-      "losses": 3,
+      "losses": 2,
       "draws": 0,
       "omw": "66.7%",
       "gwp": "33.3%",
       "ogwp": "60.1%",
-      "games": 3
+      "games": 2
     }
   ]
 }

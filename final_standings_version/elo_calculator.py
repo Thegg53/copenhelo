@@ -10,7 +10,7 @@ import csv
 import argparse
 from pathlib import Path
 from datetime import datetime
-from typing import Dict, List
+from typing import Dict, List, Set
 
 
 # Constants
@@ -99,6 +99,15 @@ def load_tournaments(tournaments_file: Path) -> Dict[str, Dict]:
         return json.load(f)
 
 
+def load_opted_in_players(opt_in_file: Path) -> Set[str]:
+    """Load opted-in player names from CSV file."""
+    if not opt_in_file.exists():
+        return set()
+    
+    with open(opt_in_file, 'r') as f:
+        return {line.strip() for line in f if line.strip()}
+
+
 def save_players(players: Dict, players_file: Path):
     """Save players to JSON file."""
     with open(players_file, 'w') as f:
@@ -123,7 +132,8 @@ def process_tournament_standings(
     tournament_name: str,
     standings: List[Dict],
     players: Dict,
-    tournaments: Dict
+    tournaments: Dict,
+    opted_in_players: Set[str]
 ) -> tuple:
     """
     Process a tournament's standings and calculate ELO changes.
@@ -225,15 +235,16 @@ def process_tournament_standings(
     return players, tournaments, results
 
 
-def print_results_table(results: List[Dict]):
-    """Pretty print results table."""
+def print_results_table(results: List[Dict], opted_in_players: Set[str]):
+    """Pretty print results table, hiding non-opted-in players."""
     print(f"\n{'Name':<25} {'Rank':<6} {'Record':<12} {'Old Elo':<10} "
           f"{'Field Avg':<12} {'Perf':<10} {'New Elo':<10} {'Change':<10}")
     print("-" * 115)
     
     for r in results:
+        display_name = r['name'] if r['name'] in opted_in_players else 'Hidden Player'
         change_str = f"+{r['change']:.1f}" if r['change'] >= 0 else f"{r['change']:.1f}"
-        print(f"{r['name']:<25} {r['rank']:<6} {r['record']:<12} "
+        print(f"{display_name:<25} {r['rank']:<6} {r['record']:<12} "
               f"{r['old_rating']:<10.1f} {r['field_avg']:<12.1f} "
               f"{r['perf_rating']:<10.1f} {r['new_rating']:<10.1f} {change_str:<10}")
 
@@ -338,6 +349,11 @@ def process_all_standings(events_dir: Path, output_dir: Path, exclude_dummy: boo
     players = load_players(players_file)
     tournaments = load_tournaments(tournaments_file)
     
+    # Load opted-in players from main input directory
+    repo_root = events_dir.parent.parent
+    opt_in_file = repo_root / 'input' / 'opt_in.csv'
+    opted_in_players = load_opted_in_players(opt_in_file)
+    
     # Get already processed tournaments from CSV
     processed_tournaments = load_processed_tournaments(csv_file)
     
@@ -385,11 +401,12 @@ def process_all_standings(events_dir: Path, output_dir: Path, exclude_dummy: boo
                 tournament_name,
                 standings,
                 players,
-                tournaments
+                tournaments,
+                opted_in_players
             )
             
             # Display results
-            print_results_table(results)
+            print_results_table(results, opted_in_players)
             
             # Mark as processed in CSV
             mark_tournament_processed(csv_file, tournament_id)

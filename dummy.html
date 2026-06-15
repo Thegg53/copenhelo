@@ -1,0 +1,1632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dummy Tournament Leaderboard</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+    }
+    
+    .header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    
+    .header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    
+    .header p {
+      font-size: 1.1em;
+      opacity: 0.9;
+      margin-bottom: 15px;
+    }
+    
+    .table-wrapper {
+      overflow-x: auto;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    thead {
+      background: #f8f9fa;
+      border-bottom: 2px solid #dee2e6;
+    }
+    
+    th {
+      padding: 15px;
+      text-align: left;
+      font-weight: 600;
+      color: #333;
+    }
+    
+    td {
+      padding: 15px;
+      border-bottom: 1px solid #dee2e6;
+    }
+    
+    .player-row {
+      cursor: pointer;
+      user-select: none;
+    }
+    
+    .player-row:hover {
+      background: #f8f9fa;
+    }
+    
+    .rank {
+      font-weight: 600;
+      color: #667eea;
+      width: 60px;
+    }
+    
+    .name {
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .expand-icon {
+      display: inline-block;
+      transition: transform 0.2s;
+      font-size: 0.8em;
+      color: #667eea;
+    }
+    
+    .player-row.expanded .expand-icon {
+      transform: rotate(90deg);
+    }
+    
+    .rating {
+      text-align: right;
+      font-weight: 600;
+      color: #764ba2;
+      width: 100px;
+    }
+    
+    .matches {
+      text-align: center;
+      color: #666;
+      width: 80px;
+    }
+    
+    .history-row {
+      background: #f8f9fa;
+    }
+    
+    .history-row td {
+      padding: 20px 15px;
+      border-bottom: none;
+    }
+    
+    .history-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9em;
+    }
+    
+    .history-table thead {
+      background: #e9ecef;
+    }
+    
+    .history-table th {
+      padding: 10px;
+      text-align: left;
+      font-weight: 600;
+      color: #333;
+      border-bottom: 1px solid #dee2e6;
+    }
+    
+    .history-table td {
+      padding: 10px;
+      border-bottom: 1px solid #dee2e6;
+    }
+    
+    .history-table tr:hover {
+      background: #e9ecef;
+    }
+    
+    .num {
+      text-align: right;
+      font-family: 'Courier New', monospace;
+    }
+    
+    .positive {
+      color: #28a745;
+      font-weight: 600;
+    }
+    
+    .negative {
+      color: #dc3545;
+      font-weight: 600;
+    }
+    
+    .footer {
+      background: #f8f9fa;
+      padding: 20px;
+      text-align: center;
+      color: #666;
+      font-size: 0.9em;
+      border-top: 1px solid #dee2e6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Dummy Tournament Leaderboard</h1>
+      <p>Click player names to see their tournament history</p>
+    </div>
+    
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th class="rank">Rank</th>
+            <th class="name">Player</th>
+            <th class="rating">Rating</th>
+          <th class="tournaments">Tournaments</th>
+          </tr>
+        </thead>
+        <tbody>
+
+    <tr class="player-row" onclick="toggleHistory('player-1')">
+      <td class="rank">1</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        Erik Christensen
+      </td>
+      <td class="rating">1666.2</td>
+      <td class="tournaments">13</td>
+    </tr>
+    <tr class="history-row" id="player-1" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20250914</td>
+            <td>2025-09-14</td>
+            <td>7</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1500.0</td>
+            <td class="num">1511.6</td>
+            <td class="num positive">+11.6</td>
+          </tr>
+            
+          <tr>
+            <td>20250928_prestige3</td>
+            <td>2025-09-28</td>
+            <td>16</td>
+            <td>3-3-0</td>
+            <td>9</td>
+            <td class="num">1511.6</td>
+            <td class="num">1510.5</td>
+            <td class="num negative">-1.1</td>
+          </tr>
+            
+          <tr>
+            <td>20251026</td>
+            <td>2025-10-26</td>
+            <td>16</td>
+            <td>0-3-1</td>
+            <td>1</td>
+            <td class="num">1510.5</td>
+            <td class="num">1445.1</td>
+            <td class="num negative">-65.4</td>
+          </tr>
+            
+          <tr>
+            <td>20251123</td>
+            <td>2025-11-23</td>
+            <td>8</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1445.1</td>
+            <td class="num">1465.8</td>
+            <td class="num positive">+20.7</td>
+          </tr>
+            
+          <tr>
+            <td>20251207_pauper_lyngby</td>
+            <td>2025-12-07</td>
+            <td>9</td>
+            <td>2-2-0</td>
+            <td>6</td>
+            <td class="num">1465.8</td>
+            <td class="num">1473.5</td>
+            <td class="num positive">+7.7</td>
+          </tr>
+            
+          <tr>
+            <td>20251221</td>
+            <td>2025-12-21</td>
+            <td>5</td>
+            <td>2-2-0</td>
+            <td>6</td>
+            <td class="num">1473.5</td>
+            <td class="num">1483.3</td>
+            <td class="num positive">+9.8</td>
+          </tr>
+            
+          <tr>
+            <td>20260104</td>
+            <td>2026-01-04</td>
+            <td>2</td>
+            <td>3-1-0</td>
+            <td>9</td>
+            <td class="num">1483.3</td>
+            <td class="num">1518.7</td>
+            <td class="num positive">+35.4</td>
+          </tr>
+            
+          <tr>
+            <td>20260201-prestige4</td>
+            <td>2026-02-01</td>
+            <td>1</td>
+            <td>7-1-0</td>
+            <td>21</td>
+            <td class="num">1518.7</td>
+            <td class="num">1571.8</td>
+            <td class="num positive">+53.1</td>
+          </tr>
+            
+          <tr>
+            <td>20260215</td>
+            <td>2026-02-15</td>
+            <td>3</td>
+            <td>2-1-0</td>
+            <td>6</td>
+            <td class="num">1571.8</td>
+            <td class="num">1583.7</td>
+            <td class="num positive">+11.9</td>
+          </tr>
+            
+          <tr>
+            <td>20260301_pauper_lyngby</td>
+            <td>2026-03-01</td>
+            <td>1</td>
+            <td>5-0-0</td>
+            <td>15</td>
+            <td class="num">1583.7</td>
+            <td class="num">1636.4</td>
+            <td class="num positive">+52.7</td>
+          </tr>
+            
+          <tr>
+            <td>20260329</td>
+            <td>2026-03-29</td>
+            <td>4</td>
+            <td>3-1-0</td>
+            <td>9</td>
+            <td class="num">1636.4</td>
+            <td class="num">1649.9</td>
+            <td class="num positive">+13.5</td>
+          </tr>
+            
+          <tr>
+            <td>20260426</td>
+            <td>2026-04-26</td>
+            <td>2</td>
+            <td>3-1-0</td>
+            <td>9</td>
+            <td class="num">1649.9</td>
+            <td class="num">1660.0</td>
+            <td class="num positive">+10.1</td>
+          </tr>
+            
+          <tr>
+            <td>20260530</td>
+            <td>2026-05-30</td>
+            <td>1</td>
+            <td>3-1-0</td>
+            <td>9</td>
+            <td class="num">1660.0</td>
+            <td class="num">1666.2</td>
+            <td class="num positive">+6.2</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-2')">
+      <td class="rank">2</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        Freya Gade Ravnsborg
+      </td>
+      <td class="rating">1582.7</td>
+      <td class="tournaments">14</td>
+    </tr>
+    <tr class="history-row" id="player-2" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20250817</td>
+            <td>2025-08-17</td>
+            <td>4</td>
+            <td>2-1-1</td>
+            <td>7</td>
+            <td class="num">1500.0</td>
+            <td class="num">1509.4</td>
+            <td class="num positive">+9.4</td>
+          </tr>
+            
+          <tr>
+            <td>20250831</td>
+            <td>2025-08-31</td>
+            <td>14</td>
+            <td>1-3-0</td>
+            <td>3</td>
+            <td class="num">1509.4</td>
+            <td class="num">1477.3</td>
+            <td class="num negative">-32.1</td>
+          </tr>
+            
+          <tr>
+            <td>20250914</td>
+            <td>2025-09-14</td>
+            <td>1</td>
+            <td>4-0-1</td>
+            <td>13</td>
+            <td class="num">1477.3</td>
+            <td class="num">1533.6</td>
+            <td class="num positive">+56.3</td>
+          </tr>
+            
+          <tr>
+            <td>20251012_</td>
+            <td>2025-10-12</td>
+            <td>4</td>
+            <td>2-1-1</td>
+            <td>7</td>
+            <td class="num">1533.6</td>
+            <td class="num">1538.3</td>
+            <td class="num positive">+4.7</td>
+          </tr>
+            
+          <tr>
+            <td>20251026</td>
+            <td>2025-10-26</td>
+            <td>1</td>
+            <td>4-0-0</td>
+            <td>12</td>
+            <td class="num">1538.3</td>
+            <td class="num">1598.8</td>
+            <td class="num positive">+60.5</td>
+          </tr>
+            
+          <tr>
+            <td>20251109</td>
+            <td>2025-11-09</td>
+            <td>13</td>
+            <td>1-3-0</td>
+            <td>3</td>
+            <td class="num">1598.8</td>
+            <td class="num">1553.6</td>
+            <td class="num negative">-45.2</td>
+          </tr>
+            
+          <tr>
+            <td>20251123</td>
+            <td>2025-11-23</td>
+            <td>17</td>
+            <td>2-3-0</td>
+            <td>6</td>
+            <td class="num">1553.6</td>
+            <td class="num">1533.4</td>
+            <td class="num negative">-20.2</td>
+          </tr>
+            
+          <tr>
+            <td>20251207_pauper_lyngby</td>
+            <td>2025-12-07</td>
+            <td>3</td>
+            <td>3-1-0</td>
+            <td>9</td>
+            <td class="num">1533.4</td>
+            <td class="num">1559.8</td>
+            <td class="num positive">+26.4</td>
+          </tr>
+            
+          <tr>
+            <td>20251221</td>
+            <td>2025-12-21</td>
+            <td>1</td>
+            <td>4-0-0</td>
+            <td>12</td>
+            <td class="num">1559.8</td>
+            <td class="num">1617.5</td>
+            <td class="num positive">+57.7</td>
+          </tr>
+            
+          <tr>
+            <td>20260201-prestige4</td>
+            <td>2026-02-01</td>
+            <td>10</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1617.5</td>
+            <td class="num">1611.5</td>
+            <td class="num negative">-6.0</td>
+          </tr>
+            
+          <tr>
+            <td>20260301_pauper_lyngby</td>
+            <td>2026-03-01</td>
+            <td>8</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1611.5</td>
+            <td class="num">1606.8</td>
+            <td class="num negative">-4.7</td>
+          </tr>
+            
+          <tr>
+            <td>20260329</td>
+            <td>2026-03-29</td>
+            <td>6</td>
+            <td>2-2-0</td>
+            <td>6</td>
+            <td class="num">1606.8</td>
+            <td class="num">1594.8</td>
+            <td class="num negative">-12.0</td>
+          </tr>
+            
+          <tr>
+            <td>20260412_pauper_lyngby</td>
+            <td>2026-04-12</td>
+            <td>6</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1594.8</td>
+            <td class="num">1593.4</td>
+            <td class="num negative">-1.4</td>
+          </tr>
+            
+          <tr>
+            <td>20260426</td>
+            <td>2026-04-26</td>
+            <td>7</td>
+            <td>2-2-0</td>
+            <td>6</td>
+            <td class="num">1593.4</td>
+            <td class="num">1582.7</td>
+            <td class="num negative">-10.7</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-3')">
+      <td class="rank">3</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        Simone Coghi
+      </td>
+      <td class="rating">1580.4</td>
+      <td class="tournaments">2</td>
+    </tr>
+    <tr class="history-row" id="player-3" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20260201-prestige4</td>
+            <td>2026-02-01</td>
+            <td>11</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1500.0</td>
+            <td class="num">1513.4</td>
+            <td class="num positive">+13.4</td>
+          </tr>
+            
+          <tr>
+            <td>20260426</td>
+            <td>2026-04-26</td>
+            <td>1</td>
+            <td>4-0-0</td>
+            <td>12</td>
+            <td class="num">1513.4</td>
+            <td class="num">1580.4</td>
+            <td class="num positive">+67.0</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-4')">
+      <td class="rank">4</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        Frederikke Stejlgaard
+      </td>
+      <td class="rating">1564.0</td>
+      <td class="tournaments">14</td>
+    </tr>
+    <tr class="history-row" id="player-4" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20250817</td>
+            <td>2025-08-17</td>
+            <td>3</td>
+            <td>3-1-0</td>
+            <td>9</td>
+            <td class="num">1500.0</td>
+            <td class="num">1530.5</td>
+            <td class="num positive">+30.5</td>
+          </tr>
+            
+          <tr>
+            <td>20250831</td>
+            <td>2025-08-31</td>
+            <td>3</td>
+            <td>3-1-0</td>
+            <td>9</td>
+            <td class="num">1530.5</td>
+            <td class="num">1555.9</td>
+            <td class="num positive">+25.4</td>
+          </tr>
+            
+          <tr>
+            <td>20250914</td>
+            <td>2025-09-14</td>
+            <td>12</td>
+            <td>2-3-0</td>
+            <td>6</td>
+            <td class="num">1555.9</td>
+            <td class="num">1535.5</td>
+            <td class="num negative">-20.4</td>
+          </tr>
+            
+          <tr>
+            <td>20250928_prestige3</td>
+            <td>2025-09-28</td>
+            <td>28</td>
+            <td>2-4-0</td>
+            <td>6</td>
+            <td class="num">1535.5</td>
+            <td class="num">1511.2</td>
+            <td class="num negative">-24.3</td>
+          </tr>
+            
+          <tr>
+            <td>20251026</td>
+            <td>2025-10-26</td>
+            <td>2</td>
+            <td>3-1-0</td>
+            <td>9</td>
+            <td class="num">1511.2</td>
+            <td class="num">1542.8</td>
+            <td class="num positive">+31.6</td>
+          </tr>
+            
+          <tr>
+            <td>20251109</td>
+            <td>2025-11-09</td>
+            <td>12</td>
+            <td>1-3-0</td>
+            <td>3</td>
+            <td class="num">1542.8</td>
+            <td class="num">1507.2</td>
+            <td class="num negative">-35.6</td>
+          </tr>
+            
+          <tr>
+            <td>20251207_pauper_lyngby</td>
+            <td>2025-12-07</td>
+            <td>4</td>
+            <td>2-2-0</td>
+            <td>6</td>
+            <td class="num">1507.2</td>
+            <td class="num">1507.7</td>
+            <td class="num positive">+0.5</td>
+          </tr>
+            
+          <tr>
+            <td>20260104</td>
+            <td>2026-01-04</td>
+            <td>1</td>
+            <td>4-0-0</td>
+            <td>12</td>
+            <td class="num">1507.7</td>
+            <td class="num">1572.3</td>
+            <td class="num positive">+64.6</td>
+          </tr>
+            
+          <tr>
+            <td>20260201-prestige4</td>
+            <td>2026-02-01</td>
+            <td>4</td>
+            <td>5-1-1</td>
+            <td>16</td>
+            <td class="num">1572.3</td>
+            <td class="num">1594.8</td>
+            <td class="num positive">+22.5</td>
+          </tr>
+            
+          <tr>
+            <td>20260301_pauper_lyngby</td>
+            <td>2026-03-01</td>
+            <td>2</td>
+            <td>4-1-0</td>
+            <td>12</td>
+            <td class="num">1594.8</td>
+            <td class="num">1620.2</td>
+            <td class="num positive">+25.4</td>
+          </tr>
+            
+          <tr>
+            <td>20260315</td>
+            <td>2026-03-15</td>
+            <td>6</td>
+            <td>2-2-0</td>
+            <td>6</td>
+            <td class="num">1620.2</td>
+            <td class="num">1602.1</td>
+            <td class="num negative">-18.1</td>
+          </tr>
+            
+          <tr>
+            <td>20260329</td>
+            <td>2026-03-29</td>
+            <td>8</td>
+            <td>2-2-0</td>
+            <td>6</td>
+            <td class="num">1602.1</td>
+            <td class="num">1590.9</td>
+            <td class="num negative">-11.2</td>
+          </tr>
+            
+          <tr>
+            <td>20260412_pauper_lyngby</td>
+            <td>2026-04-12</td>
+            <td>14</td>
+            <td>1-2-2</td>
+            <td>5</td>
+            <td class="num">1590.9</td>
+            <td class="num">1559.6</td>
+            <td class="num negative">-31.3</td>
+          </tr>
+            
+          <tr>
+            <td>20260426</td>
+            <td>2026-04-26</td>
+            <td>5</td>
+            <td>2-1-1</td>
+            <td>7</td>
+            <td class="num">1559.6</td>
+            <td class="num">1564.0</td>
+            <td class="num positive">+4.4</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-5')">
+      <td class="rank">5</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        gui morgado
+      </td>
+      <td class="rating">1550.9</td>
+      <td class="tournaments">10</td>
+    </tr>
+    <tr class="history-row" id="player-5" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20250817</td>
+            <td>2025-08-17</td>
+            <td>8</td>
+            <td>1-2-0</td>
+            <td>3</td>
+            <td class="num">1500.0</td>
+            <td class="num">1480.7</td>
+            <td class="num negative">-19.3</td>
+          </tr>
+            
+          <tr>
+            <td>20250831</td>
+            <td>2025-08-31</td>
+            <td>2</td>
+            <td>3-1-0</td>
+            <td>9</td>
+            <td class="num">1480.7</td>
+            <td class="num">1514.6</td>
+            <td class="num positive">+33.9</td>
+          </tr>
+            
+          <tr>
+            <td>20251012_</td>
+            <td>2025-10-12</td>
+            <td>2</td>
+            <td>3-1-0</td>
+            <td>9</td>
+            <td class="num">1514.6</td>
+            <td class="num">1543.7</td>
+            <td class="num positive">+29.1</td>
+          </tr>
+            
+          <tr>
+            <td>20251026</td>
+            <td>2025-10-26</td>
+            <td>6</td>
+            <td>2-2-0</td>
+            <td>6</td>
+            <td class="num">1543.7</td>
+            <td class="num">1539.3</td>
+            <td class="num negative">-4.4</td>
+          </tr>
+            
+          <tr>
+            <td>20251109</td>
+            <td>2025-11-09</td>
+            <td>8</td>
+            <td>2-2-0</td>
+            <td>6</td>
+            <td class="num">1539.3</td>
+            <td class="num">1534.8</td>
+            <td class="num negative">-4.5</td>
+          </tr>
+            
+          <tr>
+            <td>20251123</td>
+            <td>2025-11-23</td>
+            <td>7</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1534.8</td>
+            <td class="num">1540.3</td>
+            <td class="num positive">+5.5</td>
+          </tr>
+            
+          <tr>
+            <td>20260201-prestige4</td>
+            <td>2026-02-01</td>
+            <td>7</td>
+            <td>3-2-1</td>
+            <td>10</td>
+            <td class="num">1540.3</td>
+            <td class="num">1542.0</td>
+            <td class="num positive">+1.7</td>
+          </tr>
+            
+          <tr>
+            <td>20260215</td>
+            <td>2026-02-15</td>
+            <td>6</td>
+            <td>0-2-0</td>
+            <td>0</td>
+            <td class="num">1542.0</td>
+            <td class="num">1476.4</td>
+            <td class="num negative">-65.6</td>
+          </tr>
+            
+          <tr>
+            <td>20260301_pauper_lyngby</td>
+            <td>2026-03-01</td>
+            <td>5</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1476.4</td>
+            <td class="num">1494.6</td>
+            <td class="num positive">+18.2</td>
+          </tr>
+            
+          <tr>
+            <td>20260412_pauper_lyngby</td>
+            <td>2026-04-12</td>
+            <td>2</td>
+            <td>4-0-1</td>
+            <td>13</td>
+            <td class="num">1494.6</td>
+            <td class="num">1550.9</td>
+            <td class="num positive">+56.3</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-6')">
+      <td class="rank">6</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        Emma Gad
+      </td>
+      <td class="rating">1540.1</td>
+      <td class="tournaments">14</td>
+    </tr>
+    <tr class="history-row" id="player-6" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20250817</td>
+            <td>2025-08-17</td>
+            <td>1</td>
+            <td>4-0-0</td>
+            <td>12</td>
+            <td class="num">1500.0</td>
+            <td class="num">1564.0</td>
+            <td class="num positive">+64.0</td>
+          </tr>
+            
+          <tr>
+            <td>20250831</td>
+            <td>2025-08-31</td>
+            <td>8</td>
+            <td>2-2-0</td>
+            <td>6</td>
+            <td class="num">1564.0</td>
+            <td class="num">1553.1</td>
+            <td class="num negative">-10.9</td>
+          </tr>
+            
+          <tr>
+            <td>20250928_prestige3</td>
+            <td>2025-09-28</td>
+            <td>10</td>
+            <td>4-2-0</td>
+            <td>12</td>
+            <td class="num">1553.1</td>
+            <td class="num">1564.4</td>
+            <td class="num positive">+11.3</td>
+          </tr>
+            
+          <tr>
+            <td>20251012_</td>
+            <td>2025-10-12</td>
+            <td>7</td>
+            <td>2-2-0</td>
+            <td>6</td>
+            <td class="num">1564.4</td>
+            <td class="num">1554.4</td>
+            <td class="num negative">-10.0</td>
+          </tr>
+            
+          <tr>
+            <td>20251026</td>
+            <td>2025-10-26</td>
+            <td>7</td>
+            <td>2-2-0</td>
+            <td>6</td>
+            <td class="num">1554.4</td>
+            <td class="num">1548.1</td>
+            <td class="num negative">-6.3</td>
+          </tr>
+            
+          <tr>
+            <td>20251109</td>
+            <td>2025-11-09</td>
+            <td>7</td>
+            <td>2-2-0</td>
+            <td>6</td>
+            <td class="num">1548.1</td>
+            <td class="num">1542.1</td>
+            <td class="num negative">-6.0</td>
+          </tr>
+            
+          <tr>
+            <td>20251123</td>
+            <td>2025-11-23</td>
+            <td>6</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1542.1</td>
+            <td class="num">1546.4</td>
+            <td class="num positive">+4.3</td>
+          </tr>
+            
+          <tr>
+            <td>20251207_pauper_lyngby</td>
+            <td>2025-12-07</td>
+            <td>7</td>
+            <td>2-2-0</td>
+            <td>6</td>
+            <td class="num">1546.4</td>
+            <td class="num">1540.0</td>
+            <td class="num negative">-6.4</td>
+          </tr>
+            
+          <tr>
+            <td>20251221</td>
+            <td>2025-12-21</td>
+            <td>6</td>
+            <td>2-2-0</td>
+            <td>6</td>
+            <td class="num">1540.0</td>
+            <td class="num">1537.3</td>
+            <td class="num negative">-2.7</td>
+          </tr>
+            
+          <tr>
+            <td>20260201-prestige4</td>
+            <td>2026-02-01</td>
+            <td>15</td>
+            <td>2-2-1</td>
+            <td>7</td>
+            <td class="num">1537.3</td>
+            <td class="num">1529.6</td>
+            <td class="num negative">-7.7</td>
+          </tr>
+            
+          <tr>
+            <td>20260215</td>
+            <td>2026-02-15</td>
+            <td>2</td>
+            <td>2-1-0</td>
+            <td>6</td>
+            <td class="num">1529.6</td>
+            <td class="num">1549.6</td>
+            <td class="num positive">+20.0</td>
+          </tr>
+            
+          <tr>
+            <td>20260301_pauper_lyngby</td>
+            <td>2026-03-01</td>
+            <td>10</td>
+            <td>2-2-1</td>
+            <td>7</td>
+            <td class="num">1549.6</td>
+            <td class="num">1540.4</td>
+            <td class="num negative">-9.2</td>
+          </tr>
+            
+          <tr>
+            <td>20260329</td>
+            <td>2026-03-29</td>
+            <td>11</td>
+            <td>2-2-0</td>
+            <td>6</td>
+            <td class="num">1540.4</td>
+            <td class="num">1539.8</td>
+            <td class="num negative">-0.6</td>
+          </tr>
+            
+          <tr>
+            <td>20260412_pauper_lyngby</td>
+            <td>2026-04-12</td>
+            <td>10</td>
+            <td>2-1-2</td>
+            <td>8</td>
+            <td class="num">1539.8</td>
+            <td class="num">1540.1</td>
+            <td class="num positive">+0.3</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-7')">
+      <td class="rank">7</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        Eva Østerby
+      </td>
+      <td class="rating">1536.5</td>
+      <td class="tournaments">10</td>
+    </tr>
+    <tr class="history-row" id="player-7" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20250928_prestige3</td>
+            <td>2025-09-28</td>
+            <td>15</td>
+            <td>3-3-0</td>
+            <td>9</td>
+            <td class="num">1500.0</td>
+            <td class="num">1500.8</td>
+            <td class="num positive">+0.8</td>
+          </tr>
+            
+          <tr>
+            <td>20251012_</td>
+            <td>2025-10-12</td>
+            <td>8</td>
+            <td>2-2-0</td>
+            <td>6</td>
+            <td class="num">1500.8</td>
+            <td class="num">1501.8</td>
+            <td class="num positive">+1.0</td>
+          </tr>
+            
+          <tr>
+            <td>20251123</td>
+            <td>2025-11-23</td>
+            <td>1</td>
+            <td>4-1-0</td>
+            <td>12</td>
+            <td class="num">1501.8</td>
+            <td class="num">1540.2</td>
+            <td class="num positive">+38.4</td>
+          </tr>
+            
+          <tr>
+            <td>20260104</td>
+            <td>2026-01-04</td>
+            <td>7</td>
+            <td>2-2-0</td>
+            <td>6</td>
+            <td class="num">1540.2</td>
+            <td class="num">1535.2</td>
+            <td class="num negative">-5.0</td>
+          </tr>
+            
+          <tr>
+            <td>20260201-prestige4</td>
+            <td>2026-02-01</td>
+            <td>17</td>
+            <td>2-3-0</td>
+            <td>6</td>
+            <td class="num">1535.2</td>
+            <td class="num">1520.2</td>
+            <td class="num negative">-15.0</td>
+          </tr>
+            
+          <tr>
+            <td>20260315</td>
+            <td>2026-03-15</td>
+            <td>1</td>
+            <td>3-0-1</td>
+            <td>10</td>
+            <td class="num">1520.2</td>
+            <td class="num">1564.0</td>
+            <td class="num positive">+43.8</td>
+          </tr>
+            
+          <tr>
+            <td>20260329</td>
+            <td>2026-03-29</td>
+            <td>10</td>
+            <td>2-2-0</td>
+            <td>6</td>
+            <td class="num">1564.0</td>
+            <td class="num">1559.3</td>
+            <td class="num negative">-4.7</td>
+          </tr>
+            
+          <tr>
+            <td>20260412_pauper_lyngby</td>
+            <td>2026-04-12</td>
+            <td>9</td>
+            <td>3-2-0</td>
+            <td>9</td>
+            <td class="num">1559.3</td>
+            <td class="num">1563.9</td>
+            <td class="num positive">+4.6</td>
+          </tr>
+            
+          <tr>
+            <td>20260426</td>
+            <td>2026-04-26</td>
+            <td>11</td>
+            <td>1-2-1</td>
+            <td>4</td>
+            <td class="num">1563.9</td>
+            <td class="num">1539.0</td>
+            <td class="num negative">-24.9</td>
+          </tr>
+            
+          <tr>
+            <td>20260530</td>
+            <td>2026-05-30</td>
+            <td>5</td>
+            <td>2-2-0</td>
+            <td>6</td>
+            <td class="num">1539.0</td>
+            <td class="num">1536.5</td>
+            <td class="num negative">-2.5</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-8')">
+      <td class="rank">8</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        Mads Dupont
+      </td>
+      <td class="rating">1503.3</td>
+      <td class="tournaments">10</td>
+    </tr>
+    <tr class="history-row" id="player-8" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20250817</td>
+            <td>2025-08-17</td>
+            <td>2</td>
+            <td>3-1-0</td>
+            <td>9</td>
+            <td class="num">1500.0</td>
+            <td class="num">1530.5</td>
+            <td class="num positive">+30.5</td>
+          </tr>
+            
+          <tr>
+            <td>20250928_prestige3</td>
+            <td>2025-09-28</td>
+            <td>7</td>
+            <td>4-2-1</td>
+            <td>13</td>
+            <td class="num">1530.5</td>
+            <td class="num">1539.7</td>
+            <td class="num positive">+9.2</td>
+          </tr>
+            
+          <tr>
+            <td>20251026</td>
+            <td>2025-10-26</td>
+            <td>4</td>
+            <td>3-1-0</td>
+            <td>9</td>
+            <td class="num">1539.7</td>
+            <td class="num">1566.5</td>
+            <td class="num positive">+26.8</td>
+          </tr>
+            
+          <tr>
+            <td>20251109</td>
+            <td>2025-11-09</td>
+            <td>1</td>
+            <td>3-1-0</td>
+            <td>9</td>
+            <td class="num">1566.5</td>
+            <td class="num">1587.9</td>
+            <td class="num positive">+21.4</td>
+          </tr>
+            
+          <tr>
+            <td>20251123</td>
+            <td>2025-11-23</td>
+            <td>5</td>
+            <td>3-1-1</td>
+            <td>10</td>
+            <td class="num">1587.9</td>
+            <td class="num">1592.5</td>
+            <td class="num positive">+4.6</td>
+          </tr>
+            
+          <tr>
+            <td>20251207_pauper_lyngby</td>
+            <td>2025-12-07</td>
+            <td>10</td>
+            <td>1-3-0</td>
+            <td>3</td>
+            <td class="num">1592.5</td>
+            <td class="num">1547.5</td>
+            <td class="num negative">-45.0</td>
+          </tr>
+            
+          <tr>
+            <td>20260104</td>
+            <td>2026-01-04</td>
+            <td>11</td>
+            <td>1-3-0</td>
+            <td>3</td>
+            <td class="num">1547.5</td>
+            <td class="num">1510.7</td>
+            <td class="num negative">-36.8</td>
+          </tr>
+            
+          <tr>
+            <td>20260201-prestige4</td>
+            <td>2026-02-01</td>
+            <td>21</td>
+            <td>2-3-0</td>
+            <td>6</td>
+            <td class="num">1510.7</td>
+            <td class="num">1499.8</td>
+            <td class="num negative">-10.9</td>
+          </tr>
+            
+          <tr>
+            <td>20260329</td>
+            <td>2026-03-29</td>
+            <td>2</td>
+            <td>3-1-0</td>
+            <td>9</td>
+            <td class="num">1499.8</td>
+            <td class="num">1536.7</td>
+            <td class="num positive">+36.9</td>
+          </tr>
+            
+          <tr>
+            <td>20260412_pauper_lyngby</td>
+            <td>2026-04-12</td>
+            <td>16</td>
+            <td>1-3-0</td>
+            <td>3</td>
+            <td class="num">1536.7</td>
+            <td class="num">1503.3</td>
+            <td class="num negative">-33.4</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-9')">
+      <td class="rank">9</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        Mathias Vith Andersen
+      </td>
+      <td class="rating">1499.6</td>
+      <td class="tournaments">5</td>
+    </tr>
+    <tr class="history-row" id="player-9" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20251109</td>
+            <td>2025-11-09</td>
+            <td>3</td>
+            <td>3-1-0</td>
+            <td>9</td>
+            <td class="num">1500.0</td>
+            <td class="num">1532.8</td>
+            <td class="num positive">+32.8</td>
+          </tr>
+            
+          <tr>
+            <td>20260201-prestige4</td>
+            <td>2026-02-01</td>
+            <td>6</td>
+            <td>4-2-0</td>
+            <td>12</td>
+            <td class="num">1532.8</td>
+            <td class="num">1548.8</td>
+            <td class="num positive">+16.0</td>
+          </tr>
+            
+          <tr>
+            <td>20260315</td>
+            <td>2026-03-15</td>
+            <td>7</td>
+            <td>2-2-0</td>
+            <td>6</td>
+            <td class="num">1548.8</td>
+            <td class="num">1543.0</td>
+            <td class="num negative">-5.8</td>
+          </tr>
+            
+          <tr>
+            <td>20260329</td>
+            <td>2026-03-29</td>
+            <td>9</td>
+            <td>2-2-0</td>
+            <td>6</td>
+            <td class="num">1543.0</td>
+            <td class="num">1541.9</td>
+            <td class="num negative">-1.1</td>
+          </tr>
+            
+          <tr>
+            <td>20260412_pauper_lyngby</td>
+            <td>2026-04-12</td>
+            <td>17</td>
+            <td>1-4-0</td>
+            <td>3</td>
+            <td class="num">1541.9</td>
+            <td class="num">1499.6</td>
+            <td class="num negative">-42.3</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+
+    <tr class="player-row" onclick="toggleHistory('player-10')">
+      <td class="rank">10</td>
+      <td class="name">
+        <span class="expand-icon">▶</span>
+        Austin McKeand
+      </td>
+      <td class="rating">1433.5</td>
+      <td class="tournaments">7</td>
+    </tr>
+    <tr class="history-row" id="player-10" style="display: none;">
+      <td colspan="4">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Tournament</th>
+              <th>Date</th>
+              <th>Rank</th>
+              <th>Record</th>
+              <th>Points</th>
+              <th>Rating Before</th>
+              <th>Rating After</th>
+              <th>Change</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <tr>
+            <td>20250831</td>
+            <td>2025-08-31</td>
+            <td>15</td>
+            <td>1-3-0</td>
+            <td>3</td>
+            <td class="num">1500.0</td>
+            <td class="num">1469.5</td>
+            <td class="num negative">-30.5</td>
+          </tr>
+            
+          <tr>
+            <td>20250914</td>
+            <td>2025-09-14</td>
+            <td>15</td>
+            <td>1-3-1</td>
+            <td>4</td>
+            <td class="num">1469.5</td>
+            <td class="num">1446.9</td>
+            <td class="num negative">-22.6</td>
+          </tr>
+            
+          <tr>
+            <td>20250928_prestige3</td>
+            <td>2025-09-28</td>
+            <td>14</td>
+            <td>3-3-0</td>
+            <td>9</td>
+            <td class="num">1446.9</td>
+            <td class="num">1456.4</td>
+            <td class="num positive">+9.5</td>
+          </tr>
+            
+          <tr>
+            <td>20251026</td>
+            <td>2025-10-26</td>
+            <td>10</td>
+            <td>1-2-1</td>
+            <td>4</td>
+            <td class="num">1456.4</td>
+            <td class="num">1447.6</td>
+            <td class="num negative">-8.8</td>
+          </tr>
+            
+          <tr>
+            <td>20251109</td>
+            <td>2025-11-09</td>
+            <td>4</td>
+            <td>3-1-0</td>
+            <td>9</td>
+            <td class="num">1447.6</td>
+            <td class="num">1489.4</td>
+            <td class="num positive">+41.8</td>
+          </tr>
+            
+          <tr>
+            <td>20260201-prestige4</td>
+            <td>2026-02-01</td>
+            <td>27</td>
+            <td>1-3-0</td>
+            <td>3</td>
+            <td class="num">1489.4</td>
+            <td class="num">1462.7</td>
+            <td class="num negative">-26.7</td>
+          </tr>
+            
+          <tr>
+            <td>20260301_pauper_lyngby</td>
+            <td>2026-03-01</td>
+            <td>16</td>
+            <td>1-4-0</td>
+            <td>3</td>
+            <td class="num">1462.7</td>
+            <td class="num">1433.5</td>
+            <td class="num negative">-29.2</td>
+          </tr>
+            
+          </tbody>
+        </table>
+      </td>
+    </tr>
+        
+        </tbody>
+      </table>
+    </div>
+    
+    <div class="footer">
+      <p>Generated from final_standings_version ELO data</p>
+    </div>
+  </div>
+  
+  <script>
+    function toggleHistory(playerId) {
+      const row = document.getElementById(playerId);
+      const playerRow = row.previousElementSibling;
+      
+      if (row.style.display === 'none') {
+        row.style.display = 'table-row';
+        playerRow.classList.add('expanded');
+      } else {
+        row.style.display = 'none';
+        playerRow.classList.remove('expanded');
+      }
+    }
+  </script>
+</body>
+</html>

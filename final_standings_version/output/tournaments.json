@@ -2,7 +2,7 @@
   "20250817": {
     "id": "20250817",
     "name": "20250817",
-    "created_at": "2026-06-13T21:34:32.233711",
+    "created_at": "2026-06-15T10:24:36.732803",
     "standings": [
       {
         "name": "Emma Gad",
@@ -129,7 +129,7 @@
   "20250831": {
     "id": "20250831",
     "name": "20250831",
-    "created_at": "2026-06-13T21:34:32.235329",
+    "created_at": "2026-06-15T10:24:36.734717",
     "standings": [
       {
         "name": "Malthe Grundesen",
@@ -316,7 +316,7 @@
   "20250914": {
     "id": "20250914",
     "name": "20250914",
-    "created_at": "2026-06-13T21:34:32.237508",
+    "created_at": "2026-06-15T10:24:36.737043",
     "standings": [
       {
         "name": "Freya Gade Ravnsborg",
@@ -527,7 +527,7 @@
   "20250928_prestige3": {
     "id": "20250928_prestige3",
     "name": "20250928 Prestige3",
-    "created_at": "2026-06-13T21:34:32.240727",
+    "created_at": "2026-06-15T10:24:36.740433",
     "standings": [
       {
         "name": "Hjalte Daugaard",
@@ -942,7 +942,7 @@
   "20251012_": {
     "id": "20251012_",
     "name": "20251012 ",
-    "created_at": "2026-06-13T21:34:32.242732",
+    "created_at": "2026-06-15T10:24:36.742568",
     "standings": [
       {
         "name": "Marcus Wenzel",
@@ -1105,7 +1105,7 @@
   "20251026": {
     "id": "20251026",
     "name": "20251026",
-    "created_at": "2026-06-13T21:34:32.244900",
+    "created_at": "2026-06-15T10:24:36.744937",
     "standings": [
       {
         "name": "Freya Gade Ravnsborg",
@@ -1304,7 +1304,7 @@
   "20251109": {
     "id": "20251109",
     "name": "20251109",
-    "created_at": "2026-06-13T21:34:32.247102",
+    "created_at": "2026-06-15T10:24:36.747038",
     "standings": [
       {
         "name": "Mads Dupont",
@@ -1491,7 +1491,7 @@
   "20251123": {
     "id": "20251123",
     "name": "20251123",
-    "created_at": "2026-06-13T21:34:32.248902",
+    "created_at": "2026-06-15T10:24:36.749070",
     "standings": [
       {
         "name": "Eva \u00d8sterby",
@@ -1726,7 +1726,7 @@
   "20251207_pauper_lyngby": {
     "id": "20251207_pauper_lyngby",
     "name": "20251207 Pauper Lyngby",
-    "created_at": "2026-06-13T21:34:32.250428",
+    "created_at": "2026-06-15T10:24:36.750930",
     "standings": [
       {
         "name": "Christian Hansen",
@@ -1877,7 +1877,7 @@
   "20251221": {
     "id": "20251221",
     "name": "20251221",
-    "created_at": "2026-06-13T21:34:32.251639",
+    "created_at": "2026-06-15T10:24:36.752550",
     "standings": [
       {
         "name": "Freya Gade Ravnsborg",
@@ -1968,7 +1968,7 @@
   "20260104": {
     "id": "20260104",
     "name": "20260104",
-    "created_at": "2026-06-13T21:34:32.253030",
+    "created_at": "2026-06-15T10:24:36.754290",
     "standings": [
       {
         "name": "Frederikke Stejlgaard",
@@ -2131,7 +2131,7 @@
   "20260201-prestige4": {
     "id": "20260201-prestige4",
     "name": "20260201-Prestige4",
-    "created_at": "2026-06-13T21:34:32.255389",
+    "created_at": "2026-06-15T10:24:36.757245",
     "standings": [
       {
         "name": "Erik Christensen",
@@ -2522,7 +2522,7 @@
   "20260215": {
     "id": "20260215",
     "name": "20260215",
-    "created_at": "2026-06-13T21:34:32.256753",
+    "created_at": "2026-06-15T10:24:36.758852",
     "standings": [
       {
         "name": "Christian Hansen",
@@ -2589,19 +2589,19 @@
         "rank": 6,
         "points": 0,
         "wins": 0,
-        "losses": 3,
+        "losses": 2,
         "draws": 0,
         "omw": "66.7%",
         "gwp": "33.3%",
         "ogwp": "60.1%",
-        "games": 3
+        "games": 2
       }
     ]
   },
   "20260301_pauper_lyngby": {
     "id": "20260301_pauper_lyngby",
     "name": "20260301 Pauper Lyngby",
-    "created_at": "2026-06-13T21:34:32.258340",
+    "created_at": "2026-06-15T10:24:36.760697",
     "standings": [
       {
         "name": "Erik Christensen",
@@ -2812,7 +2812,7 @@
   "20260315": {
     "id": "20260315",
     "name": "20260315",
-    "created_at": "2026-06-13T21:34:32.260008",
+    "created_at": "2026-06-15T10:24:36.762664",
     "standings": [
       {
         "name": "Eva \u00d8sterby",
@@ -2987,7 +2987,7 @@
   "20260329": {
     "id": "20260329",
     "name": "20260329",
-    "created_at": "2026-06-13T21:34:32.261830",
+    "created_at": "2026-06-15T10:24:36.764523",
     "standings": [
       {
         "name": "Leo Dyrkj\u00f8b",
@@ -3174,7 +3174,7 @@
   "20260412_pauper_lyngby": {
     "id": "20260412_pauper_lyngby",
     "name": "20260412 Pauper Lyngby",
-    "created_at": "2026-06-13T21:34:32.264209",
+    "created_at": "2026-06-15T10:24:36.766726",
     "standings": [
       {
         "name": "Yuxiang  Zhuang",
@@ -3409,7 +3409,7 @@
   "20260426": {
     "id": "20260426",
     "name": "20260426",
-    "created_at": "2026-06-13T21:34:32.265950",
+    "created_at": "2026-06-15T10:24:36.768739",
     "standings": [
       {
         "name": "Simone Coghi",
@@ -3596,7 +3596,7 @@
   "20260530": {
     "id": "20260530",
     "name": "20260530",
-    "created_at": "2026-06-13T21:34:32.267399",
+    "created_at": "2026-06-15T10:24:36.770270",
     "standings": [
       {
         "name": "Erik Christensen",
