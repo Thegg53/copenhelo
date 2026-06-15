@@ -2,7 +2,7 @@
   "20250817": {
     "id": "20250817",
     "name": "20250817",
-    "created_at": "2026-06-15T11:24:55.421949",
+    "created_at": "2026-06-15T14:49:54.083392",
     "standings": [
       {
         "name": "Emma Gad",
@@ -129,7 +129,7 @@
   "20250831": {
     "id": "20250831",
     "name": "20250831",
-    "created_at": "2026-06-15T11:24:55.424573",
+    "created_at": "2026-06-15T14:49:54.085843",
     "standings": [
       {
         "name": "Malthe Grundesen",
@@ -316,7 +316,7 @@
   "20250914": {
     "id": "20250914",
     "name": "20250914",
-    "created_at": "2026-06-15T11:24:55.427631",
+    "created_at": "2026-06-15T14:49:54.088841",
     "standings": [
       {
         "name": "Freya Gade Ravnsborg",
@@ -527,7 +527,7 @@
   "20250928_prestige3": {
     "id": "20250928_prestige3",
     "name": "20250928 Prestige3",
-    "created_at": "2026-06-15T11:24:55.431496",
+    "created_at": "2026-06-15T14:49:54.093140",
     "standings": [
       {
         "name": "Hjalte Daugaard",
@@ -942,7 +942,7 @@
   "20251012_": {
     "id": "20251012_",
     "name": "20251012 ",
-    "created_at": "2026-06-15T11:24:55.433998",
+    "created_at": "2026-06-15T14:49:54.096022",
     "standings": [
       {
         "name": "Marcus Wenzel",
@@ -1105,7 +1105,7 @@
   "20251026": {
     "id": "20251026",
     "name": "20251026",
-    "created_at": "2026-06-15T11:24:55.436629",
+    "created_at": "2026-06-15T14:49:54.098748",
     "standings": [
       {
         "name": "Freya Gade Ravnsborg",
@@ -1304,7 +1304,7 @@
   "20251109": {
     "id": "20251109",
     "name": "20251109",
-    "created_at": "2026-06-15T11:24:55.439145",
+    "created_at": "2026-06-15T14:49:54.101532",
     "standings": [
       {
         "name": "Mads Dupont",
@@ -1491,7 +1491,7 @@
   "20251123": {
     "id": "20251123",
     "name": "20251123",
-    "created_at": "2026-06-15T11:24:55.441541",
+    "created_at": "2026-06-15T14:49:54.104680",
     "standings": [
       {
         "name": "Eva \u00d8sterby",
@@ -1726,7 +1726,7 @@
   "20251207_pauper_lyngby": {
     "id": "20251207_pauper_lyngby",
     "name": "20251207 Pauper Lyngby",
-    "created_at": "2026-06-15T11:24:55.443792",
+    "created_at": "2026-06-15T14:49:54.106913",
     "standings": [
       {
         "name": "Christian Hansen",
@@ -1877,7 +1877,7 @@
   "20251221": {
     "id": "20251221",
     "name": "20251221",
-    "created_at": "2026-06-15T11:24:55.445568",
+    "created_at": "2026-06-15T14:49:54.108487",
     "standings": [
       {
         "name": "Freya Gade Ravnsborg",
@@ -1968,7 +1968,7 @@
   "20260104": {
     "id": "20260104",
     "name": "20260104",
-    "created_at": "2026-06-15T11:24:55.447544",
+    "created_at": "2026-06-15T14:49:54.110339",
     "standings": [
       {
         "name": "Frederikke Stejlgaard",
@@ -2131,7 +2131,7 @@
   "20260201-prestige4": {
     "id": "20260201-prestige4",
     "name": "20260201-Prestige4",
-    "created_at": "2026-06-15T11:24:55.450654",
+    "created_at": "2026-06-15T14:49:54.113588",
     "standings": [
       {
         "name": "Erik Christensen",
@@ -2522,7 +2522,7 @@
   "20260215": {
     "id": "20260215",
     "name": "20260215",
-    "created_at": "2026-06-15T11:24:55.452755",
+    "created_at": "2026-06-15T14:49:54.115552",
     "standings": [
       {
         "name": "Christian Hansen",
@@ -2601,7 +2601,7 @@
   "20260301_pauper_lyngby": {
     "id": "20260301_pauper_lyngby",
     "name": "20260301 Pauper Lyngby",
-    "created_at": "2026-06-15T11:24:55.454981",
+    "created_at": "2026-06-15T14:49:54.117885",
     "standings": [
       {
         "name": "Erik Christensen",
@@ -2812,7 +2812,7 @@
   "20260315": {
     "id": "20260315",
     "name": "20260315",
-    "created_at": "2026-06-15T11:24:55.457424",
+    "created_at": "2026-06-15T14:49:54.120147",
     "standings": [
       {
         "name": "Eva \u00d8sterby",
@@ -2987,7 +2987,7 @@
   "20260329": {
     "id": "20260329",
     "name": "20260329",
-    "created_at": "2026-06-15T11:24:55.459919",
+    "created_at": "2026-06-15T14:49:54.122424",
     "standings": [
       {
         "name": "Leo Dyrkj\u00f8b",
@@ -3174,7 +3174,7 @@
   "20260412_pauper_lyngby": {
     "id": "20260412_pauper_lyngby",
     "name": "20260412 Pauper Lyngby",
-    "created_at": "2026-06-15T11:24:55.462567",
+    "created_at": "2026-06-15T14:49:54.125160",
     "standings": [
       {
         "name": "Yuxiang  Zhuang",
@@ -3409,7 +3409,7 @@
   "20260426": {
     "id": "20260426",
     "name": "20260426",
-    "created_at": "2026-06-15T11:24:55.464913",
+    "created_at": "2026-06-15T14:49:54.127342",
     "standings": [
       {
         "name": "Simone Coghi",
@@ -3593,10 +3593,233 @@
       }
     ]
   },
+  "20260510": {
+    "id": "20260510",
+    "name": "20260510",
+    "created_at": "2026-06-15T14:49:54.129907",
+    "standings": [
+      {
+        "name": "Freya Gade Ravnsborg",
+        "rank": 1,
+        "points": 12,
+        "wins": 4,
+        "losses": 1,
+        "draws": 0,
+        "omw": "64.0%",
+        "gwp": "75.0%",
+        "ogwp": "59.5%",
+        "games": 5
+      },
+      {
+        "name": "Frederikke Stejlgaard",
+        "rank": 2,
+        "points": 12,
+        "wins": 4,
+        "losses": 1,
+        "draws": 0,
+        "omw": "60.0%",
+        "gwp": "75.0%",
+        "ogwp": "55.4%",
+        "games": 5
+      },
+      {
+        "name": "gui morgado",
+        "rank": 3,
+        "points": 12,
+        "wins": 4,
+        "losses": 1,
+        "draws": 0,
+        "omw": "60.0%",
+        "gwp": "72.7%",
+        "ogwp": "55.9%",
+        "games": 5
+      },
+      {
+        "name": "Mathias Vith Andersen",
+        "rank": 4,
+        "points": 12,
+        "wins": 4,
+        "losses": 1,
+        "draws": 0,
+        "omw": "49.2%",
+        "gwp": "64.3%",
+        "ogwp": "47.4%",
+        "games": 5
+      },
+      {
+        "name": "Gregoire  Sanguinetti",
+        "rank": 5,
+        "points": 9,
+        "wins": 3,
+        "losses": 2,
+        "draws": 0,
+        "omw": "64.0%",
+        "gwp": "50.0%",
+        "ogwp": "57.9%",
+        "games": 5
+      },
+      {
+        "name": "Yuxiang  Zhuang",
+        "rank": 6,
+        "points": 9,
+        "wins": 3,
+        "losses": 2,
+        "draws": 0,
+        "omw": "58.6%",
+        "gwp": "54.5%",
+        "ogwp": "55.4%",
+        "games": 5
+      },
+      {
+        "name": "Casper Albrektsen",
+        "rank": 7,
+        "points": 9,
+        "wins": 3,
+        "losses": 2,
+        "draws": 0,
+        "omw": "56.6%",
+        "gwp": "53.8%",
+        "ogwp": "53.7%",
+        "games": 5
+      },
+      {
+        "name": "Christian Hansen",
+        "rank": 8,
+        "points": 9,
+        "wins": 3,
+        "losses": 2,
+        "draws": 0,
+        "omw": "52.6%",
+        "gwp": "57.1%",
+        "ogwp": "48.4%",
+        "games": 5
+      },
+      {
+        "name": "Jonas Borgland",
+        "rank": 9,
+        "points": 9,
+        "wins": 3,
+        "losses": 2,
+        "draws": 0,
+        "omw": "45.2%",
+        "gwp": "53.8%",
+        "ogwp": "42.4%",
+        "games": 5
+      },
+      {
+        "name": "Josef-Nam Nguyen",
+        "rank": 10,
+        "points": 6,
+        "wins": 2,
+        "losses": 3,
+        "draws": 0,
+        "omw": "64.0%",
+        "gwp": "36.4%",
+        "ogwp": "60.2%",
+        "games": 5
+      },
+      {
+        "name": "Hannibal Poulsen",
+        "rank": 11,
+        "points": 6,
+        "wins": 2,
+        "losses": 3,
+        "draws": 0,
+        "omw": "57.2%",
+        "gwp": "38.5%",
+        "ogwp": "53.6%",
+        "games": 5
+      },
+      {
+        "name": "Alexander Printzlau Korsgaard",
+        "rank": 12,
+        "points": 6,
+        "wins": 2,
+        "losses": 3,
+        "draws": 0,
+        "omw": "46.6%",
+        "gwp": "41.7%",
+        "ogwp": "43.9%",
+        "games": 5
+      },
+      {
+        "name": "Berg Gudbergsson",
+        "rank": 13,
+        "points": 6,
+        "wins": 2,
+        "losses": 2,
+        "draws": 0,
+        "omw": "46.5%",
+        "gwp": "54.5%",
+        "ogwp": "44.2%",
+        "games": 4
+      },
+      {
+        "name": "Mark Urbanowicz",
+        "rank": 14,
+        "points": 6,
+        "wins": 2,
+        "losses": 3,
+        "draws": 0,
+        "omw": "46.5%",
+        "gwp": "46.2%",
+        "ogwp": "48.1%",
+        "games": 5
+      },
+      {
+        "name": "Andreas R\u00f8pke",
+        "rank": 15,
+        "points": 3,
+        "wins": 1,
+        "losses": 4,
+        "draws": 0,
+        "omw": "52.6%",
+        "gwp": "33.0%",
+        "ogwp": "52.4%",
+        "games": 5
+      },
+      {
+        "name": "Axel Huagb\u00f8lle",
+        "rank": 16,
+        "points": 3,
+        "wins": 1,
+        "losses": 4,
+        "draws": 0,
+        "omw": "49.2%",
+        "gwp": "42.9%",
+        "ogwp": "46.2%",
+        "games": 5
+      },
+      {
+        "name": "Nikkel Krasilnikoff",
+        "rank": 17,
+        "points": 3,
+        "wins": 1,
+        "losses": 4,
+        "draws": 0,
+        "omw": "40.6%",
+        "gwp": "33.0%",
+        "ogwp": "44.7%",
+        "games": 5
+      },
+      {
+        "name": "Frede Olsen",
+        "rank": 18,
+        "points": 0,
+        "wins": 0,
+        "losses": 3,
+        "draws": 0,
+        "omw": "60.0%",
+        "gwp": "33.3%",
+        "ogwp": "52.2%",
+        "games": 3
+      }
+    ]
+  },
   "20260530": {
     "id": "20260530",
     "name": "20260530",
-    "created_at": "2026-06-15T11:24:55.466833",
+    "created_at": "2026-06-15T14:49:54.132041",
     "standings": [
       {
         "name": "Erik Christensen",
