@@ -73,8 +73,8 @@ class TestPlayersGenerator:
                         'opponent': 'Player B',
                         'result_code': 'W',
                         'rating_before': 1600,
-                        'rating_after': 1616.0,
-                        'rating_change': 16.0
+                        'rating_after': 1616,
+                        'rating_change': 16
                     }
                 ]
             }
@@ -102,8 +102,8 @@ class TestPlayersGenerator:
                         'opponent': 'Player B',
                         'result_code': 'W',
                         'rating_before': 1600,
-                        'rating_after': 1616.0,
-                        'rating_change': 16.0
+                        'rating_after': 1616,
+                        'rating_change': 16
                     }
                 ]
             }

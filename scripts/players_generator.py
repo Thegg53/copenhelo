@@ -51,7 +51,7 @@ def generate_match_rows(player: Dict, opted_in_players: Set[str]) -> str:
               <td>{match.get('round', '')}</td>
               <td>{opponent}</td>
               <td><span class="result {result_class}">{result_text}</span></td>
-              <td><span class="rating-change {change_class}">{rating_change:+.1f}</span></td>
+              <td><span class="rating-change {change_class}">{rating_change:+d}</span></td>
               <td>{match.get('rating_after', '')}</td>
             </tr>
         """)

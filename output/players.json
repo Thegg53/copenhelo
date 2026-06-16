@@ -1,7 +1,7 @@
 {
   "Erik Christensen": {
     "name": "Erik Christensen",
-    "rating": 1468.0,
+    "rating": 1468,
     "matches": [
       {
         "tournament": "20260530_pauper_baltzer",
@@ -65,8 +65,8 @@
         "opponent": "Hidden Opponent",
         "result_code": "L",
         "rating_before": 1500,
-        "rating_after": 1484.0,
-        "rating_change": -16.0,
+        "rating_after": 1484,
+        "rating_change": -16,
         "score": [
           0,
           2
@@ -77,9 +77,9 @@
         "round": 3,
         "opponent": "Hidden Opponent",
         "result_code": "W",
-        "rating_before": 1484.0,
-        "rating_after": 1500.7,
-        "rating_change": 16.7,
+        "rating_before": 1484,
+        "rating_after": 1500,
+        "rating_change": 16,
         "score": [
           2,
           0
@@ -90,9 +90,9 @@
         "round": 4,
         "opponent": "Hidden Opponent",
         "result_code": "W",
-        "rating_before": 1500.7,
-        "rating_after": 1516.7,
-        "rating_change": 16.0,
+        "rating_before": 1500,
+        "rating_after": 1516,
+        "rating_change": 16,
         "score": [
           2,
           1
@@ -103,9 +103,9 @@
         "round": 1,
         "opponent": "Hidden Opponent",
         "result_code": "L",
-        "rating_before": 1516.7,
-        "rating_after": 1499.9,
-        "rating_change": -16.8,
+        "rating_before": 1516,
+        "rating_after": 1500,
+        "rating_change": -16,
         "score": [
           0,
           2
@@ -116,9 +116,9 @@
         "round": 2,
         "opponent": "gui morgado",
         "result_code": "L",
-        "rating_before": 1499.9,
-        "rating_after": 1483.2,
-        "rating_change": -16.7,
+        "rating_before": 1500,
+        "rating_after": 1484,
+        "rating_change": -16,
         "score": [
           1,
           2
@@ -129,9 +129,9 @@
         "round": 3,
         "opponent": "Hidden Opponent",
         "result_code": "L",
-        "rating_before": 1483.2,
-        "rating_after": 1468.0,
-        "rating_change": -15.2,
+        "rating_before": 1484,
+        "rating_after": 1468,
+        "rating_change": -16,
         "score": [
           1,
           2
@@ -141,7 +141,7 @@
   },
   "Eva \u00d8sterby": {
     "name": "Eva \u00d8sterby",
-    "rating": 1470.3,
+    "rating": 1469,
     "matches": [
       {
         "tournament": "20260530_pauper_baltzer",
@@ -223,8 +223,8 @@
         "opponent": "Hidden Opponent",
         "result_code": "L",
         "rating_before": 1500,
-        "rating_after": 1484.0,
-        "rating_change": -16.0,
+        "rating_after": 1484,
+        "rating_change": -16,
         "score": [
           1,
           2
@@ -235,9 +235,9 @@
         "round": 2,
         "opponent": "Hidden Opponent",
         "result_code": "L",
-        "rating_before": 1484.0,
-        "rating_after": 1468.7,
-        "rating_change": -15.3,
+        "rating_before": 1484,
+        "rating_after": 1468,
+        "rating_change": -16,
         "score": [
           0,
           2
@@ -248,9 +248,9 @@
         "round": 3,
         "opponent": "Hidden Opponent",
         "result_code": "W",
-        "rating_before": 1468.7,
-        "rating_after": 1486.1,
-        "rating_change": 17.4,
+        "rating_before": 1468,
+        "rating_after": 1485,
+        "rating_change": 17,
         "score": [
           2,
           1
@@ -261,9 +261,9 @@
         "round": 4,
         "opponent": "Hidden Opponent",
         "result_code": "W",
-        "rating_before": 1486.1,
-        "rating_after": 1502.7,
-        "rating_change": 16.6,
+        "rating_before": 1485,
+        "rating_after": 1501,
+        "rating_change": 16,
         "score": [
           2,
           0
@@ -274,9 +274,9 @@
         "round": 1,
         "opponent": "Hidden Opponent",
         "result_code": "W",
-        "rating_before": 1502.7,
-        "rating_after": 1518.6,
-        "rating_change": 15.9,
+        "rating_before": 1501,
+        "rating_after": 1517,
+        "rating_change": 16,
         "score": [
           2,
           1
@@ -287,9 +287,9 @@
         "round": 2,
         "opponent": "Hidden Opponent",
         "result_code": "L",
-        "rating_before": 1518.6,
-        "rating_after": 1501.7,
-        "rating_change": -16.9,
+        "rating_before": 1517,
+        "rating_after": 1501,
+        "rating_change": -16,
         "score": [
           1,
           2
@@ -300,9 +300,9 @@
         "round": 3,
         "opponent": "Hidden Opponent",
         "result_code": "L",
-        "rating_before": 1501.7,
-        "rating_after": 1485.6,
-        "rating_change": -16.1,
+        "rating_before": 1501,
+        "rating_after": 1485,
+        "rating_change": -16,
         "score": [
           0,
           2
@@ -313,9 +313,9 @@
         "round": 4,
         "opponent": "Hidden Opponent",
         "result_code": "L",
-        "rating_before": 1485.6,
-        "rating_after": 1470.3,
-        "rating_change": -15.3,
+        "rating_before": 1485,
+        "rating_after": 1469,
+        "rating_change": -16,
         "score": [
           0,
           2
@@ -325,7 +325,7 @@
   },
   "gui morgado": {
     "name": "gui morgado",
-    "rating": 1484.7,
+    "rating": 1484,
     "matches": [
       {
         "tournament": "20260606_pauper_lyngby",
@@ -362,8 +362,8 @@
         "opponent": "Hidden Opponent",
         "result_code": "L",
         "rating_before": 1500,
-        "rating_after": 1484.0,
-        "rating_change": -16.0,
+        "rating_after": 1484,
+        "rating_change": -16,
         "score": [
           1,
           2
@@ -374,9 +374,9 @@
         "round": 2,
         "opponent": "Erik Christensen",
         "result_code": "W",
-        "rating_before": 1484.0,
-        "rating_after": 1500.7,
-        "rating_change": 16.7,
+        "rating_before": 1484,
+        "rating_after": 1500,
+        "rating_change": 16,
         "score": [
           2,
           1
@@ -387,9 +387,9 @@
         "round": 3,
         "opponent": "Mads Dupont",
         "result_code": "L",
-        "rating_before": 1500.7,
-        "rating_after": 1484.7,
-        "rating_change": -16.0,
+        "rating_before": 1500,
+        "rating_after": 1484,
+        "rating_change": -16,
         "score": [
           1,
           2
@@ -399,7 +399,7 @@
   },
   "Mads Dupont": {
     "name": "Mads Dupont",
-    "rating": 1499.9,
+    "rating": 1500,
     "matches": [
       {
         "tournament": "20260606_pauper_lyngby",
@@ -445,8 +445,8 @@
         "opponent": "Hidden Opponent",
         "result_code": "L",
         "rating_before": 1500,
-        "rating_after": 1484.0,
-        "rating_change": -16.0,
+        "rating_after": 1484,
+        "rating_change": -16,
         "score": [
           1,
           2
@@ -457,9 +457,9 @@
         "round": 2,
         "opponent": "Hidden Opponent",
         "result_code": "W",
-        "rating_before": 1484.0,
-        "rating_after": 1500.7,
-        "rating_change": 16.7,
+        "rating_before": 1484,
+        "rating_after": 1500,
+        "rating_change": 16,
         "score": [
           2,
           1
@@ -470,9 +470,9 @@
         "round": 3,
         "opponent": "gui morgado",
         "result_code": "W",
-        "rating_before": 1500.7,
-        "rating_after": 1516.7,
-        "rating_change": 16.0,
+        "rating_before": 1500,
+        "rating_after": 1516,
+        "rating_change": 16,
         "score": [
           2,
           1
@@ -483,9 +483,9 @@
         "round": 4,
         "opponent": "Hidden Opponent",
         "result_code": "L",
-        "rating_before": 1516.7,
-        "rating_after": 1499.9,
-        "rating_change": -16.8,
+        "rating_before": 1516,
+        "rating_after": 1500,
+        "rating_change": -16,
         "score": [
           0,
           2

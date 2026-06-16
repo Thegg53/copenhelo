@@ -120,26 +120,26 @@ class TestPrestigeDetection:
         assert get_bracket_stage(100) == 'swiss_only'
     
     def test_prestige_finals_bonus(self):
-        """Finals player should get +48 rating points independent of performance."""
+        """Finals player should get +40 rating points independent of performance."""
         standings = [{'rank': i, 'games': 9 if i <= 2 else 5} for i in range(1, 10)]
         player = {'wins': 7, 'losses': 1, 'draws': 1}
         
-        # Finals bonus is 48 points regardless of K-factor
+        # Finals bonus is 40 points regardless of K-factor
         bonus = get_bracket_advancement_bonus('20250928_prestige3', 1)
-        assert bonus == 48.0, f"Expected 48.0 point finals bonus, got {bonus}"
+        assert bonus == 40.0, f"Expected 40.0 point finals bonus, got {bonus}"
     
     def test_prestige_semis_bonus(self):
-        """Semis player should get +10 rating points (1-1 bracket record)."""
+        """Semis player should get +8 rating points (1-1 bracket record)."""
         standings = [{'rank': 1, 'games': 9}, {'rank': 2, 'games': 9},
                      {'rank': 3, 'games': 8}, {'rank': 4, 'games': 8}]
         standings += [{'rank': i, 'games': 5} for i in range(5, 10)]
         player = {'wins': 6, 'losses': 2, 'draws': 0}
         
         bonus = get_bracket_advancement_bonus('20260201-prestige4', 3)
-        assert bonus == 10.0, f"Expected 10.0 point semis bonus (1-1 bracket), got {bonus}"
+        assert bonus == 8.0, f"Expected 8.0 point semis bonus (1-1 bracket), got {bonus}"
     
     def test_prestige_quarters_bonus(self):
-        """Quarters player should get +3 rating points (0-1 bracket record)."""
+        """Quarters player should get +4 rating points (0-1 bracket record)."""
         standings = [{'rank': 1, 'games': 9}, {'rank': 2, 'games': 9},
                      {'rank': 3, 'games': 8}, {'rank': 4, 'games': 8},
                      {'rank': 5, 'games': 7}, {'rank': 6, 'games': 7}]
@@ -147,7 +147,7 @@ class TestPrestigeDetection:
         player = {'wins': 5, 'losses': 2, 'draws': 0}
         
         bonus = get_bracket_advancement_bonus('20250928_prestige3', 5)
-        assert bonus == 3.0, f"Expected 3.0 point quarters bonus (0-1 bracket), got {bonus}"
+        assert bonus == 4.0, f"Expected 4.0 point quarters bonus (0-1 bracket), got {bonus}"
     
     def test_prestige_swiss_only_no_bonus(self):
         """Swiss-only player in prestige should get no bracket bonus."""

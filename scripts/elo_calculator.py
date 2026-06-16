@@ -14,6 +14,7 @@ from datetime import datetime
 # Constants
 DEFAULT_RATING = 1500
 K_FACTOR = 32
+DIVISOR = 1136  # MTG Elo Project standard (vs chess's 400)
 
 
 def calculate_new_rating(
@@ -21,9 +22,14 @@ def calculate_new_rating(
     opponent_rating: float,
     score: float,
     k_factor: int = K_FACTOR
-) -> float:
+) -> int:
     """
     Calculate new rating using standard ELO formula.
+    
+    Uses divisor of 1136 following MTG Elo Project standards:
+    - 200-point rating gap = 60% expected win rate
+    - (vs chess's 400 divisor where 200-point gap = 76%)
+    - Accounts for Magic's high variance compared to chess
     
     Args:
         current_rating: Player's current rating
@@ -32,12 +38,12 @@ def calculate_new_rating(
         k_factor: ELO K-factor (default 32)
         
     Returns:
-        New rating rounded to 1 decimal place
+        New rating as integer (rounded to nearest whole number)
     """
-    expected_score = 1 / (1 + math.pow(10, (opponent_rating - current_rating) / 400))
+    expected_score = 1 / (1 + math.pow(10, (opponent_rating - current_rating) / DIVISOR))
     rating_change = k_factor * (score - expected_score)
     new_rating = current_rating + rating_change
-    return round(new_rating, 1)
+    return round(new_rating)
 
 
 def determine_result_code(p1_wins: int, p2_wins: int) -> str:
@@ -157,11 +163,11 @@ def process_match(
     p1_new_rating = calculate_new_rating(p1_rating_before, p1_opponent_rating, p1_score)
     p2_new_rating = calculate_new_rating(p2_rating_before, p2_opponent_rating, p2_score)
     
-    p1_rating_change = round(p1_new_rating - p1_rating_before, 1)
-    p2_rating_change = round(p2_new_rating - p2_rating_before, 1)
+    p1_rating_change = int(p1_new_rating - p1_rating_before)
+    p2_rating_change = int(p2_new_rating - p2_rating_before)
     
     # Log the match
-    log_func(f"    {p1_name} ({result_code}) {p2_name} [{p1_rating_change:+.1f} {p2_rating_change:+.1f}]")
+    log_func(f"    {p1_name} ({result_code}) {p2_name} [{p1_rating_change:+d} {p2_rating_change:+d}]")
     
     # Update ratings
     players[p1_name]['rating'] = p1_new_rating
