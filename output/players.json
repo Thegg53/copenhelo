@@ -51,7 +51,7 @@
       {
         "tournament": "20260606_pauper_lyngby",
         "round": 3,
-        "opponent": "Hidden Opponent",
+        "opponent": "Gregoire  Sanguinetti",
         "result": [
           1,
           2
@@ -127,7 +127,7 @@
       {
         "tournament": "20260606_pauper_lyngby",
         "round": 3,
-        "opponent": "Hidden Opponent",
+        "opponent": "Gregoire  Sanguinetti",
         "result_code": "L",
         "rating_before": 1484,
         "rating_after": 1468,
@@ -139,6 +139,190 @@
       }
     ]
   },
+  "Gregoire  Sanguinetti": {
+    "name": "Gregoire  Sanguinetti",
+    "rating": 1500,
+    "matches": [
+      {
+        "tournament": "20260530_pauper_baltzer",
+        "round": 1,
+        "opponent": "Eva \u00d8sterby",
+        "result": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260530_pauper_baltzer",
+        "round": 2,
+        "opponent": "Hidden Opponent",
+        "result": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260530_pauper_baltzer",
+        "round": 3,
+        "opponent": "Hidden Opponent",
+        "result": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260530_pauper_baltzer",
+        "round": 4,
+        "opponent": "Hidden Opponent",
+        "result": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 1,
+        "opponent": "Eva \u00d8sterby",
+        "result": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 2,
+        "opponent": "Mads Dupont",
+        "result": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 3,
+        "opponent": "Erik Christensen",
+        "result": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 4,
+        "opponent": "Hidden Opponent",
+        "result": [
+          2,
+          0
+        ]
+      }
+    ],
+    "history": [
+      {
+        "tournament": "20260530_pauper_baltzer",
+        "round": 1,
+        "opponent": "Eva \u00d8sterby",
+        "result_code": "W",
+        "rating_before": 1500,
+        "rating_after": 1516,
+        "rating_change": 16,
+        "score": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260530_pauper_baltzer",
+        "round": 2,
+        "opponent": "Hidden Opponent",
+        "result_code": "L",
+        "rating_before": 1516,
+        "rating_after": 1500,
+        "rating_change": -16,
+        "score": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260530_pauper_baltzer",
+        "round": 3,
+        "opponent": "Hidden Opponent",
+        "result_code": "L",
+        "rating_before": 1500,
+        "rating_after": 1484,
+        "rating_change": -16,
+        "score": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260530_pauper_baltzer",
+        "round": 4,
+        "opponent": "Hidden Opponent",
+        "result_code": "W",
+        "rating_before": 1484,
+        "rating_after": 1500,
+        "rating_change": 16,
+        "score": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 1,
+        "opponent": "Eva \u00d8sterby",
+        "result_code": "L",
+        "rating_before": 1500,
+        "rating_after": 1484,
+        "rating_change": -16,
+        "score": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 2,
+        "opponent": "Mads Dupont",
+        "result_code": "L",
+        "rating_before": 1484,
+        "rating_after": 1468,
+        "rating_change": -16,
+        "score": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 3,
+        "opponent": "Erik Christensen",
+        "result_code": "W",
+        "rating_before": 1468,
+        "rating_after": 1484,
+        "rating_change": 16,
+        "score": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260606_pauper_lyngby",
+        "round": 4,
+        "opponent": "Hidden Opponent",
+        "result_code": "W",
+        "rating_before": 1484,
+        "rating_after": 1500,
+        "rating_change": 16,
+        "score": [
+          2,
+          0
+        ]
+      }
+    ]
+  },
   "Eva \u00d8sterby": {
     "name": "Eva \u00d8sterby",
     "rating": 1469,
@@ -146,7 +330,7 @@
       {
         "tournament": "20260530_pauper_baltzer",
         "round": 1,
-        "opponent": "Hidden Opponent",
+        "opponent": "Gregoire  Sanguinetti",
         "result": [
           1,
           2
@@ -182,7 +366,7 @@
       {
         "tournament": "20260606_pauper_lyngby",
         "round": 1,
-        "opponent": "Hidden Opponent",
+        "opponent": "Gregoire  Sanguinetti",
         "result": [
           2,
           1
@@ -220,7 +404,7 @@
       {
         "tournament": "20260530_pauper_baltzer",
         "round": 1,
-        "opponent": "Hidden Opponent",
+        "opponent": "Gregoire  Sanguinetti",
         "result_code": "L",
         "rating_before": 1500,
         "rating_after": 1484,
@@ -272,7 +456,7 @@
       {
         "tournament": "20260606_pauper_lyngby",
         "round": 1,
-        "opponent": "Hidden Opponent",
+        "opponent": "Gregoire  Sanguinetti",
         "result_code": "W",
         "rating_before": 1501,
         "rating_after": 1517,
@@ -413,7 +597,7 @@
       {
         "tournament": "20260606_pauper_lyngby",
         "round": 2,
-        "opponent": "Hidden Opponent",
+        "opponent": "Gregoire  Sanguinetti",
         "result": [
           2,
           1
@@ -455,7 +639,7 @@
       {
         "tournament": "20260606_pauper_lyngby",
         "round": 2,
-        "opponent": "Hidden Opponent",
+        "opponent": "Gregoire  Sanguinetti",
         "result_code": "W",
         "rating_before": 1484,
         "rating_after": 1500,

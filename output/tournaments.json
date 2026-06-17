@@ -1,7 +1,7 @@
 {
   "20260530_pauper_baltzer": {
     "id": "20260530_pauper_baltzer",
-    "created_at": "2026-06-16T08:46:54.179351",
+    "created_at": "2026-06-17T09:44:39.637073",
     "rounds": {
       "1": {
         "matches": [
@@ -37,7 +37,7 @@
           },
           {
             "table": "4",
-            "player1": "Hidden Player",
+            "player1": "Gregoire  Sanguinetti",
             "player2": "Eva \u00d8sterby",
             "result": [
               2,
@@ -53,13 +53,13 @@
             "has_bye": true
           }
         ],
-        "processed_at": "2026-06-16T08:46:54.179362"
+        "processed_at": "2026-06-17T09:44:39.637083"
       },
       "2": {
         "matches": [
           {
             "table": "1",
-            "player1": "Hidden Player",
+            "player1": "Gregoire  Sanguinetti",
             "player2": "Hidden Player",
             "result": [
               1,
@@ -105,7 +105,7 @@
             "has_bye": true
           }
         ],
-        "processed_at": "2026-06-16T08:46:54.180029"
+        "processed_at": "2026-06-17T09:44:39.637445"
       },
       "3": {
         "matches": [
@@ -131,7 +131,7 @@
           },
           {
             "table": "3",
-            "player1": "Hidden Player",
+            "player1": "Gregoire  Sanguinetti",
             "player2": "Hidden Player",
             "result": [
               1,
@@ -157,7 +157,7 @@
             "has_bye": true
           }
         ],
-        "processed_at": "2026-06-16T08:46:54.180272"
+        "processed_at": "2026-06-17T09:44:39.637748"
       },
       "4": {
         "matches": [
@@ -193,7 +193,7 @@
           },
           {
             "table": "4",
-            "player1": "Hidden Player",
+            "player1": "Gregoire  Sanguinetti",
             "player2": "Hidden Player",
             "result": [
               2,
@@ -209,13 +209,13 @@
             "has_bye": true
           }
         ],
-        "processed_at": "2026-06-16T08:46:54.180500"
+        "processed_at": "2026-06-17T09:44:39.637986"
       }
     }
   },
   "20260606_pauper_lyngby": {
     "id": "20260606_pauper_lyngby",
-    "created_at": "2026-06-16T08:46:54.181093",
+    "created_at": "2026-06-17T09:44:39.638680",
     "rounds": {
       "1": {
         "matches": [
@@ -232,7 +232,7 @@
           {
             "table": "2",
             "player1": "Eva \u00d8sterby",
-            "player2": "Hidden Player",
+            "player2": "Gregoire  Sanguinetti",
             "result": [
               2,
               1
@@ -280,7 +280,7 @@
             "has_bye": false
           }
         ],
-        "processed_at": "2026-06-16T08:46:54.181103"
+        "processed_at": "2026-06-17T09:44:39.638691"
       },
       "2": {
         "matches": [
@@ -326,7 +326,7 @@
           },
           {
             "table": "5",
-            "player1": "Hidden Player",
+            "player1": "Gregoire  Sanguinetti",
             "player2": "Mads Dupont",
             "result": [
               1,
@@ -345,14 +345,14 @@
             "has_bye": false
           }
         ],
-        "processed_at": "2026-06-16T08:46:54.181450"
+        "processed_at": "2026-06-17T09:44:39.639049"
       },
       "3": {
         "matches": [
           {
             "table": "1",
             "player1": "Erik Christensen",
-            "player2": "Hidden Player",
+            "player2": "Gregoire  Sanguinetti",
             "result": [
               1,
               2
@@ -410,13 +410,13 @@
             "has_bye": false
           }
         ],
-        "processed_at": "2026-06-16T08:46:54.181751"
+        "processed_at": "2026-06-17T09:44:39.639466"
       },
       "4": {
         "matches": [
           {
             "table": "1",
-            "player1": "Hidden Player",
+            "player1": "Gregoire  Sanguinetti",
             "player2": "Hidden Player",
             "result": [
               2,
@@ -472,7 +472,7 @@
             "has_bye": true
           }
         ],
-        "processed_at": "2026-06-16T08:46:54.182095"
+        "processed_at": "2026-06-17T09:44:39.639784"
       }
     }
   }

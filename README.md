@@ -14,6 +14,21 @@ make install
 
 This creates a Python virtual environment and installs dependencies.
 
+## Running the Pipeline
+
+After adding new players to `input/opt_in.csv` (or when you need to regenerate everything from scratch):
+
+```bash
+make reset
+```
+
+This is the **default command to use** when managing player consent. It performs a complete reset:
+1. Parses all tournaments from `input/`
+2. Recalculates ELO history from scratch
+3. Generates fresh HTML outputs (leaderboard, players, tournaments)
+
+As players slowly give consent, simply add them to `input/opt_in.csv` and run `make reset` to regenerate everything with the updated roster.
+
 ## Alternative: Final Standings Version
 
 For a simpler pipeline that works with **final standings only** (no round-by-round data needed):
