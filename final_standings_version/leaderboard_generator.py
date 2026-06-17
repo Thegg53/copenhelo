@@ -295,8 +295,11 @@ def generate_leaderboard(output_file: Path):
 <body>
   <div class="container">
     <div class="header">
-      <h1>Dummy Tournament Leaderboard</h1>
+      <h1>Tournament Standings</h1>
       <p>Click player names to see their tournament history</p>
+      <nav style="margin-top: 15px;">
+        <a href="leaderboard.html" style="color: rgba(255, 255, 255, 0.9); text-decoration: none; font-size: 14px; margin: 0 15px;">← Back to Leaderboard</a>
+      </nav>
     </div>
     
     <div class="table-wrapper">
@@ -348,7 +351,7 @@ def main():
     """Main entry point."""
     script_dir = Path(__file__).parent
     repo_root = script_dir.parent
-    output_file = repo_root / 'dummy.html'
+    output_file = repo_root / 'standings.html'
     generate_leaderboard(output_file)
 
 

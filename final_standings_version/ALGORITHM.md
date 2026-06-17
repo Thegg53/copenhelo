@@ -196,7 +196,7 @@ Players must opt-in via `input/opt_in.csv`. Opted-in players display their actua
 ### Output
 - `output/players.json`: Player data with current ratings and history
 - `output/tournaments.json`: Tournament standings and metadata
-- `../dummy.html`: Generated leaderboard (opted-in players only)
+- `../standings.html`: Generated leaderboard (opted-in players only)
 
 ## Testing
 

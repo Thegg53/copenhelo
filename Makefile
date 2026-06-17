@@ -76,4 +76,4 @@ final_standings_reset: $(VENV_DIR)
 	cd $(FSV) && ../$(PYTHON) elo_calculator.py
 	@echo "Generating leaderboard..."
 	cd $(FSV) && ../$(PYTHON) leaderboard_generator.py
-	@echo "✓ Pipeline complete: dummy.html"
+	@echo "✓ Pipeline complete: standings.html"

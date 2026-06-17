@@ -203,6 +203,7 @@ def generate_leaderboard_html(players: Dict[str, Dict]) -> str:
       <nav>
         <a href="players.html">Players</a>
         <a href="tournaments.html">Tournaments</a>
+        <a href="standings.html">Old Standings Based</a>
       </nav>
     </div>
     

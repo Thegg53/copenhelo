@@ -36,7 +36,7 @@ python elo_calculator.py --include-dummy
 python leaderboard_generator.py
 ```
 
-Output: `../dummy.html` with interactive player rankings + history.
+Output: `../standings.html` with interactive player rankings + history.
 
 ## How It Works
 
