@@ -870,3 +870,118 @@
 [2026-06-17T16:23:54.131439] Starting tournaments page generation
 [2026-06-17T16:23:54.132573] Generated tournaments page: tournaments.html (2 tournaments)
 [2026-06-17T16:23:54.132603] Tournaments page generation complete
+[2026-06-21T18:41:50.113149] Starting tournament parsing
+[2026-06-21T18:41:50.113541] Skipping tournament 20260530_pauper_baltzer (already parsed)
+[2026-06-21T18:41:50.113571] Skipping tournament 20260606_pauper_lyngby (already parsed)
+[2026-06-21T18:41:50.113591] Parsing tournament: 20260621_pauper_lyngby
+[2026-06-21T18:41:50.156227]   Parsed round 1: 8 matches
+[2026-06-21T18:41:50.197991]   Parsed round 2: 8 matches
+[2026-06-21T18:41:50.237466]   Parsed round 3: 8 matches
+[2026-06-21T18:41:50.275170]   Parsed round 4: 7 matches
+[2026-06-21T18:41:50.276472] Parsed tournament 20260621_pauper_lyngby: 4 rounds, 31 matches -> events/20260621_pauper_lyngby.json
+[2026-06-21T18:41:50.276512] Tournament parsing complete: 1 processed, 2 skipped
+[2026-06-21T18:41:50.377504] ============================================================
+[2026-06-21T18:41:50.377536] RECALCULATING HISTORY FROM SCRATCH
+[2026-06-21T18:41:50.377551] ============================================================
+[2026-06-21T18:41:50.377688] Loaded 12 opted-in players from opt_in.csv
+[2026-06-21T18:41:50.378050] Found 3 tournament(s)
+[2026-06-21T18:41:50.378069] Cleared existing player and tournament data
+[2026-06-21T18:41:50.378228] Processing tournament: 20260530_pauper_baltzer
+[2026-06-21T18:41:50.378312]     Mads thode schultz (W) Christoffer Nielsen [+16 -16]
+[2026-06-21T18:41:50.378347]     Josef-Nam Nguyen (W) Erik Christensen [+16 -16]
+[2026-06-21T18:41:50.378376]     Casper Albrektsen (W) Edoardo Cravero [+16 -16]
+[2026-06-21T18:41:50.378398]     Gregoire  Sanguinetti (W) Eva Østerby [+16 -16]
+[2026-06-21T18:41:50.378589]   Round 1: 5 matches
+[2026-06-21T18:41:50.378625]     Gregoire  Sanguinetti (L) Jonas Borgland [-16 +16]
+[2026-06-21T18:41:50.378651]     Josef-Nam Nguyen (W) Mads thode schultz [+16 -16]
+[2026-06-21T18:41:50.378675]     Casper Albrektsen (W) Eva Østerby [+15 -16]
+[2026-06-21T18:41:50.378699]     Edoardo Cravero (W) Christoffer Nielsen [+16 -16]
+[2026-06-21T18:41:50.378717]   Round 2: 5 matches
+[2026-06-21T18:41:50.378742]     Josef-Nam Nguyen (L) Jonas Borgland [-17 +16]
+[2026-06-21T18:41:50.378763]     Casper Albrektsen (L) Erik Christensen [-17 +16]
+[2026-06-21T18:41:50.378784]     Gregoire  Sanguinetti (L) Mads thode schultz [-16 +16]
+[2026-06-21T18:41:50.378813]     Edoardo Cravero (L) Eva Østerby [-17 +17]
+[2026-06-21T18:41:50.378832]   Round 3: 5 matches
+[2026-06-21T18:41:50.378853]     Jonas Borgland (L) Erik Christensen [-17 +16]
+[2026-06-21T18:41:50.378872]     Josef-Nam Nguyen (L) Casper Albrektsen [-16 +16]
+[2026-06-21T18:41:50.378889]     Mads thode schultz (L) Eva Østerby [-17 +16]
+[2026-06-21T18:41:50.378909]     Gregoire  Sanguinetti (W) Christoffer Nielsen [+16 -16]
+[2026-06-21T18:41:50.378923]   Round 4: 5 matches
+[2026-06-21T18:41:50.379219] Processing tournament: 20260606_pauper_lyngby
+[2026-06-21T18:41:50.379279]     Olav Joergensen (W) Thor Weis [+16 -16]
+[2026-06-21T18:41:50.379306]     Eva Østerby (W) Gregoire  Sanguinetti [+16 -16]
+[2026-06-21T18:41:50.379330]     Stefan Leone (W) gui morgado [+16 -16]
+[2026-06-21T18:41:50.379351]     Alexander Graulund (W) Mads Dupont [+16 -16]
+[2026-06-21T18:41:50.379372]     Jonathan Mohr (L) Esben Roenne Green [-16 +16]
+[2026-06-21T18:41:50.379400]     Erika C (W) Erik Christensen [+16 -16]
+[2026-06-21T18:41:50.379419]   Round 1: 6 matches
+[2026-06-21T18:41:50.379441]     Erik Christensen (L) gui morgado [-16 +16]
+[2026-06-21T18:41:50.379459]     Olav Joergensen (W) Stefan Leone [+16 -16]
+[2026-06-21T18:41:50.379478]     Eva Østerby (L) Alexander Graulund [-16 +16]
+[2026-06-21T18:41:50.379498]     Jonathan Mohr (L) Thor Weis [-16 +16]
+[2026-06-21T18:41:50.379516]     Gregoire  Sanguinetti (L) Mads Dupont [-16 +16]
+[2026-06-21T18:41:50.379536]     Esben Roenne Green (L) Erika C [-16 +16]
+[2026-06-21T18:41:50.379552]   Round 2: 6 matches
+[2026-06-21T18:41:50.379573]     Erik Christensen (L) Gregoire  Sanguinetti [-16 +16]
+[2026-06-21T18:41:50.379591]     Alexander Graulund (W) Stefan Leone [+15 -16]
+[2026-06-21T18:41:50.379610]     Thor Weis (W) Esben Roenne Green [+16 -16]
+[2026-06-21T18:41:50.379628]     Mads Dupont (W) gui morgado [+16 -16]
+[2026-06-21T18:41:50.379652]     Eva Østerby (L) Jonathan Mohr [-16 +17]
+[2026-06-21T18:41:50.379679]     Erika C (L) Olav Joergensen [-17 +15]
+[2026-06-21T18:41:50.379693]   Round 3: 6 matches
+[2026-06-21T18:41:50.379712]     Gregoire  Sanguinetti (W) Jonathan Mohr [+16 -16]
+[2026-06-21T18:41:50.379731]     Olav Joergensen (W) Alexander Graulund [+15 -17]
+[2026-06-21T18:41:50.379749]     Mads Dupont (L) Stefan Leone [-16 +17]
+[2026-06-21T18:41:50.379769]     Esben Roenne Green (W) Eva Østerby [+16 -16]
+[2026-06-21T18:41:50.379789]     Thor Weis (W) Erika C [+16 -16]
+[2026-06-21T18:41:50.379804]   Round 4: 6 matches
+[2026-06-21T18:41:50.380035] Processing tournament: 20260621_pauper_lyngby
+[2026-06-21T18:41:50.380082]     Mads Dupont (L) Freya Gade Ravnsborg [-16 +16]
+[2026-06-21T18:41:50.380106]     Frederikke Stejlgaard (W) Christian Hansen [+16 -16]
+[2026-06-21T18:41:50.380133]     Emma Gad (L) gui morgado [-16 +16]
+[2026-06-21T18:41:50.380161]     Esben Roenne Green (L) Casper Albrektsen [-16 +16]
+[2026-06-21T18:41:50.380181]     Alexander Graulund (W) Mathias Vith Andersen [+16 -16]
+[2026-06-21T18:41:50.380215]     Erika C (L) Jonathan Mohr [-16 +17]
+[2026-06-21T18:41:50.380238]     Erik Christensen (L) Mads thode schultz [-15 +15]
+[2026-06-21T18:41:50.380258]     Eva Østerby (L) Andreas Røpke [-15 +15]
+[2026-06-21T18:41:50.380281]   Round 1: 8 matches
+[2026-06-21T18:41:50.380306]     Frederikke Stejlgaard (W) Freya Gade Ravnsborg [+16 -16]
+[2026-06-21T18:41:50.380327]     Alexander Graulund (W) Casper Albrektsen [+15 -17]
+[2026-06-21T18:41:50.380354]     Jonathan Mohr (W) gui morgado [+16 -16]
+[2026-06-21T18:41:50.380375]     Andreas Røpke (L) Mads thode schultz [-16 +16]
+[2026-06-21T18:41:50.380401]     Christian Hansen (L) Esben Roenne Green [-16 +16]
+[2026-06-21T18:41:50.380440]     Emma Gad (W) Erika C [+16 -16]
+[2026-06-21T18:41:50.380466]     Erik Christensen (L) Mads Dupont [-15 +15]
+[2026-06-21T18:41:50.380484]     Mathias Vith Andersen (L) Eva Østerby [-16 +16]
+[2026-06-21T18:41:50.380498]   Round 2: 8 matches
+[2026-06-21T18:41:50.380518]     Freya Gade Ravnsborg (L) Emma Gad [-16 +16]
+[2026-06-21T18:41:50.380540]     Jonathan Mohr (L) Mads thode schultz [-16 +16]
+[2026-06-21T18:41:50.380559]     gui morgado (L) Mads Dupont [-16 +16]
+[2026-06-21T18:41:50.380576]     Frederikke Stejlgaard (W) Alexander Graulund [+15 -16]
+[2026-06-21T18:41:50.380593]     Eva Østerby (D) Esben Roenne Green [+0 +0]
+[2026-06-21T18:41:50.380610]     Andreas Røpke (L) Casper Albrektsen [-16 +16]
+[2026-06-21T18:41:50.380631]     Erik Christensen (L) Mathias Vith Andersen [-16 +16]
+[2026-06-21T18:41:50.380648]     Erika C (W) Christian Hansen [+17 -15]
+[2026-06-21T18:41:50.380659]   Round 3: 8 matches
+[2026-06-21T18:41:50.380677]     Eva Østerby (L) Freya Gade Ravnsborg [-16 +16]
+[2026-06-21T18:41:50.380699]     Mads thode schultz (L) Frederikke Stejlgaard [-16 +15]
+[2026-06-21T18:41:50.380721]     Alexander Graulund (W) Jonathan Mohr [+15 -16]
+[2026-06-21T18:41:50.380739]     Casper Albrektsen (L) Emma Gad [-16 +16]
+[2026-06-21T18:41:50.380754]     Mads Dupont (L) Esben Roenne Green [-16 +16]
+[2026-06-21T18:41:50.380770]     Andreas Røpke (L) Mathias Vith Andersen [-16 +16]
+[2026-06-21T18:41:50.380788]     Erika C (L) Erik Christensen [-17 +17]
+[2026-06-21T18:41:50.380801]   Round 4: 7 matches
+[2026-06-21T18:41:50.386550] Recalculation complete!
+[2026-06-21T18:41:50.386589]   Tournaments processed: 3
+[2026-06-21T18:41:50.386603]   Total players calculated: 24
+[2026-06-21T18:41:50.386612]   Players in output (opted-in): 9
+[2026-06-21T18:41:50.386622] ============================================================
+[2026-06-21T18:41:50.450175] Starting leaderboard generation
+[2026-06-21T18:41:50.451477] Generated leaderboard: leaderboard.html (9 players)
+[2026-06-21T18:41:50.451506] Leaderboard generation complete
+[2026-06-21T18:41:50.517751] Starting player pages generation
+[2026-06-21T18:41:50.519133] Generated players page: players.html (9 players)
+[2026-06-21T18:41:50.519155] Player pages generation complete
+[2026-06-21T18:41:50.581444] Starting tournaments page generation
+[2026-06-21T18:41:50.582951] Generated tournaments page: tournaments.html (3 tournaments)
+[2026-06-21T18:41:50.582985] Tournaments page generation complete

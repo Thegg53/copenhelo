@@ -1,7 +1,7 @@
 {
   "Erik Christensen": {
     "name": "Erik Christensen",
-    "rating": 1468,
+    "rating": 1439,
     "matches": [
       {
         "tournament": "20260530_pauper_baltzer",
@@ -55,6 +55,42 @@
         "result": [
           1,
           2
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 1,
+        "opponent": "Hidden Opponent",
+        "result": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 2,
+        "opponent": "Mads Dupont",
+        "result": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 3,
+        "opponent": "Mathias Vith Andersen",
+        "result": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 4,
+        "opponent": "Hidden Opponent",
+        "result": [
+          2,
+          1
         ]
       }
     ],
@@ -135,6 +171,58 @@
         "score": [
           1,
           2
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 1,
+        "opponent": "Hidden Opponent",
+        "result_code": "L",
+        "rating_before": 1468,
+        "rating_after": 1453,
+        "rating_change": -15,
+        "score": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 2,
+        "opponent": "Mads Dupont",
+        "result_code": "L",
+        "rating_before": 1453,
+        "rating_after": 1438,
+        "rating_change": -15,
+        "score": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 3,
+        "opponent": "Mathias Vith Andersen",
+        "result_code": "L",
+        "rating_before": 1438,
+        "rating_after": 1422,
+        "rating_change": -16,
+        "score": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 4,
+        "opponent": "Hidden Opponent",
+        "result_code": "W",
+        "rating_before": 1422,
+        "rating_after": 1439,
+        "rating_change": 17,
+        "score": [
+          2,
+          1
         ]
       }
     ]
@@ -325,7 +413,7 @@
   },
   "Eva \u00d8sterby": {
     "name": "Eva \u00d8sterby",
-    "rating": 1469,
+    "rating": 1454,
     "matches": [
       {
         "tournament": "20260530_pauper_baltzer",
@@ -394,6 +482,42 @@
         "tournament": "20260606_pauper_lyngby",
         "round": 4,
         "opponent": "Hidden Opponent",
+        "result": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 1,
+        "opponent": "Hidden Opponent",
+        "result": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 2,
+        "opponent": "Mathias Vith Andersen",
+        "result": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 3,
+        "opponent": "Hidden Opponent",
+        "result": [
+          1,
+          1
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 4,
+        "opponent": "Freya Gade Ravnsborg",
         "result": [
           0,
           2
@@ -504,12 +628,64 @@
           0,
           2
         ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 1,
+        "opponent": "Hidden Opponent",
+        "result_code": "L",
+        "rating_before": 1469,
+        "rating_after": 1454,
+        "rating_change": -15,
+        "score": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 2,
+        "opponent": "Mathias Vith Andersen",
+        "result_code": "W",
+        "rating_before": 1454,
+        "rating_after": 1470,
+        "rating_change": 16,
+        "score": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 3,
+        "opponent": "Hidden Opponent",
+        "result_code": "D",
+        "rating_before": 1470,
+        "rating_after": 1470,
+        "rating_change": 0,
+        "score": [
+          1,
+          1
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 4,
+        "opponent": "Freya Gade Ravnsborg",
+        "result_code": "L",
+        "rating_before": 1470,
+        "rating_after": 1454,
+        "rating_change": -16,
+        "score": [
+          0,
+          2
+        ]
       }
     ]
   },
   "gui morgado": {
     "name": "gui morgado",
-    "rating": 1484,
+    "rating": 1468,
     "matches": [
       {
         "tournament": "20260606_pauper_lyngby",
@@ -531,6 +707,33 @@
       },
       {
         "tournament": "20260606_pauper_lyngby",
+        "round": 3,
+        "opponent": "Mads Dupont",
+        "result": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 1,
+        "opponent": "Emma Gad",
+        "result": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 2,
+        "opponent": "Hidden Opponent",
+        "result": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
         "round": 3,
         "opponent": "Mads Dupont",
         "result": [
@@ -578,12 +781,51 @@
           1,
           2
         ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 1,
+        "opponent": "Emma Gad",
+        "result_code": "W",
+        "rating_before": 1484,
+        "rating_after": 1500,
+        "rating_change": 16,
+        "score": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 2,
+        "opponent": "Hidden Opponent",
+        "result_code": "L",
+        "rating_before": 1500,
+        "rating_after": 1484,
+        "rating_change": -16,
+        "score": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 3,
+        "opponent": "Mads Dupont",
+        "result_code": "L",
+        "rating_before": 1484,
+        "rating_after": 1468,
+        "rating_change": -16,
+        "score": [
+          1,
+          2
+        ]
       }
     ]
   },
   "Mads Dupont": {
     "name": "Mads Dupont",
-    "rating": 1500,
+    "rating": 1499,
     "matches": [
       {
         "tournament": "20260606_pauper_lyngby",
@@ -618,6 +860,42 @@
         "opponent": "Hidden Opponent",
         "result": [
           0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 1,
+        "opponent": "Freya Gade Ravnsborg",
+        "result": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 2,
+        "opponent": "Erik Christensen",
+        "result": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 3,
+        "opponent": "gui morgado",
+        "result": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 4,
+        "opponent": "Hidden Opponent",
+        "result": [
+          1,
           2
         ]
       }
@@ -673,6 +951,442 @@
         "score": [
           0,
           2
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 1,
+        "opponent": "Freya Gade Ravnsborg",
+        "result_code": "L",
+        "rating_before": 1500,
+        "rating_after": 1484,
+        "rating_change": -16,
+        "score": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 2,
+        "opponent": "Erik Christensen",
+        "result_code": "W",
+        "rating_before": 1484,
+        "rating_after": 1499,
+        "rating_change": 15,
+        "score": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 3,
+        "opponent": "gui morgado",
+        "result_code": "W",
+        "rating_before": 1499,
+        "rating_after": 1515,
+        "rating_change": 16,
+        "score": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 4,
+        "opponent": "Hidden Opponent",
+        "result_code": "L",
+        "rating_before": 1515,
+        "rating_after": 1499,
+        "rating_change": -16,
+        "score": [
+          1,
+          2
+        ]
+      }
+    ]
+  },
+  "Freya Gade Ravnsborg": {
+    "name": "Freya Gade Ravnsborg",
+    "rating": 1500,
+    "matches": [
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 1,
+        "opponent": "Mads Dupont",
+        "result": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 2,
+        "opponent": "Frederikke Stejlgaard",
+        "result": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 3,
+        "opponent": "Emma Gad",
+        "result": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 4,
+        "opponent": "Eva \u00d8sterby",
+        "result": [
+          2,
+          0
+        ]
+      }
+    ],
+    "history": [
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 1,
+        "opponent": "Mads Dupont",
+        "result_code": "W",
+        "rating_before": 1500,
+        "rating_after": 1516,
+        "rating_change": 16,
+        "score": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 2,
+        "opponent": "Frederikke Stejlgaard",
+        "result_code": "L",
+        "rating_before": 1516,
+        "rating_after": 1500,
+        "rating_change": -16,
+        "score": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 3,
+        "opponent": "Emma Gad",
+        "result_code": "L",
+        "rating_before": 1500,
+        "rating_after": 1484,
+        "rating_change": -16,
+        "score": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 4,
+        "opponent": "Eva \u00d8sterby",
+        "result_code": "W",
+        "rating_before": 1484,
+        "rating_after": 1500,
+        "rating_change": 16,
+        "score": [
+          2,
+          0
+        ]
+      }
+    ]
+  },
+  "Frederikke Stejlgaard": {
+    "name": "Frederikke Stejlgaard",
+    "rating": 1562,
+    "matches": [
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 1,
+        "opponent": "Hidden Opponent",
+        "result": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 2,
+        "opponent": "Freya Gade Ravnsborg",
+        "result": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 3,
+        "opponent": "Hidden Opponent",
+        "result": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 4,
+        "opponent": "Hidden Opponent",
+        "result": [
+          2,
+          1
+        ]
+      }
+    ],
+    "history": [
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 1,
+        "opponent": "Hidden Opponent",
+        "result_code": "W",
+        "rating_before": 1500,
+        "rating_after": 1516,
+        "rating_change": 16,
+        "score": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 2,
+        "opponent": "Freya Gade Ravnsborg",
+        "result_code": "W",
+        "rating_before": 1516,
+        "rating_after": 1532,
+        "rating_change": 16,
+        "score": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 3,
+        "opponent": "Hidden Opponent",
+        "result_code": "W",
+        "rating_before": 1532,
+        "rating_after": 1547,
+        "rating_change": 15,
+        "score": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 4,
+        "opponent": "Hidden Opponent",
+        "result_code": "W",
+        "rating_before": 1547,
+        "rating_after": 1562,
+        "rating_change": 15,
+        "score": [
+          2,
+          1
+        ]
+      }
+    ]
+  },
+  "Emma Gad": {
+    "name": "Emma Gad",
+    "rating": 1532,
+    "matches": [
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 1,
+        "opponent": "gui morgado",
+        "result": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 2,
+        "opponent": "Hidden Opponent",
+        "result": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 3,
+        "opponent": "Freya Gade Ravnsborg",
+        "result": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 4,
+        "opponent": "Hidden Opponent",
+        "result": [
+          2,
+          0
+        ]
+      }
+    ],
+    "history": [
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 1,
+        "opponent": "gui morgado",
+        "result_code": "L",
+        "rating_before": 1500,
+        "rating_after": 1484,
+        "rating_change": -16,
+        "score": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 2,
+        "opponent": "Hidden Opponent",
+        "result_code": "W",
+        "rating_before": 1484,
+        "rating_after": 1500,
+        "rating_change": 16,
+        "score": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 3,
+        "opponent": "Freya Gade Ravnsborg",
+        "result_code": "W",
+        "rating_before": 1500,
+        "rating_after": 1516,
+        "rating_change": 16,
+        "score": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 4,
+        "opponent": "Hidden Opponent",
+        "result_code": "W",
+        "rating_before": 1516,
+        "rating_after": 1532,
+        "rating_change": 16,
+        "score": [
+          2,
+          0
+        ]
+      }
+    ]
+  },
+  "Mathias Vith Andersen": {
+    "name": "Mathias Vith Andersen",
+    "rating": 1500,
+    "matches": [
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 1,
+        "opponent": "Hidden Opponent",
+        "result": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 2,
+        "opponent": "Eva \u00d8sterby",
+        "result": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 3,
+        "opponent": "Erik Christensen",
+        "result": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 4,
+        "opponent": "Hidden Opponent",
+        "result": [
+          2,
+          0
+        ]
+      }
+    ],
+    "history": [
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 1,
+        "opponent": "Hidden Opponent",
+        "result_code": "L",
+        "rating_before": 1500,
+        "rating_after": 1484,
+        "rating_change": -16,
+        "score": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 2,
+        "opponent": "Eva \u00d8sterby",
+        "result_code": "L",
+        "rating_before": 1484,
+        "rating_after": 1468,
+        "rating_change": -16,
+        "score": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 3,
+        "opponent": "Erik Christensen",
+        "result_code": "W",
+        "rating_before": 1468,
+        "rating_after": 1484,
+        "rating_change": 16,
+        "score": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 4,
+        "opponent": "Hidden Opponent",
+        "result_code": "W",
+        "rating_before": 1484,
+        "rating_after": 1500,
+        "rating_change": 16,
+        "score": [
+          2,
+          0
         ]
       }
     ]
