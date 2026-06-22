@@ -985,3 +985,22 @@
 [2026-06-21T18:41:50.581444] Starting tournaments page generation
 [2026-06-21T18:41:50.582951] Generated tournaments page: tournaments.html (3 tournaments)
 [2026-06-21T18:41:50.582985] Tournaments page generation complete
+[2026-06-22T02:59:50.708942] Starting tournament parsing
+[2026-06-22T02:59:50.709111] Skipping tournament 20260530_pauper_baltzer (already parsed)
+[2026-06-22T02:59:50.709123] Skipping tournament 20260606_pauper_lyngby (already parsed)
+[2026-06-22T02:59:50.709132] Skipping tournament 20260621_pauper_lyngby (already parsed)
+[2026-06-22T02:59:50.709142] Tournament parsing complete: 0 processed, 3 skipped
+[2026-06-22T02:59:50.748807] Starting ELO calculation
+[2026-06-22T02:59:50.748996] Skipping tournament 20260530_pauper_baltzer (already processed)
+[2026-06-22T02:59:50.749003] Skipping tournament 20260606_pauper_lyngby (already processed)
+[2026-06-22T02:59:50.749006] Skipping tournament 20260621_pauper_lyngby (already processed)
+[2026-06-22T02:59:50.751410] ELO calculation complete: 0 processed, 3 skipped
+[2026-06-22T02:59:50.782516] Starting leaderboard generation
+[2026-06-22T02:59:50.783188] Generated leaderboard: leaderboard.html (9 players)
+[2026-06-22T02:59:50.783195] Leaderboard generation complete
+[2026-06-22T02:59:50.813512] Starting player pages generation
+[2026-06-22T02:59:50.814184] Generated players page: players.html (9 players)
+[2026-06-22T02:59:50.814190] Player pages generation complete
+[2026-06-22T02:59:50.845150] Starting tournaments page generation
+[2026-06-22T02:59:50.845827] Generated tournaments page: tournaments.html (3 tournaments)
+[2026-06-22T02:59:50.845833] Tournaments page generation complete
