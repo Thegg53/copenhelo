@@ -1,0 +1,562 @@
+{
+  "id": "20260705_pauper_lyngby",
+  "rounds": {
+    "1": {
+      "matches": [
+        {
+          "table": "1",
+          "player1": "gui morgado",
+          "player2": "Esben Roenne Green",
+          "result": [
+            1,
+            1
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "2",
+          "player1": "Emma Gad",
+          "player2": "Erik Christensen",
+          "result": [
+            0,
+            2
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "3",
+          "player1": "Erika C",
+          "player2": "Andreas R\u00f8pke",
+          "result": [
+            2,
+            0
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "4",
+          "player1": "Mads thode schultz",
+          "player2": "Aslak Hansen",
+          "result": [
+            0,
+            2
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "5",
+          "player1": "Thor Weis",
+          "player2": "Alexander Printzlau Korsgaard",
+          "result": [
+            2,
+            1
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "6",
+          "player1": "Lars Ove Lassen",
+          "player2": "Simone Coghi",
+          "result": [
+            1,
+            2
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "7",
+          "player1": "Freya Gade Ravnsborg",
+          "player2": "Stefan Leone",
+          "result": [
+            2,
+            1
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "8",
+          "player1": "Leander Lassen",
+          "player2": "Mads Dupont",
+          "result": [
+            2,
+            0
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "9",
+          "player1": "Gregoire  Sanguinetti",
+          "player2": "Casper Albrektsen",
+          "result": [
+            0,
+            2
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "10",
+          "player1": "Frederikke Stejlgaard",
+          "player2": "Mathias Vith Andersen",
+          "result": [
+            2,
+            0
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "11",
+          "player1": "Christian Hansen",
+          "player2": "Anders Str\u00f8b\u00e6k",
+          "result": [
+            1,
+            1
+          ],
+          "has_bye": false
+        }
+      ],
+      "count": 11
+    },
+    "2": {
+      "matches": [
+        {
+          "table": "1",
+          "player1": "Simone Coghi",
+          "player2": "Frederikke Stejlgaard",
+          "result": [
+            0,
+            1
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "2",
+          "player1": "Erika C",
+          "player2": "Leander Lassen",
+          "result": [
+            2,
+            0
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "3",
+          "player1": "Freya Gade Ravnsborg",
+          "player2": "Erik Christensen",
+          "result": [
+            2,
+            0
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "4",
+          "player1": "Thor Weis",
+          "player2": "Casper Albrektsen",
+          "result": [
+            2,
+            1
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "5",
+          "player1": "Aslak Hansen",
+          "player2": "gui morgado",
+          "result": [
+            2,
+            1
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "6",
+          "player1": "Esben Roenne Green",
+          "player2": "Anders Str\u00f8b\u00e6k",
+          "result": [
+            1,
+            1
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "7",
+          "player1": "Mathias Vith Andersen",
+          "player2": "Lars Ove Lassen",
+          "result": [
+            1,
+            2
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "8",
+          "player1": "Stefan Leone",
+          "player2": "Gregoire  Sanguinetti",
+          "result": [
+            2,
+            0
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "9",
+          "player1": "Andreas R\u00f8pke",
+          "player2": "Emma Gad",
+          "result": [
+            1,
+            2
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "10",
+          "player1": "Mads thode schultz",
+          "player2": "Alexander Printzlau Korsgaard",
+          "result": [
+            2,
+            0
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "11",
+          "player1": "Christian Hansen",
+          "player2": "Mads Dupont",
+          "result": [
+            2,
+            0
+          ],
+          "has_bye": false
+        }
+      ],
+      "count": 11
+    },
+    "3": {
+      "matches": [
+        {
+          "table": "1",
+          "player1": "Freya Gade Ravnsborg",
+          "player2": "Thor Weis",
+          "result": [
+            2,
+            1
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "2",
+          "player1": "Erika C",
+          "player2": "Aslak Hansen",
+          "result": [
+            1,
+            2
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "3",
+          "player1": "Mads thode schultz",
+          "player2": "Leander Lassen",
+          "result": [
+            2,
+            0
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "4",
+          "player1": "Emma Gad",
+          "player2": "Simone Coghi",
+          "result": [
+            0,
+            2
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "5",
+          "player1": "Erik Christensen",
+          "player2": "Lars Ove Lassen",
+          "result": [
+            2,
+            1
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "6",
+          "player1": "Casper Albrektsen",
+          "player2": "Stefan Leone",
+          "result": [
+            2,
+            0
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "7",
+          "player1": "Anders Str\u00f8b\u00e6k",
+          "player2": "Gregoire  Sanguinetti",
+          "result": [
+            2,
+            0
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "8",
+          "player1": "Esben Roenne Green",
+          "player2": "Mathias Vith Andersen",
+          "result": [
+            0,
+            2
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "9",
+          "player1": "Andreas R\u00f8pke",
+          "player2": "Alexander Printzlau Korsgaard",
+          "result": [
+            0,
+            2
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "11",
+          "player1": "Frederikke Stejlgaard",
+          "player2": "Christian Hansen",
+          "result": [
+            2,
+            1
+          ],
+          "has_bye": false
+        },
+        {
+          "table": null,
+          "player1": "Mads Dupont",
+          "player2": null,
+          "result": null,
+          "has_bye": true
+        }
+      ],
+      "count": 11
+    },
+    "4": {
+      "matches": [
+        {
+          "table": "1",
+          "player1": "Frederikke Stejlgaard",
+          "player2": "Freya Gade Ravnsborg",
+          "result": [
+            0,
+            2
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "2",
+          "player1": "Aslak Hansen",
+          "player2": "Erik Christensen",
+          "result": [
+            1,
+            1
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "3",
+          "player1": "Erika C",
+          "player2": "Casper Albrektsen",
+          "result": [
+            1,
+            2
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "4",
+          "player1": "Mads thode schultz",
+          "player2": "Simone Coghi",
+          "result": [
+            2,
+            0
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "5",
+          "player1": "Thor Weis",
+          "player2": "Anders Str\u00f8b\u00e6k",
+          "result": [
+            2,
+            0
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "6",
+          "player1": "Mathias Vith Andersen",
+          "player2": "Alexander Printzlau Korsgaard",
+          "result": [
+            2,
+            0
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "7",
+          "player1": "Lars Ove Lassen",
+          "player2": "Mads Dupont",
+          "result": [
+            0,
+            2
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "8",
+          "player1": "Stefan Leone",
+          "player2": "Leander Lassen",
+          "result": [
+            0,
+            2
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "9",
+          "player1": "Esben Roenne Green",
+          "player2": "Gregoire  Sanguinetti",
+          "result": [
+            1,
+            2
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "11",
+          "player1": "Christian Hansen",
+          "player2": "Emma Gad",
+          "result": [
+            0,
+            2
+          ],
+          "has_bye": false
+        },
+        {
+          "table": null,
+          "player1": "Andreas R\u00f8pke",
+          "player2": null,
+          "result": null,
+          "has_bye": true
+        }
+      ],
+      "count": 11
+    },
+    "5": {
+      "matches": [
+        {
+          "table": "1",
+          "player1": "Freya Gade Ravnsborg",
+          "player2": "Aslak Hansen",
+          "result": [
+            2,
+            0
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "2",
+          "player1": "Thor Weis",
+          "player2": "Frederikke Stejlgaard",
+          "result": [
+            0,
+            2
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "3",
+          "player1": "Mads thode schultz",
+          "player2": "Casper Albrektsen",
+          "result": [
+            1,
+            2
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "4",
+          "player1": "Erik Christensen",
+          "player2": "Erika C",
+          "result": [
+            2,
+            0
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "5",
+          "player1": "Leander Lassen",
+          "player2": "Emma Gad",
+          "result": [
+            2,
+            1
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "6",
+          "player1": "Mathias Vith Andersen",
+          "player2": "Mads Dupont",
+          "result": [
+            1,
+            2
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "7",
+          "player1": "Anders Str\u00f8b\u00e6k",
+          "player2": "Alexander Printzlau Korsgaard",
+          "result": [
+            2,
+            0
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "8",
+          "player1": "Gregoire  Sanguinetti",
+          "player2": "Andreas R\u00f8pke",
+          "result": [
+            0,
+            2
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "11",
+          "player1": "Christian Hansen",
+          "player2": "Lars Ove Lassen",
+          "result": [
+            2,
+            0
+          ],
+          "has_bye": false
+        },
+        {
+          "table": null,
+          "player1": "Esben Roenne Green",
+          "player2": null,
+          "result": null,
+          "has_bye": true
+        }
+      ],
+      "count": 10
+    }
+  },
+  "parsed_at": "2026-08-15T16:37:47.522528"
+}

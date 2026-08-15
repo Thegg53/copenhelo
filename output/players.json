@@ -1,7 +1,7 @@
 {
   "Erik Christensen": {
     "name": "Erik Christensen",
-    "rating": 1439,
+    "rating": 1495,
     "matches": [
       {
         "tournament": "20260530_pauper_baltzer",
@@ -91,6 +91,87 @@
         "result": [
           2,
           1
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 1,
+        "opponent": "Emma Gad",
+        "result": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 2,
+        "opponent": "Freya Gade Ravnsborg",
+        "result": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 3,
+        "opponent": "Hidden Opponent",
+        "result": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 4,
+        "opponent": "Hidden Opponent",
+        "result": [
+          1,
+          1
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 5,
+        "opponent": "Hidden Opponent",
+        "result": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260711_pauper_baltzer",
+        "round": 1,
+        "opponent": "Hidden Opponent",
+        "result": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260711_pauper_baltzer",
+        "round": 2,
+        "opponent": "Hidden Opponent",
+        "result": [
+          1,
+          1
+        ]
+      },
+      {
+        "tournament": "20260711_pauper_baltzer",
+        "round": 3,
+        "opponent": "Mathias Vith Andersen",
+        "result": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260711_pauper_baltzer",
+        "round": 4,
+        "opponent": "Frederikke Stejlgaard",
+        "result": [
+          1,
+          2
         ]
       }
     ],
@@ -224,12 +305,129 @@
           2,
           1
         ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 1,
+        "opponent": "Emma Gad",
+        "result_code": "W",
+        "rating_before": 1439,
+        "rating_after": 1457,
+        "rating_change": 18,
+        "score": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 2,
+        "opponent": "Freya Gade Ravnsborg",
+        "result_code": "L",
+        "rating_before": 1457,
+        "rating_after": 1442,
+        "rating_change": -15,
+        "score": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 3,
+        "opponent": "Hidden Opponent",
+        "result_code": "W",
+        "rating_before": 1442,
+        "rating_after": 1459,
+        "rating_change": 17,
+        "score": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 4,
+        "opponent": "Hidden Opponent",
+        "result_code": "D",
+        "rating_before": 1459,
+        "rating_after": 1460,
+        "rating_change": 1,
+        "score": [
+          1,
+          1
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 5,
+        "opponent": "Hidden Opponent",
+        "result_code": "W",
+        "rating_before": 1460,
+        "rating_after": 1477,
+        "rating_change": 17,
+        "score": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260711_pauper_baltzer",
+        "round": 1,
+        "opponent": "Hidden Opponent",
+        "result_code": "W",
+        "rating_before": 1477,
+        "rating_after": 1493,
+        "rating_change": 16,
+        "score": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260711_pauper_baltzer",
+        "round": 2,
+        "opponent": "Hidden Opponent",
+        "result_code": "D",
+        "rating_before": 1493,
+        "rating_after": 1493,
+        "rating_change": 0,
+        "score": [
+          1,
+          1
+        ]
+      },
+      {
+        "tournament": "20260711_pauper_baltzer",
+        "round": 3,
+        "opponent": "Mathias Vith Andersen",
+        "result_code": "W",
+        "rating_before": 1493,
+        "rating_after": 1509,
+        "rating_change": 16,
+        "score": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260711_pauper_baltzer",
+        "round": 4,
+        "opponent": "Frederikke Stejlgaard",
+        "result_code": "L",
+        "rating_before": 1509,
+        "rating_after": 1495,
+        "rating_change": -14,
+        "score": [
+          1,
+          2
+        ]
       }
     ]
   },
   "Gregoire  Sanguinetti": {
     "name": "Gregoire  Sanguinetti",
-    "rating": 1500,
+    "rating": 1409,
     "matches": [
       {
         "tournament": "20260530_pauper_baltzer",
@@ -301,6 +499,78 @@
         "result": [
           2,
           0
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 1,
+        "opponent": "Hidden Opponent",
+        "result": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 2,
+        "opponent": "Hidden Opponent",
+        "result": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 3,
+        "opponent": "Hidden Opponent",
+        "result": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 4,
+        "opponent": "Hidden Opponent",
+        "result": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 5,
+        "opponent": "Hidden Opponent",
+        "result": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260711_pauper_baltzer",
+        "round": 1,
+        "opponent": "Hidden Opponent",
+        "result": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260711_pauper_baltzer",
+        "round": 2,
+        "opponent": "Hidden Opponent",
+        "result": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260711_pauper_baltzer",
+        "round": 3,
+        "opponent": "Hidden Opponent",
+        "result": [
+          0,
+          2
         ]
       }
     ],
@@ -407,6 +677,110 @@
         "score": [
           2,
           0
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 1,
+        "opponent": "Hidden Opponent",
+        "result_code": "L",
+        "rating_before": 1500,
+        "rating_after": 1484,
+        "rating_change": -16,
+        "score": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 2,
+        "opponent": "Hidden Opponent",
+        "result_code": "L",
+        "rating_before": 1484,
+        "rating_after": 1468,
+        "rating_change": -16,
+        "score": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 3,
+        "opponent": "Hidden Opponent",
+        "result_code": "L",
+        "rating_before": 1468,
+        "rating_after": 1453,
+        "rating_change": -15,
+        "score": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 4,
+        "opponent": "Hidden Opponent",
+        "result_code": "W",
+        "rating_before": 1453,
+        "rating_after": 1470,
+        "rating_change": 17,
+        "score": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 5,
+        "opponent": "Hidden Opponent",
+        "result_code": "L",
+        "rating_before": 1470,
+        "rating_after": 1454,
+        "rating_change": -16,
+        "score": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260711_pauper_baltzer",
+        "round": 1,
+        "opponent": "Hidden Opponent",
+        "result_code": "L",
+        "rating_before": 1454,
+        "rating_after": 1439,
+        "rating_change": -15,
+        "score": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260711_pauper_baltzer",
+        "round": 2,
+        "opponent": "Hidden Opponent",
+        "result_code": "L",
+        "rating_before": 1439,
+        "rating_after": 1424,
+        "rating_change": -15,
+        "score": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260711_pauper_baltzer",
+        "round": 3,
+        "opponent": "Hidden Opponent",
+        "result_code": "L",
+        "rating_before": 1424,
+        "rating_after": 1409,
+        "rating_change": -15,
+        "score": [
+          0,
+          2
         ]
       }
     ]
@@ -685,7 +1059,7 @@
   },
   "gui morgado": {
     "name": "gui morgado",
-    "rating": 1468,
+    "rating": 1454,
     "matches": [
       {
         "tournament": "20260606_pauper_lyngby",
@@ -736,6 +1110,24 @@
         "tournament": "20260621_pauper_lyngby",
         "round": 3,
         "opponent": "Mads Dupont",
+        "result": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 1,
+        "opponent": "Hidden Opponent",
+        "result": [
+          1,
+          1
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 2,
+        "opponent": "Hidden Opponent",
         "result": [
           1,
           2
@@ -820,12 +1212,38 @@
           1,
           2
         ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 1,
+        "opponent": "Hidden Opponent",
+        "result_code": "D",
+        "rating_before": 1468,
+        "rating_after": 1469,
+        "rating_change": 1,
+        "score": [
+          1,
+          1
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 2,
+        "opponent": "Hidden Opponent",
+        "result_code": "L",
+        "rating_before": 1469,
+        "rating_after": 1454,
+        "rating_change": -15,
+        "score": [
+          1,
+          2
+        ]
       }
     ]
   },
   "Mads Dupont": {
     "name": "Mads Dupont",
-    "rating": 1499,
+    "rating": 1500,
     "matches": [
       {
         "tournament": "20260606_pauper_lyngby",
@@ -897,6 +1315,42 @@
         "result": [
           1,
           2
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 1,
+        "opponent": "Hidden Opponent",
+        "result": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 2,
+        "opponent": "Hidden Opponent",
+        "result": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 4,
+        "opponent": "Hidden Opponent",
+        "result": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 5,
+        "opponent": "Mathias Vith Andersen",
+        "result": [
+          2,
+          1
         ]
       }
     ],
@@ -1004,12 +1458,64 @@
           1,
           2
         ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 1,
+        "opponent": "Hidden Opponent",
+        "result_code": "L",
+        "rating_before": 1499,
+        "rating_after": 1483,
+        "rating_change": -16,
+        "score": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 2,
+        "opponent": "Hidden Opponent",
+        "result_code": "L",
+        "rating_before": 1483,
+        "rating_after": 1467,
+        "rating_change": -16,
+        "score": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 4,
+        "opponent": "Hidden Opponent",
+        "result_code": "W",
+        "rating_before": 1467,
+        "rating_after": 1484,
+        "rating_change": 17,
+        "score": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 5,
+        "opponent": "Mathias Vith Andersen",
+        "result_code": "W",
+        "rating_before": 1484,
+        "rating_after": 1500,
+        "rating_change": 16,
+        "score": [
+          2,
+          1
+        ]
       }
     ]
   },
   "Freya Gade Ravnsborg": {
     "name": "Freya Gade Ravnsborg",
-    "rating": 1500,
+    "rating": 1575,
     "matches": [
       {
         "tournament": "20260621_pauper_lyngby",
@@ -1045,6 +1551,87 @@
         "result": [
           2,
           0
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 1,
+        "opponent": "Hidden Opponent",
+        "result": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 2,
+        "opponent": "Erik Christensen",
+        "result": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 3,
+        "opponent": "Hidden Opponent",
+        "result": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 4,
+        "opponent": "Frederikke Stejlgaard",
+        "result": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 5,
+        "opponent": "Hidden Opponent",
+        "result": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260711_pauper_baltzer",
+        "round": 1,
+        "opponent": "Frederikke Stejlgaard",
+        "result": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260711_pauper_baltzer",
+        "round": 2,
+        "opponent": "Hidden Opponent",
+        "result": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260711_pauper_baltzer",
+        "round": 3,
+        "opponent": "Hidden Opponent",
+        "result": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260711_pauper_baltzer",
+        "round": 4,
+        "opponent": "Hidden Opponent",
+        "result": [
+          0,
+          2
         ]
       }
     ],
@@ -1100,12 +1687,129 @@
           2,
           0
         ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 1,
+        "opponent": "Hidden Opponent",
+        "result_code": "W",
+        "rating_before": 1500,
+        "rating_after": 1516,
+        "rating_change": 16,
+        "score": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 2,
+        "opponent": "Erik Christensen",
+        "result_code": "W",
+        "rating_before": 1516,
+        "rating_after": 1531,
+        "rating_change": 15,
+        "score": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 3,
+        "opponent": "Hidden Opponent",
+        "result_code": "W",
+        "rating_before": 1531,
+        "rating_after": 1546,
+        "rating_change": 15,
+        "score": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 4,
+        "opponent": "Frederikke Stejlgaard",
+        "result_code": "W",
+        "rating_before": 1546,
+        "rating_after": 1563,
+        "rating_change": 17,
+        "score": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 5,
+        "opponent": "Hidden Opponent",
+        "result_code": "W",
+        "rating_before": 1563,
+        "rating_after": 1578,
+        "rating_change": 15,
+        "score": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260711_pauper_baltzer",
+        "round": 1,
+        "opponent": "Frederikke Stejlgaard",
+        "result_code": "L",
+        "rating_before": 1578,
+        "rating_after": 1562,
+        "rating_change": -16,
+        "score": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260711_pauper_baltzer",
+        "round": 2,
+        "opponent": "Hidden Opponent",
+        "result_code": "W",
+        "rating_before": 1562,
+        "rating_after": 1577,
+        "rating_change": 15,
+        "score": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260711_pauper_baltzer",
+        "round": 3,
+        "opponent": "Hidden Opponent",
+        "result_code": "W",
+        "rating_before": 1577,
+        "rating_after": 1592,
+        "rating_change": 15,
+        "score": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260711_pauper_baltzer",
+        "round": 4,
+        "opponent": "Hidden Opponent",
+        "result_code": "L",
+        "rating_before": 1592,
+        "rating_after": 1575,
+        "rating_change": -17,
+        "score": [
+          0,
+          2
+        ]
       }
     ]
   },
   "Frederikke Stejlgaard": {
     "name": "Frederikke Stejlgaard",
-    "rating": 1562,
+    "rating": 1663,
     "matches": [
       {
         "tournament": "20260621_pauper_lyngby",
@@ -1138,6 +1842,87 @@
         "tournament": "20260621_pauper_lyngby",
         "round": 4,
         "opponent": "Hidden Opponent",
+        "result": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 1,
+        "opponent": "Mathias Vith Andersen",
+        "result": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 2,
+        "opponent": "Simone Coghi",
+        "result": [
+          1,
+          0
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 3,
+        "opponent": "Hidden Opponent",
+        "result": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 4,
+        "opponent": "Freya Gade Ravnsborg",
+        "result": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 5,
+        "opponent": "Hidden Opponent",
+        "result": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260711_pauper_baltzer",
+        "round": 1,
+        "opponent": "Freya Gade Ravnsborg",
+        "result": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260711_pauper_baltzer",
+        "round": 2,
+        "opponent": "Hidden Opponent",
+        "result": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260711_pauper_baltzer",
+        "round": 3,
+        "opponent": "Hidden Opponent",
+        "result": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260711_pauper_baltzer",
+        "round": 4,
+        "opponent": "Erik Christensen",
         "result": [
           2,
           1
@@ -1196,12 +1981,129 @@
           2,
           1
         ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 1,
+        "opponent": "Mathias Vith Andersen",
+        "result_code": "W",
+        "rating_before": 1562,
+        "rating_after": 1577,
+        "rating_change": 15,
+        "score": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 2,
+        "opponent": "Simone Coghi",
+        "result_code": "W",
+        "rating_before": 1577,
+        "rating_after": 1592,
+        "rating_change": 15,
+        "score": [
+          1,
+          0
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 3,
+        "opponent": "Hidden Opponent",
+        "result_code": "W",
+        "rating_before": 1592,
+        "rating_after": 1607,
+        "rating_change": 15,
+        "score": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 4,
+        "opponent": "Freya Gade Ravnsborg",
+        "result_code": "L",
+        "rating_before": 1607,
+        "rating_after": 1590,
+        "rating_change": -17,
+        "score": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 5,
+        "opponent": "Hidden Opponent",
+        "result_code": "W",
+        "rating_before": 1590,
+        "rating_after": 1605,
+        "rating_change": 15,
+        "score": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260711_pauper_baltzer",
+        "round": 1,
+        "opponent": "Freya Gade Ravnsborg",
+        "result_code": "W",
+        "rating_before": 1605,
+        "rating_after": 1621,
+        "rating_change": 16,
+        "score": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260711_pauper_baltzer",
+        "round": 2,
+        "opponent": "Hidden Opponent",
+        "result_code": "W",
+        "rating_before": 1621,
+        "rating_after": 1635,
+        "rating_change": 14,
+        "score": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260711_pauper_baltzer",
+        "round": 3,
+        "opponent": "Hidden Opponent",
+        "result_code": "W",
+        "rating_before": 1635,
+        "rating_after": 1649,
+        "rating_change": 14,
+        "score": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260711_pauper_baltzer",
+        "round": 4,
+        "opponent": "Erik Christensen",
+        "result_code": "W",
+        "rating_before": 1649,
+        "rating_after": 1663,
+        "rating_change": 14,
+        "score": [
+          2,
+          1
+        ]
       }
     ]
   },
   "Emma Gad": {
     "name": "Emma Gad",
-    "rating": 1532,
+    "rating": 1514,
     "matches": [
       {
         "tournament": "20260621_pauper_lyngby",
@@ -1237,6 +2139,51 @@
         "result": [
           2,
           0
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 1,
+        "opponent": "Erik Christensen",
+        "result": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 2,
+        "opponent": "Hidden Opponent",
+        "result": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 3,
+        "opponent": "Simone Coghi",
+        "result": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 4,
+        "opponent": "Hidden Opponent",
+        "result": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 5,
+        "opponent": "Hidden Opponent",
+        "result": [
+          1,
+          2
         ]
       }
     ],
@@ -1292,12 +2239,77 @@
           2,
           0
         ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 1,
+        "opponent": "Erik Christensen",
+        "result_code": "L",
+        "rating_before": 1532,
+        "rating_after": 1514,
+        "rating_change": -18,
+        "score": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 2,
+        "opponent": "Hidden Opponent",
+        "result_code": "W",
+        "rating_before": 1514,
+        "rating_after": 1530,
+        "rating_change": 16,
+        "score": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 3,
+        "opponent": "Simone Coghi",
+        "result_code": "L",
+        "rating_before": 1530,
+        "rating_after": 1514,
+        "rating_change": -16,
+        "score": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 4,
+        "opponent": "Hidden Opponent",
+        "result_code": "W",
+        "rating_before": 1514,
+        "rating_after": 1530,
+        "rating_change": 16,
+        "score": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 5,
+        "opponent": "Hidden Opponent",
+        "result_code": "L",
+        "rating_before": 1530,
+        "rating_after": 1514,
+        "rating_change": -16,
+        "score": [
+          1,
+          2
+        ]
       }
     ]
   },
   "Mathias Vith Andersen": {
     "name": "Mathias Vith Andersen",
-    "rating": 1500,
+    "rating": 1471,
     "matches": [
       {
         "tournament": "20260621_pauper_lyngby",
@@ -1328,6 +2340,78 @@
       },
       {
         "tournament": "20260621_pauper_lyngby",
+        "round": 4,
+        "opponent": "Hidden Opponent",
+        "result": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 1,
+        "opponent": "Frederikke Stejlgaard",
+        "result": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 2,
+        "opponent": "Hidden Opponent",
+        "result": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 3,
+        "opponent": "Hidden Opponent",
+        "result": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 4,
+        "opponent": "Hidden Opponent",
+        "result": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 5,
+        "opponent": "Mads Dupont",
+        "result": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260711_pauper_baltzer",
+        "round": 1,
+        "opponent": "Hidden Opponent",
+        "result": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260711_pauper_baltzer",
+        "round": 3,
+        "opponent": "Erik Christensen",
+        "result": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260711_pauper_baltzer",
         "round": 4,
         "opponent": "Hidden Opponent",
         "result": [
@@ -1387,6 +2471,206 @@
         "score": [
           2,
           0
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 1,
+        "opponent": "Frederikke Stejlgaard",
+        "result_code": "L",
+        "rating_before": 1500,
+        "rating_after": 1485,
+        "rating_change": -15,
+        "score": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 2,
+        "opponent": "Hidden Opponent",
+        "result_code": "L",
+        "rating_before": 1485,
+        "rating_after": 1469,
+        "rating_change": -16,
+        "score": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 3,
+        "opponent": "Hidden Opponent",
+        "result_code": "W",
+        "rating_before": 1469,
+        "rating_after": 1486,
+        "rating_change": 17,
+        "score": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 4,
+        "opponent": "Hidden Opponent",
+        "result_code": "W",
+        "rating_before": 1486,
+        "rating_after": 1502,
+        "rating_change": 16,
+        "score": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 5,
+        "opponent": "Mads Dupont",
+        "result_code": "L",
+        "rating_before": 1502,
+        "rating_after": 1486,
+        "rating_change": -16,
+        "score": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260711_pauper_baltzer",
+        "round": 1,
+        "opponent": "Hidden Opponent",
+        "result_code": "L",
+        "rating_before": 1486,
+        "rating_after": 1470,
+        "rating_change": -16,
+        "score": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260711_pauper_baltzer",
+        "round": 3,
+        "opponent": "Erik Christensen",
+        "result_code": "L",
+        "rating_before": 1470,
+        "rating_after": 1454,
+        "rating_change": -16,
+        "score": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260711_pauper_baltzer",
+        "round": 4,
+        "opponent": "Hidden Opponent",
+        "result_code": "W",
+        "rating_before": 1454,
+        "rating_after": 1471,
+        "rating_change": 17,
+        "score": [
+          2,
+          0
+        ]
+      }
+    ]
+  },
+  "Simone Coghi": {
+    "name": "Simone Coghi",
+    "rating": 1501,
+    "matches": [
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 1,
+        "opponent": "Hidden Opponent",
+        "result": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 2,
+        "opponent": "Frederikke Stejlgaard",
+        "result": [
+          0,
+          1
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 3,
+        "opponent": "Emma Gad",
+        "result": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 4,
+        "opponent": "Hidden Opponent",
+        "result": [
+          0,
+          2
+        ]
+      }
+    ],
+    "history": [
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 1,
+        "opponent": "Hidden Opponent",
+        "result_code": "W",
+        "rating_before": 1500,
+        "rating_after": 1516,
+        "rating_change": 16,
+        "score": [
+          2,
+          1
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 2,
+        "opponent": "Frederikke Stejlgaard",
+        "result_code": "L",
+        "rating_before": 1516,
+        "rating_after": 1501,
+        "rating_change": -15,
+        "score": [
+          0,
+          1
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 3,
+        "opponent": "Emma Gad",
+        "result_code": "W",
+        "rating_before": 1501,
+        "rating_after": 1517,
+        "rating_change": 16,
+        "score": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 4,
+        "opponent": "Hidden Opponent",
+        "result_code": "L",
+        "rating_before": 1517,
+        "rating_after": 1501,
+        "rating_change": -16,
+        "score": [
+          0,
+          2
         ]
       }
     ]

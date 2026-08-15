@@ -1,7 +1,7 @@
 {
   "20260530_pauper_baltzer": {
     "id": "20260530_pauper_baltzer",
-    "created_at": "2026-06-21T18:41:50.378257",
+    "created_at": "2026-08-15T16:37:47.976880",
     "rounds": {
       "1": {
         "matches": [
@@ -53,7 +53,7 @@
             "has_bye": true
           }
         ],
-        "processed_at": "2026-06-21T18:41:50.378266"
+        "processed_at": "2026-08-15T16:37:47.976885"
       },
       "2": {
         "matches": [
@@ -105,7 +105,7 @@
             "has_bye": true
           }
         ],
-        "processed_at": "2026-06-21T18:41:50.378609"
+        "processed_at": "2026-08-15T16:37:47.977259"
       },
       "3": {
         "matches": [
@@ -157,7 +157,7 @@
             "has_bye": true
           }
         ],
-        "processed_at": "2026-06-21T18:41:50.378730"
+        "processed_at": "2026-08-15T16:37:47.977388"
       },
       "4": {
         "matches": [
@@ -209,13 +209,13 @@
             "has_bye": true
           }
         ],
-        "processed_at": "2026-06-21T18:41:50.378843"
+        "processed_at": "2026-08-15T16:37:47.977513"
       }
     }
   },
   "20260606_pauper_lyngby": {
     "id": "20260606_pauper_lyngby",
-    "created_at": "2026-06-21T18:41:50.379252",
+    "created_at": "2026-08-15T16:37:47.977798",
     "rounds": {
       "1": {
         "matches": [
@@ -280,7 +280,7 @@
             "has_bye": false
           }
         ],
-        "processed_at": "2026-06-21T18:41:50.379258"
+        "processed_at": "2026-08-15T16:37:47.977803"
       },
       "2": {
         "matches": [
@@ -345,7 +345,7 @@
             "has_bye": false
           }
         ],
-        "processed_at": "2026-06-21T18:41:50.379431"
+        "processed_at": "2026-08-15T16:37:47.977999"
       },
       "3": {
         "matches": [
@@ -410,7 +410,7 @@
             "has_bye": false
           }
         ],
-        "processed_at": "2026-06-21T18:41:50.379562"
+        "processed_at": "2026-08-15T16:37:47.978167"
       },
       "4": {
         "matches": [
@@ -472,13 +472,13 @@
             "has_bye": true
           }
         ],
-        "processed_at": "2026-06-21T18:41:50.379702"
+        "processed_at": "2026-08-15T16:37:47.978335"
       }
     }
   },
   "20260621_pauper_lyngby": {
     "id": "20260621_pauper_lyngby",
-    "created_at": "2026-06-21T18:41:50.380062",
+    "created_at": "2026-08-15T16:37:47.978677",
     "rounds": {
       "1": {
         "matches": [
@@ -563,7 +563,7 @@
             "has_bye": false
           }
         ],
-        "processed_at": "2026-06-21T18:41:50.380067"
+        "processed_at": "2026-08-15T16:37:47.978681"
       },
       "2": {
         "matches": [
@@ -648,7 +648,7 @@
             "has_bye": false
           }
         ],
-        "processed_at": "2026-06-21T18:41:50.380294"
+        "processed_at": "2026-08-15T16:37:47.978881"
       },
       "3": {
         "matches": [
@@ -733,7 +733,7 @@
             "has_bye": false
           }
         ],
-        "processed_at": "2026-06-21T18:41:50.380507"
+        "processed_at": "2026-08-15T16:37:47.979082"
       },
       "4": {
         "matches": [
@@ -808,7 +808,856 @@
             "has_bye": false
           }
         ],
-        "processed_at": "2026-06-21T18:41:50.380668"
+        "processed_at": "2026-08-15T16:37:47.979267"
+      }
+    }
+  },
+  "20260705_pauper_lyngby": {
+    "id": "20260705_pauper_lyngby",
+    "created_at": "2026-08-15T16:37:47.979818",
+    "rounds": {
+      "1": {
+        "matches": [
+          {
+            "table": "1",
+            "player1": "gui morgado",
+            "player2": "Hidden Player",
+            "result": [
+              1,
+              1
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "2",
+            "player1": "Emma Gad",
+            "player2": "Erik Christensen",
+            "result": [
+              0,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "3",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
+            "result": [
+              2,
+              0
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "4",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
+            "result": [
+              0,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "5",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
+            "result": [
+              2,
+              1
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "6",
+            "player1": "Hidden Player",
+            "player2": "Simone Coghi",
+            "result": [
+              1,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "7",
+            "player1": "Freya Gade Ravnsborg",
+            "player2": "Hidden Player",
+            "result": [
+              2,
+              1
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "8",
+            "player1": "Hidden Player",
+            "player2": "Mads Dupont",
+            "result": [
+              2,
+              0
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "9",
+            "player1": "Gregoire  Sanguinetti",
+            "player2": "Hidden Player",
+            "result": [
+              0,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "10",
+            "player1": "Frederikke Stejlgaard",
+            "player2": "Mathias Vith Andersen",
+            "result": [
+              2,
+              0
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "11",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
+            "result": [
+              1,
+              1
+            ],
+            "has_bye": false
+          }
+        ],
+        "processed_at": "2026-08-15T16:37:47.979822"
+      },
+      "2": {
+        "matches": [
+          {
+            "table": "1",
+            "player1": "Simone Coghi",
+            "player2": "Frederikke Stejlgaard",
+            "result": [
+              0,
+              1
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "2",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
+            "result": [
+              2,
+              0
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "3",
+            "player1": "Freya Gade Ravnsborg",
+            "player2": "Erik Christensen",
+            "result": [
+              2,
+              0
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "4",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
+            "result": [
+              2,
+              1
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "5",
+            "player1": "Hidden Player",
+            "player2": "gui morgado",
+            "result": [
+              2,
+              1
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "6",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
+            "result": [
+              1,
+              1
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "7",
+            "player1": "Mathias Vith Andersen",
+            "player2": "Hidden Player",
+            "result": [
+              1,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "8",
+            "player1": "Hidden Player",
+            "player2": "Gregoire  Sanguinetti",
+            "result": [
+              2,
+              0
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "9",
+            "player1": "Hidden Player",
+            "player2": "Emma Gad",
+            "result": [
+              1,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "10",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
+            "result": [
+              2,
+              0
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "11",
+            "player1": "Hidden Player",
+            "player2": "Mads Dupont",
+            "result": [
+              2,
+              0
+            ],
+            "has_bye": false
+          }
+        ],
+        "processed_at": "2026-08-15T16:37:47.980128"
+      },
+      "3": {
+        "matches": [
+          {
+            "table": "1",
+            "player1": "Freya Gade Ravnsborg",
+            "player2": "Hidden Player",
+            "result": [
+              2,
+              1
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "2",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
+            "result": [
+              1,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "3",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
+            "result": [
+              2,
+              0
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "4",
+            "player1": "Emma Gad",
+            "player2": "Simone Coghi",
+            "result": [
+              0,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "5",
+            "player1": "Erik Christensen",
+            "player2": "Hidden Player",
+            "result": [
+              2,
+              1
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "6",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
+            "result": [
+              2,
+              0
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "7",
+            "player1": "Hidden Player",
+            "player2": "Gregoire  Sanguinetti",
+            "result": [
+              2,
+              0
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "8",
+            "player1": "Hidden Player",
+            "player2": "Mathias Vith Andersen",
+            "result": [
+              0,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "9",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
+            "result": [
+              0,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "11",
+            "player1": "Frederikke Stejlgaard",
+            "player2": "Hidden Player",
+            "result": [
+              2,
+              1
+            ],
+            "has_bye": false
+          },
+          {
+            "table": null,
+            "player1": "Mads Dupont",
+            "player2": null,
+            "result": null,
+            "has_bye": true
+          }
+        ],
+        "processed_at": "2026-08-15T16:37:47.980371"
+      },
+      "4": {
+        "matches": [
+          {
+            "table": "1",
+            "player1": "Frederikke Stejlgaard",
+            "player2": "Freya Gade Ravnsborg",
+            "result": [
+              0,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "2",
+            "player1": "Hidden Player",
+            "player2": "Erik Christensen",
+            "result": [
+              1,
+              1
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "3",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
+            "result": [
+              1,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "4",
+            "player1": "Hidden Player",
+            "player2": "Simone Coghi",
+            "result": [
+              2,
+              0
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "5",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
+            "result": [
+              2,
+              0
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "6",
+            "player1": "Mathias Vith Andersen",
+            "player2": "Hidden Player",
+            "result": [
+              2,
+              0
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "7",
+            "player1": "Hidden Player",
+            "player2": "Mads Dupont",
+            "result": [
+              0,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "8",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
+            "result": [
+              0,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "9",
+            "player1": "Hidden Player",
+            "player2": "Gregoire  Sanguinetti",
+            "result": [
+              1,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "11",
+            "player1": "Hidden Player",
+            "player2": "Emma Gad",
+            "result": [
+              0,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "table": null,
+            "player1": "Hidden Player",
+            "player2": null,
+            "result": null,
+            "has_bye": true
+          }
+        ],
+        "processed_at": "2026-08-15T16:37:47.980586"
+      },
+      "5": {
+        "matches": [
+          {
+            "table": "1",
+            "player1": "Freya Gade Ravnsborg",
+            "player2": "Hidden Player",
+            "result": [
+              2,
+              0
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "2",
+            "player1": "Hidden Player",
+            "player2": "Frederikke Stejlgaard",
+            "result": [
+              0,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "3",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
+            "result": [
+              1,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "4",
+            "player1": "Erik Christensen",
+            "player2": "Hidden Player",
+            "result": [
+              2,
+              0
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "5",
+            "player1": "Hidden Player",
+            "player2": "Emma Gad",
+            "result": [
+              2,
+              1
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "6",
+            "player1": "Mathias Vith Andersen",
+            "player2": "Mads Dupont",
+            "result": [
+              1,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "7",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
+            "result": [
+              2,
+              0
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "8",
+            "player1": "Gregoire  Sanguinetti",
+            "player2": "Hidden Player",
+            "result": [
+              0,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "11",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
+            "result": [
+              2,
+              0
+            ],
+            "has_bye": false
+          },
+          {
+            "table": null,
+            "player1": "Hidden Player",
+            "player2": null,
+            "result": null,
+            "has_bye": true
+          }
+        ],
+        "processed_at": "2026-08-15T16:37:47.980804"
+      }
+    }
+  },
+  "20260711_pauper_baltzer": {
+    "id": "20260711_pauper_baltzer",
+    "created_at": "2026-08-15T16:37:47.981179",
+    "rounds": {
+      "1": {
+        "matches": [
+          {
+            "table": "1",
+            "player1": "Frederikke Stejlgaard",
+            "player2": "Freya Gade Ravnsborg",
+            "result": [
+              2,
+              1
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "2",
+            "player1": "Hidden Player",
+            "player2": "Gregoire  Sanguinetti",
+            "result": [
+              2,
+              1
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "3",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
+            "result": [
+              2,
+              0
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "4",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
+            "result": [
+              2,
+              1
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "5",
+            "player1": "Mathias Vith Andersen",
+            "player2": "Hidden Player",
+            "result": [
+              1,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "6",
+            "player1": "Hidden Player",
+            "player2": "Erik Christensen",
+            "result": [
+              0,
+              2
+            ],
+            "has_bye": false
+          }
+        ],
+        "processed_at": "2026-08-15T16:37:47.981183"
+      },
+      "2": {
+        "matches": [
+          {
+            "table": "1",
+            "player1": "Hidden Player",
+            "player2": "Erik Christensen",
+            "result": [
+              1,
+              1
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "2",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
+            "result": [
+              2,
+              0
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "3",
+            "player1": "Hidden Player",
+            "player2": "Frederikke Stejlgaard",
+            "result": [
+              1,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "4",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
+            "result": [
+              0,
+              1
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "5",
+            "player1": "Freya Gade Ravnsborg",
+            "player2": "Hidden Player",
+            "result": [
+              2,
+              0
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "6",
+            "player1": "Hidden Player",
+            "player2": "Gregoire  Sanguinetti",
+            "result": [
+              2,
+              0
+            ],
+            "has_bye": false
+          },
+          {
+            "table": null,
+            "player1": "Mathias Vith Andersen",
+            "player2": null,
+            "result": null,
+            "has_bye": true
+          }
+        ],
+        "processed_at": "2026-08-15T16:37:47.981338"
+      },
+      "3": {
+        "matches": [
+          {
+            "table": "1",
+            "player1": "Hidden Player",
+            "player2": "Frederikke Stejlgaard",
+            "result": [
+              0,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "2",
+            "player1": "Erik Christensen",
+            "player2": "Mathias Vith Andersen",
+            "result": [
+              2,
+              0
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "3",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
+            "result": [
+              2,
+              1
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "4",
+            "player1": "Freya Gade Ravnsborg",
+            "player2": "Hidden Player",
+            "result": [
+              2,
+              0
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "5",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
+            "result": [
+              1,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "6",
+            "player1": "Hidden Player",
+            "player2": "Gregoire  Sanguinetti",
+            "result": [
+              2,
+              0
+            ],
+            "has_bye": false
+          },
+          {
+            "table": null,
+            "player1": "Hidden Player",
+            "player2": null,
+            "result": null,
+            "has_bye": true
+          }
+        ],
+        "processed_at": "2026-08-15T16:37:47.981504"
+      },
+      "4": {
+        "matches": [
+          {
+            "table": "1",
+            "player1": "Frederikke Stejlgaard",
+            "player2": "Erik Christensen",
+            "result": [
+              2,
+              1
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "2",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
+            "result": [
+              1,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "3",
+            "player1": "Freya Gade Ravnsborg",
+            "player2": "Hidden Player",
+            "result": [
+              0,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "4",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
+            "result": [
+              0,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "5",
+            "player1": "Mathias Vith Andersen",
+            "player2": "Hidden Player",
+            "result": [
+              2,
+              0
+            ],
+            "has_bye": false
+          },
+          {
+            "table": "6",
+            "player1": "Hidden Player",
+            "player2": "Hidden Player",
+            "result": [
+              1,
+              2
+            ],
+            "has_bye": false
+          },
+          {
+            "table": null,
+            "player1": "Gregoire  Sanguinetti",
+            "player2": null,
+            "result": null,
+            "has_bye": true
+          }
+        ],
+        "processed_at": "2026-08-15T16:37:47.981672"
       }
     }
   }

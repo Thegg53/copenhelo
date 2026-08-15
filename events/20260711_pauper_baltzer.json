@@ -1,0 +1,287 @@
+{
+  "id": "20260711_pauper_baltzer",
+  "rounds": {
+    "1": {
+      "matches": [
+        {
+          "table": "1",
+          "player1": "Frederikke Stejlgaard",
+          "player2": "Freya Gade Ravnsborg",
+          "result": [
+            2,
+            1
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "2",
+          "player1": "Leander Lassen",
+          "player2": "Gregoire  Sanguinetti",
+          "result": [
+            2,
+            1
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "3",
+          "player1": "Lars Ove Lassen",
+          "player2": "Alexander Graulund",
+          "result": [
+            2,
+            0
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "4",
+          "player1": "Jonas Borgland",
+          "player2": "Christoffer Nielsen",
+          "result": [
+            2,
+            1
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "5",
+          "player1": "Mathias Vith Andersen",
+          "player2": "Alexander Printzlau Korsgaard",
+          "result": [
+            1,
+            2
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "6",
+          "player1": "Hannibal Poulsen",
+          "player2": "Erik Christensen",
+          "result": [
+            0,
+            2
+          ],
+          "has_bye": false
+        }
+      ],
+      "count": 6
+    },
+    "2": {
+      "matches": [
+        {
+          "table": "1",
+          "player1": "Jonas Borgland",
+          "player2": "Erik Christensen",
+          "result": [
+            1,
+            1
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "2",
+          "player1": "Lars Ove Lassen",
+          "player2": "Leander Lassen",
+          "result": [
+            2,
+            0
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "3",
+          "player1": "Alexander Printzlau Korsgaard",
+          "player2": "Frederikke Stejlgaard",
+          "result": [
+            1,
+            2
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "4",
+          "player1": "Christoffer Nielsen",
+          "player2": "Hygenic Frank",
+          "result": [
+            0,
+            1
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "5",
+          "player1": "Freya Gade Ravnsborg",
+          "player2": "Hannibal Poulsen",
+          "result": [
+            2,
+            0
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "6",
+          "player1": "Alexander Graulund",
+          "player2": "Gregoire  Sanguinetti",
+          "result": [
+            2,
+            0
+          ],
+          "has_bye": false
+        },
+        {
+          "table": null,
+          "player1": "Mathias Vith Andersen",
+          "player2": null,
+          "result": null,
+          "has_bye": true
+        }
+      ],
+      "count": 7
+    },
+    "3": {
+      "matches": [
+        {
+          "table": "1",
+          "player1": "Lars Ove Lassen",
+          "player2": "Frederikke Stejlgaard",
+          "result": [
+            0,
+            2
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "2",
+          "player1": "Erik Christensen",
+          "player2": "Mathias Vith Andersen",
+          "result": [
+            2,
+            0
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "3",
+          "player1": "Jonas Borgland",
+          "player2": "Alexander Printzlau Korsgaard",
+          "result": [
+            2,
+            1
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "4",
+          "player1": "Freya Gade Ravnsborg",
+          "player2": "Hygenic Frank",
+          "result": [
+            2,
+            0
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "5",
+          "player1": "Alexander Graulund",
+          "player2": "Leander Lassen",
+          "result": [
+            1,
+            2
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "6",
+          "player1": "Christoffer Nielsen",
+          "player2": "Gregoire  Sanguinetti",
+          "result": [
+            2,
+            0
+          ],
+          "has_bye": false
+        },
+        {
+          "table": null,
+          "player1": "Hannibal Poulsen",
+          "player2": null,
+          "result": null,
+          "has_bye": true
+        }
+      ],
+      "count": 7
+    },
+    "4": {
+      "matches": [
+        {
+          "table": "1",
+          "player1": "Frederikke Stejlgaard",
+          "player2": "Erik Christensen",
+          "result": [
+            2,
+            1
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "2",
+          "player1": "Jonas Borgland",
+          "player2": "Lars Ove Lassen",
+          "result": [
+            1,
+            2
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "3",
+          "player1": "Freya Gade Ravnsborg",
+          "player2": "Leander Lassen",
+          "result": [
+            0,
+            2
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "4",
+          "player1": "Hannibal Poulsen",
+          "player2": "Alexander Printzlau Korsgaard",
+          "result": [
+            0,
+            2
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "5",
+          "player1": "Mathias Vith Andersen",
+          "player2": "Hygenic Frank",
+          "result": [
+            2,
+            0
+          ],
+          "has_bye": false
+        },
+        {
+          "table": "6",
+          "player1": "Alexander Graulund",
+          "player2": "Christoffer Nielsen",
+          "result": [
+            1,
+            2
+          ],
+          "has_bye": false
+        },
+        {
+          "table": null,
+          "player1": "Gregoire  Sanguinetti",
+          "player2": null,
+          "result": null,
+          "has_bye": true
+        }
+      ],
+      "count": 7
+    }
+  },
+  "parsed_at": "2026-08-15T16:37:47.726690"
+}

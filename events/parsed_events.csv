@@ -2,3 +2,5 @@ timestamp,tournament_id,rounds,matches,file
 2026-06-03T13:25:25.182386,20260530_pauper_baltzer,4,20,20260530_pauper_baltzer.json
 2026-06-14T12:19:13.062568,20260606_pauper_lyngby,4,24,20260606_pauper_lyngby.json
 2026-06-21T18:41:50.276423,20260621_pauper_lyngby,4,31,20260621_pauper_lyngby.json
+2026-08-15T16:37:47.726507,20260705_pauper_lyngby,5,54,20260705_pauper_lyngby.json
+2026-08-15T16:37:47.865715,20260711_pauper_baltzer,4,27,20260711_pauper_baltzer.json
