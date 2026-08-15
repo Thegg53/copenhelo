@@ -1329,7 +1329,7 @@
       {
         "tournament": "20260705_pauper_lyngby",
         "round": 2,
-        "opponent": "Hidden Opponent",
+        "opponent": "Christian Hansen",
         "result": [
           0,
           2
@@ -1475,7 +1475,7 @@
       {
         "tournament": "20260705_pauper_lyngby",
         "round": 2,
-        "opponent": "Hidden Opponent",
+        "opponent": "Christian Hansen",
         "result_code": "L",
         "rating_before": 1483,
         "rating_after": 1467,
@@ -1809,12 +1809,12 @@
   },
   "Frederikke Stejlgaard": {
     "name": "Frederikke Stejlgaard",
-    "rating": 1663,
+    "rating": 1662,
     "matches": [
       {
         "tournament": "20260621_pauper_lyngby",
         "round": 1,
-        "opponent": "Hidden Opponent",
+        "opponent": "Christian Hansen",
         "result": [
           2,
           1
@@ -1868,7 +1868,7 @@
       {
         "tournament": "20260705_pauper_lyngby",
         "round": 3,
-        "opponent": "Hidden Opponent",
+        "opponent": "Christian Hansen",
         "result": [
           2,
           1
@@ -1933,7 +1933,7 @@
       {
         "tournament": "20260621_pauper_lyngby",
         "round": 1,
-        "opponent": "Hidden Opponent",
+        "opponent": "Christian Hansen",
         "result_code": "W",
         "rating_before": 1500,
         "rating_after": 1516,
@@ -2011,11 +2011,11 @@
       {
         "tournament": "20260705_pauper_lyngby",
         "round": 3,
-        "opponent": "Hidden Opponent",
+        "opponent": "Christian Hansen",
         "result_code": "W",
         "rating_before": 1592,
-        "rating_after": 1607,
-        "rating_change": 15,
+        "rating_after": 1606,
+        "rating_change": 14,
         "score": [
           2,
           1
@@ -2026,8 +2026,8 @@
         "round": 4,
         "opponent": "Freya Gade Ravnsborg",
         "result_code": "L",
-        "rating_before": 1607,
-        "rating_after": 1590,
+        "rating_before": 1606,
+        "rating_after": 1589,
         "rating_change": -17,
         "score": [
           0,
@@ -2039,8 +2039,8 @@
         "round": 5,
         "opponent": "Hidden Opponent",
         "result_code": "W",
-        "rating_before": 1590,
-        "rating_after": 1605,
+        "rating_before": 1589,
+        "rating_after": 1604,
         "rating_change": 15,
         "score": [
           2,
@@ -2052,8 +2052,8 @@
         "round": 1,
         "opponent": "Freya Gade Ravnsborg",
         "result_code": "W",
-        "rating_before": 1605,
-        "rating_after": 1621,
+        "rating_before": 1604,
+        "rating_after": 1620,
         "rating_change": 16,
         "score": [
           2,
@@ -2065,8 +2065,8 @@
         "round": 2,
         "opponent": "Hidden Opponent",
         "result_code": "W",
-        "rating_before": 1621,
-        "rating_after": 1635,
+        "rating_before": 1620,
+        "rating_after": 1634,
         "rating_change": 14,
         "score": [
           2,
@@ -2078,8 +2078,8 @@
         "round": 3,
         "opponent": "Hidden Opponent",
         "result_code": "W",
-        "rating_before": 1635,
-        "rating_after": 1649,
+        "rating_before": 1634,
+        "rating_after": 1648,
         "rating_change": 14,
         "score": [
           2,
@@ -2091,8 +2091,8 @@
         "round": 4,
         "opponent": "Erik Christensen",
         "result_code": "W",
-        "rating_before": 1649,
-        "rating_after": 1663,
+        "rating_before": 1648,
+        "rating_after": 1662,
         "rating_change": 14,
         "score": [
           2,
@@ -2101,9 +2101,193 @@
       }
     ]
   },
+  "Christian Hansen": {
+    "name": "Christian Hansen",
+    "rating": 1458,
+    "matches": [
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 1,
+        "opponent": "Frederikke Stejlgaard",
+        "result": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 2,
+        "opponent": "Hidden Opponent",
+        "result": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 3,
+        "opponent": "Hidden Opponent",
+        "result": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 1,
+        "opponent": "Hidden Opponent",
+        "result": [
+          1,
+          1
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 2,
+        "opponent": "Mads Dupont",
+        "result": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 3,
+        "opponent": "Frederikke Stejlgaard",
+        "result": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 4,
+        "opponent": "Emma Gad",
+        "result": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 5,
+        "opponent": "Hidden Opponent",
+        "result": [
+          2,
+          0
+        ]
+      }
+    ],
+    "history": [
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 1,
+        "opponent": "Frederikke Stejlgaard",
+        "result_code": "L",
+        "rating_before": 1500,
+        "rating_after": 1484,
+        "rating_change": -16,
+        "score": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 2,
+        "opponent": "Hidden Opponent",
+        "result_code": "L",
+        "rating_before": 1484,
+        "rating_after": 1468,
+        "rating_change": -16,
+        "score": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260621_pauper_lyngby",
+        "round": 3,
+        "opponent": "Hidden Opponent",
+        "result_code": "L",
+        "rating_before": 1468,
+        "rating_after": 1453,
+        "rating_change": -15,
+        "score": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 1,
+        "opponent": "Hidden Opponent",
+        "result_code": "D",
+        "rating_before": 1453,
+        "rating_after": 1454,
+        "rating_change": 1,
+        "score": [
+          1,
+          1
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 2,
+        "opponent": "Mads Dupont",
+        "result_code": "W",
+        "rating_before": 1454,
+        "rating_after": 1470,
+        "rating_change": 16,
+        "score": [
+          2,
+          0
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 3,
+        "opponent": "Frederikke Stejlgaard",
+        "result_code": "L",
+        "rating_before": 1470,
+        "rating_after": 1456,
+        "rating_change": -14,
+        "score": [
+          1,
+          2
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 4,
+        "opponent": "Emma Gad",
+        "result_code": "L",
+        "rating_before": 1456,
+        "rating_after": 1441,
+        "rating_change": -15,
+        "score": [
+          0,
+          2
+        ]
+      },
+      {
+        "tournament": "20260705_pauper_lyngby",
+        "round": 5,
+        "opponent": "Hidden Opponent",
+        "result_code": "W",
+        "rating_before": 1441,
+        "rating_after": 1458,
+        "rating_change": 17,
+        "score": [
+          2,
+          0
+        ]
+      }
+    ]
+  },
   "Emma Gad": {
     "name": "Emma Gad",
-    "rating": 1514,
+    "rating": 1513,
     "matches": [
       {
         "tournament": "20260621_pauper_lyngby",
@@ -2171,7 +2355,7 @@
       {
         "tournament": "20260705_pauper_lyngby",
         "round": 4,
-        "opponent": "Hidden Opponent",
+        "opponent": "Christian Hansen",
         "result": [
           2,
           0
@@ -2282,11 +2466,11 @@
       {
         "tournament": "20260705_pauper_lyngby",
         "round": 4,
-        "opponent": "Hidden Opponent",
+        "opponent": "Christian Hansen",
         "result_code": "W",
         "rating_before": 1514,
-        "rating_after": 1530,
-        "rating_change": 16,
+        "rating_after": 1529,
+        "rating_change": 15,
         "score": [
           2,
           0
@@ -2297,8 +2481,8 @@
         "round": 5,
         "opponent": "Hidden Opponent",
         "result_code": "L",
-        "rating_before": 1530,
-        "rating_after": 1514,
+        "rating_before": 1529,
+        "rating_after": 1513,
         "rating_change": -16,
         "score": [
           1,
