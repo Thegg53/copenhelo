@@ -2,8 +2,8 @@ name: Update ELO Ratings
 
 on:
   schedule:
-    # Run daily at 00:00 UTC
-    - cron: '0 0 * * *'
+    # Run on day 3 of the week, (sunday is 0, monday is 1, etc.) at 00:00 UTC
+    - cron: '0 0 * * 3'
   # Also allow manual trigger
   workflow_dispatch:
 
