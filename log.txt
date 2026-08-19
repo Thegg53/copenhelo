@@ -1609,3 +1609,26 @@
 [2026-08-15T17:11:49.834214] Starting tournaments page generation
 [2026-08-15T17:11:49.835843] Generated tournaments page: tournaments.html (5 tournaments)
 [2026-08-15T17:11:49.835866] Tournaments page generation complete
+[2026-08-19T01:11:12.947906] Starting tournament parsing
+[2026-08-19T01:11:12.948107] Skipping tournament 20260530_pauper_baltzer (already parsed)
+[2026-08-19T01:11:12.948122] Skipping tournament 20260606_pauper_lyngby (already parsed)
+[2026-08-19T01:11:12.948132] Skipping tournament 20260621_pauper_lyngby (already parsed)
+[2026-08-19T01:11:12.948141] Skipping tournament 20260705_pauper_lyngby (already parsed)
+[2026-08-19T01:11:12.948149] Skipping tournament 20260711_pauper_baltzer (already parsed)
+[2026-08-19T01:11:12.948163] Tournament parsing complete: 0 processed, 5 skipped
+[2026-08-19T01:11:12.987978] Starting ELO calculation
+[2026-08-19T01:11:12.988182] Skipping tournament 20260530_pauper_baltzer (already processed)
+[2026-08-19T01:11:12.988189] Skipping tournament 20260606_pauper_lyngby (already processed)
+[2026-08-19T01:11:12.988192] Skipping tournament 20260621_pauper_lyngby (already processed)
+[2026-08-19T01:11:12.988195] Skipping tournament 20260705_pauper_lyngby (already processed)
+[2026-08-19T01:11:12.988197] Skipping tournament 20260711_pauper_baltzer (already processed)
+[2026-08-19T01:11:12.992796] ELO calculation complete: 0 processed, 5 skipped
+[2026-08-19T01:11:13.023969] Starting leaderboard generation
+[2026-08-19T01:11:13.024927] Generated leaderboard: leaderboard.html (12 players)
+[2026-08-19T01:11:13.024933] Leaderboard generation complete
+[2026-08-19T01:11:13.055880] Starting player pages generation
+[2026-08-19T01:11:13.056925] Generated players page: players.html (12 players)
+[2026-08-19T01:11:13.056932] Player pages generation complete
+[2026-08-19T01:11:13.087910] Starting tournaments page generation
+[2026-08-19T01:11:13.088868] Generated tournaments page: tournaments.html (5 tournaments)
+[2026-08-19T01:11:13.088875] Tournaments page generation complete
